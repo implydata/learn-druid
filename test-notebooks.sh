@@ -1,4 +1,17 @@
 #!/bin/bash
+#
+# This script run notebook execution tests.
+# Usage:
+#   test_notebooks.sh <notebook_path>
+#   Parameters:	
+#     <notebook_path> (optional): path to notebook(s) to test
+#
+# The script will:  
+#  - use docker-compose-local.yaml config to build jupyter-img and bring up the full stack,
+#  - Wait for services to report status
+#  - Run all notebooks found recursively within the specified <notebook path>, 
+#    if no path is specified, it will use the current path and any notebooks in any subfolders
+# 
 
 
 
