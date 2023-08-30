@@ -36,13 +36,13 @@ retry() {
 
 
 
-docker compose -f docker-compose-local.yaml --profile all-services up -d --build
+docker compose -f ../docker-compose-local.yaml --profile all-services up -d --build
 docker exec -it jupyter pip install nbmake
 
 if [ $# -ge 1 ];
     then TEST_PATH=$1
 else
-     TEST_PATH=./
+     TEST_PATH=../notebooks/
 fi 
 
 # check that druid is running
@@ -58,4 +58,4 @@ retry 'curl http://localhost:9999/jobs' 50 2
 docker exec -it jupyter pytest --nbmake $TEST_PATH
 # run it a second time to test re-runnability of the notebooks
 docker exec -it jupyter pytest --nbmake $TEST_PATH
-docker compose -f docker-compose-local.yaml --profile all-services down -v
+docker compose -f ../docker-compose-local.yaml --profile all-services down -v
