@@ -21,8 +21,8 @@ REQ_POST_TASK = OVERLORD_BASE + '/task'
 REQ_GET_TASK = REQ_POST_TASK + '/{}'
 REQ_TASK_STATUS = REQ_GET_TASK + '/status'
 REQ_TASK_REPORTS = REQ_GET_TASK + '/reports'
-REQ_END_TASK = REQ_GET_TASK
-REQ_END_DS_TASKS = REQ_END_TASK + '/shutdownAllTasks'
+REQ_END_TASK = REQ_GET_TASK + '/shutdown'
+REQ_END_DS_TASKS =  OVERLORD_BASE + '/datasources/{}/shutdownAllTasks'
 
 class TaskClient:
     '''
@@ -182,7 +182,7 @@ class TaskClient:
         ---------
         `POST /druid/indexer/v1/task/{taskId}/shutdown`
         '''
-        return self.client.post_json(REQ_END_TASK, args=[task_id])
+        return self.client.post_json(REQ_END_TASK, body='', args=[task_id])
 
     def shut_down_tasks_for(self, table):
         '''
@@ -201,4 +201,4 @@ class TaskClient:
         ---------
         `POST /druid/indexer/v1/datasources/{dataSource}/shutdownAllTasks`
         '''
-        return self.client.post_json(REQ_END_DS_TASKS, args=[table])
+        return self.client.post_json(REQ_END_DS_TASKS, body='', args=[table])
