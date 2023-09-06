@@ -17,44 +17,123 @@
   ~ under the License.
   -->
 
-# Jupyter in Docker
+# Learn Druid
 
-For details on getting started with Jupyter in Docker,
-see [Docker for Jupyter Notebook tutorials](../../../../docs/tutorials/tutorial-jupyter-docker.md).
+The Learn Druid project contains a set of Jupyter Notebooks to help you learn Apache Druid. Also included is a Docker Compose file that launches Jupyter Lab, Druid, Kafka, and other services to help you get started quickly.
 
-## Contributing
+## Pre-requisites
 
-### Rebuild Jupyter image
+To use the Docker Compose environment, you need:
 
-You may want to update the Jupyter image to access new or updated tutorial notebooks,
-include new Python packages, or update configuration files.
+* Git
+* Docker Desktop with Docker Compose
+* A machine with at least 6 GiB of RAM.
+     > Of course, more power is better.
+     > The notebooks have been tested with the following resources available to docker: 6 of 8 cpus,  8.5 GB of RAM, and 1 GB swap.
 
-To build the custom Jupyter image locally:
+## Quickstart
 
-1. Clone the Druid repo if you haven't already.
-2. Navigate to `examples/quickstart/jupyter-notebooks` in your Druid source repo.
-3. Edit the image definition in `Dockerfile`.
-4. Navigate to the `docker-jupyter` directory.
-5. Generate the new build using the following command:
+To get started quickly:
 
-   ```shell
-   DRUID_VERSION=25.0.0 docker compose --profile all-services -f docker-compose-local.yaml up -d --build
+1. Clone this git repo:
+    
+   ```bash
+   git clone https://github.com/implydata/learn-druid
    ```
 
-   You can change the value of `DRUID_VERSION` or the profile used from the Docker Compose file.
+2. Navigate to the repo directory:
 
-### Update Docker Compose
+   ```bash
+    cd learn-druid
+   ```
 
-The Docker Compose file defines a multi-container application that allows you to run
-the custom Jupyter Notebook container, Apache Druid, and Apache Kafka.
+3. Launch the "Learn Druid" environoment:
 
-Any changes to `docker-compose.yaml` should also be made to `docker-compose-local.yaml`
-and vice versa. These files should be identical except that `docker-compose.yaml`
-contains an `image` attribute while `docker-compose-local.yaml` contains a `build` subsection.
+   ```bash
+   docker compose --profile all-services up -d
+   ```
 
-If you update `docker-compose.yaml`, recreate the ZIP file using the following command:
+   > The first time you lanch the environment, it can take a while to start all the services.
 
-```bash
-zip tutorial-jupyter-docker.zip docker-compose.yaml environment
-```
+4. Navigate to Jupyter Lab in your browser:
+     http://localhost:8889/lab/tree/0-START-HERE.ipynb
 
+From there you can read the introduction or use Jupyter Lab to navigate the notebooks folder.
+
+<!-- ToDo: when notebook gets an update, add a screen shot -->
+
+## Components
+
+The Learn Druid environment includes the following services defined within the Docker Compose file:
+
+**Jupyter Lab**: An interactive environment to run Jupyter Notebooks. The image for Jupyter used in the environment contains Python along with all the supporting libraries you need to run the notebooks.
+
+**Apache Kafka**: Streaming service as a data source for Druid.
+
+**Imply Data Generator**: A tool to generate sample data for Druid. It can produce either batch or streaming data.
+
+**Apache Druid**: The currently released version of Apache Druid by default.
+
+## Profiles
+
+You can use the following Docker Compose profiles to start various combinations of the services based upon your specific needs.
+
+### All services
+
+This is an easy default option if you're not sure what services you'll need. It is required for notebooks that use Kafka.
+
+To start all services:
+
+   ```bash
+   docker compose --profile all-services up -d
+   ```
+
+To stop all services:
+
+   ```bash
+   docker compose --profile all-services down
+   ```
+
+### Jupyter and Druid
+
+If you're not using streaming ingestion, this is a good option.
+
+To start Jupyter and Druid:
+
+   ```bash
+   docker compose --profile druid-jupyter up -d
+   ```
+
+
+To stop all services:
+
+   ```bash
+   docker compose --profile druid-jupyter down
+   ```
+
+### Start Jupyter only
+
+If you want to run the notebooks against a Druid instance not in the Learn Druid environment, you can run Jupyter by itself. In this case, pass the Druid host ad an environment variable. For example, if Druid is running on the local machine:
+
+To start Jupyter only:
+
+   ```bash
+  DRUID_HOST=host.docker.internal docker compose --profile jupyter up -d
+   ```
+
+To stop Jupyter:
+
+   ```bash
+  docker compose --profile jupyter down
+   ```
+
+## Druid web console
+
+The Docker Compose environment exposes the Druid web console at:
+http://localhost:8888.
+
+You can use the web console to monitor ingestion tasks, compare query results, and more. To learn about the Druid web console, see [Web console](https://druid.apache.org/docs/latest/operations/web-console).
+
+## Feedback and help
+
+For feedback and help, start a discussion in the [docs and training channel](https://apachedruidworkspace.slack.com/archives/docs-and-training) in Apache Druid Slack.
