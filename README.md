@@ -19,9 +19,13 @@
 
 # Learn Druid
 
-The Learn Druid project contains a set of Jupyter Notebooks to help you learn Apache Druid. Also included is a Docker Compose file that launches Jupyter Lab, Druid, Kafka, and other services to help you get started quickly.
+The Learn Druid project contains a set of Jupyter Notebooks to help you learn Apache Druid.
+Also included is a Docker Compose file that launches Jupyter Lab, Druid, Kafka, and other services to help you get started quickly.
 
-## Pre-requisites
+For convenience and to keep the focus on the Druid APIs, the notebooks in the Learn Druid project use the [`druidapi` Python library](./jupyter-img/druidapi/README.md).
+This library is for educational purposes only and is not suitable for production implementations.
+
+## Prerequisites
 
 To use the Docker Compose environment, you need:
 
@@ -50,8 +54,10 @@ To get started quickly:
 3. Launch the "Learn Druid" environoment:
 
    ```bash
-   docker compose --profile all-services up -d
+   docker compose --profile druid-jupyter up -d
    ```
+
+   This command launches Druid and the Jupyter Lab environment. See [Profiles](#profiles) for more options.
 
    > The first time you lanch the environment, it can take a while to start all the services.
 
@@ -66,7 +72,8 @@ From there you can read the introduction or use Jupyter Lab to navigate the note
 
 The Learn Druid environment includes the following services defined within the Docker Compose file:
 
-**Jupyter Lab**: An interactive environment to run Jupyter Notebooks. The image for Jupyter used in the environment contains Python along with all the supporting libraries you need to run the notebooks.
+**Jupyter Lab**: An interactive environment to run Jupyter Notebooks. 
+The image for Jupyter used in the environment contains Python along with all the supporting libraries you need to run the notebooks.
 
 **Apache Kafka**: Streaming service as a data source for Druid.
 
@@ -113,7 +120,9 @@ To stop all services:
 
 ### Start Jupyter only
 
-If you want to run the notebooks against a Druid instance not in the Learn Druid environment, you can run Jupyter by itself. In this case, pass the Druid host ad an environment variable. For example, if Druid is running on the local machine:
+If you want to run the notebooks against a Druid instance not in the Learn Druid environment, you can run Jupyter by itself.
+In this case, pass the Druid host ad an environment variable.
+For example, if Druid is running on the local machine:
 
 To start Jupyter only:
 
@@ -132,7 +141,8 @@ To stop Jupyter:
 The Docker Compose environment exposes the Druid web console at:
 http://localhost:8888.
 
-You can use the web console to monitor ingestion tasks, compare query results, and more. To learn about the Druid web console, see [Web console](https://druid.apache.org/docs/latest/operations/web-console).
+You can use the web console to monitor ingestion tasks, compare query results, and more.
+To learn about the Druid web console, see [Web console](https://druid.apache.org/docs/latest/operations/web-console).
 
 ## Feedback and help
 
