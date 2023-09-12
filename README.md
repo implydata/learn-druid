@@ -19,44 +19,48 @@
 
 # Learn Druid
 
-The Learn Druid project contains a set of Jupyter Notebooks to help you learn Apache Druid. Also included is a Docker Compose file that launches Jupyter Lab, Druid, Kafka, and other services to help you get started quickly.
+The Learn Druid project contains a set of Jupyter Notebooks to help you learn Apache Druid.
+
+Also included is a Docker Compose file that launches Jupyter Lab and Apache Druid to help you get started quickly.
 
 ## Pre-requisites
 
-To use the Docker Compose environment, you need:
+To use the "Learn Druid" Docker Compose, you need:
 
-* Git
-* Docker Desktop with Docker Compose
+* Git or [Github Desktop](https://desktop.github.com/)
+* [Docker Desktop](https://docs.docker.com/get-docker/) with Docker Compose
 * A machine with at least 6 GiB of RAM.
+
      > Of course, more power is better.
-     > The notebooks have been tested with the following resources available to docker: 6 of 8 cpus,  8.5 GB of RAM, and 1 GB swap.
+     > The notebooks have been tested with the following resources available to docker: 6 CPUs, 8GB of RAM, and 1 GB swap.
 
 ## Quickstart
 
 To get started quickly:
 
-1. Clone this git repo:
+1. Clone this repository locally:
     
    ```bash
    git clone https://github.com/implydata/learn-druid
    ```
 
-2. Navigate to the repo directory:
+2. Navigate to the directory:
 
    ```bash
     cd learn-druid
    ```
 
-3. Launch the "Learn Druid" environoment:
+3. Launch the "Learn Druid" Docker environment:
 
    ```bash
-   docker compose --profile all-services up -d
+   docker compose --profile druid-jupyter up -d
    ```
 
    > The first time you lanch the environment, it can take a while to start all the services.
 
 4. Navigate to Jupyter Lab in your browser:
-     http://localhost:8889/lab/tree/0-START-HERE.ipynb
+
+     http://localhost:8889/lab
 
 From there you can read the introduction or use Jupyter Lab to navigate the notebooks folder.
 
@@ -64,23 +68,73 @@ From there you can read the introduction or use Jupyter Lab to navigate the note
 
 ## Components
 
-The Learn Druid environment includes the following services defined within the Docker Compose file:
+The Learn Druid environment Docker Compose file includes the following services:
 
-**Jupyter Lab**: An interactive environment to run Jupyter Notebooks. The image for Jupyter used in the environment contains Python along with all the supporting libraries you need to run the notebooks.
+[**Jupyter Lab**](https://jupyter.org/): An interactive environment to run Jupyter Notebooks. The image for Jupyter used in the environment contains Python along with all the supporting libraries you need to run the notebooks.
 
-**Apache Kafka**: Streaming service as a data source for Druid.
+[**Apache Kafka**](https://kafka.apache.org/): Streaming service as a data source for Druid.
 
-**Imply Data Generator**: A tool to generate sample data for Druid. It can produce either batch or streaming data.
+[**Imply Data Generator**](https://github.com/implydata/druid-datagenerator): A tool to generate sample data for Druid. It can produce either batch or streaming data.
 
-**Apache Druid**: The currently released version of Apache Druid by default.
+[**Apache Druid**](https://druid.apache.org/): The currently released version of Apache Druid by default.
+
+### Access the Apache Druid web console
+
+The Docker Compose environment exposes the Druid web console at:
+http://localhost:8888.
+
+You can use the web console to monitor ingestion tasks, compare query results, and more. To learn about the Druid web console, see [Web console](https://druid.apache.org/docs/latest/operations/web-console).
+
+### Access the Jupyter Labs environment
+
+Jupyter Labs is exposed by Docker Compose at:
+http://localhost:8889/
 
 ## Profiles
 
-You can use the following Docker Compose profiles to start various combinations of the services based upon your specific needs.
+You can use the following Docker Compose profiles to start various combinations of the components based upon your specific needs.
+
+Individual notebooks may prescribe a specific profile that you need to use.
+
+### Jupyter only
+
+Use this profile when you want to run the notebooks against an existing Apache Druid database. Use the `DRUID_HOST` parameter to set the Apache Druid host address.
+
+To start Jupyter only:
+
+   ```bash
+  DRUID_HOST=[host address] docker compose --profile jupyter up -d
+   ```
+
+For example, if Druid is running on the local machine:
+
+   ```bash
+  DRUID_HOST=host.docker.internal docker compose --profile jupyter up -d
+   ```
+
+To stop Jupyter:
+
+   ```bash
+  docker compose --profile jupyter down
+   ```
+
+### Jupyter and Druid
+
+Use this profile when you need to query data and do batch ingestion only.
+
+To start Jupyter and Druid:
+
+   ```bash
+   docker compose --profile druid-jupyter up -d
+   ```
+
+To stop Jupyter and Druid:
+
+   ```bash
+   docker compose --profile druid-jupyter down
+   ```
 
 ### All services
-
-This is an easy default option if you're not sure what services you'll need. It is required for notebooks that use Kafka.
 
 To start all services:
 
@@ -94,46 +148,6 @@ To stop all services:
    docker compose --profile all-services down
    ```
 
-### Jupyter and Druid
-
-If you're not using streaming ingestion, this is a good option.
-
-To start Jupyter and Druid:
-
-   ```bash
-   docker compose --profile druid-jupyter up -d
-   ```
-
-
-To stop all services:
-
-   ```bash
-   docker compose --profile druid-jupyter down
-   ```
-
-### Start Jupyter only
-
-If you want to run the notebooks against a Druid instance not in the Learn Druid environment, you can run Jupyter by itself. In this case, pass the Druid host ad an environment variable. For example, if Druid is running on the local machine:
-
-To start Jupyter only:
-
-   ```bash
-  DRUID_HOST=host.docker.internal docker compose --profile jupyter up -d
-   ```
-
-To stop Jupyter:
-
-   ```bash
-  docker compose --profile jupyter down
-   ```
-
-## Druid web console
-
-The Docker Compose environment exposes the Druid web console at:
-http://localhost:8888.
-
-You can use the web console to monitor ingestion tasks, compare query results, and more. To learn about the Druid web console, see [Web console](https://druid.apache.org/docs/latest/operations/web-console).
-
 ## Feedback and help
 
-For feedback and help, start a discussion in the [docs and training channel](https://apachedruidworkspace.slack.com/archives/docs-and-training) in Apache Druid Slack.
+For feedback and help, start a discussion in the [Discussions board](https://github.com/implydata/learn-druid/discussions) or make contact in the [docs and training channel](https://apachedruidworkspace.slack.com/archives/docs-and-training) in [Apache Druid Slack](https://druid.apache.org/community/).
