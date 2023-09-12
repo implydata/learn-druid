@@ -76,7 +76,8 @@ The Learn Druid environment Docker Compose file includes the following services:
 [**Jupyter Lab**](https://jupyter.org/): An interactive environment to run Jupyter Notebooks. The image for Jupyter used in the environment contains Python along with all the supporting libraries you need to run the notebooks.
 
 Jupyter Labs is exposed by Docker Compose at:
-http://localhost:8889/
+
+   http://localhost:8889/
 
 [**Apache Kafka**](https://kafka.apache.org/): Streaming service as a data source for Druid.
 
@@ -86,7 +87,7 @@ http://localhost:8889/
 
 You can use the web console to monitor ingestion tasks, compare query results, and more. To learn about the Druid web console, see [Web console](https://druid.apache.org/docs/latest/operations/web-console). The Docker Compose environment exposes the Druid web console at:
 
-http://localhost:8888
+   http://localhost:8888
 
 ## Profiles
 
