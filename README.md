@@ -75,30 +75,18 @@ The Learn Druid environment Docker Compose file includes the following services:
 
 [**Jupyter Lab**](https://jupyter.org/): An interactive environment to run Jupyter Notebooks. The image for Jupyter used in the environment contains Python along with all the supporting libraries you need to run the notebooks.
 
+Jupyter Labs is exposed by Docker Compose at:
+http://localhost:8889/
+
 [**Apache Kafka**](https://kafka.apache.org/): Streaming service as a data source for Druid.
 
 [**Imply Data Generator**](https://github.com/implydata/druid-datagenerator): A tool to generate sample data for Druid. It can produce either batch or streaming data.
 
 [**Apache Druid**](https://druid.apache.org/): The currently released version of Apache Druid by default.
 
-### Access the Apache Druid web console
+You can use the web console to monitor ingestion tasks, compare query results, and more. To learn about the Druid web console, see [Web console](https://druid.apache.org/docs/latest/operations/web-console). The Docker Compose environment exposes the Druid web console at:
 
-The Docker Compose environment exposes the Druid web console at:
-http://localhost:8888.
-
-You can use the web console to monitor ingestion tasks, compare query results, and more. To learn about the Druid web console, see [Web console](https://druid.apache.org/docs/latest/operations/web-console).
-
-### Access the Jupyter Labs environment
-
-Jupyter Labs is exposed by Docker Compose at:
-http://localhost:8889/
-
-To use the notebooks without using the Docker Compose image, you need:
-
-* [Jupyter Lab](https://jupyter.org/).
-* [druidapi](https://github.com/apache/druid/blob/master/examples/quickstart/jupyter-notebooks/druidapi/README.md), a Python client for Apache Druid.
-* [matplotlib](https://matplotlib.org/), a library for creating visualizations in Python.
-* [pandas](https://pandas.pydata.org/), a data analysis and manipulation tool.
+http://localhost:8888
 
 ## Profiles
 
