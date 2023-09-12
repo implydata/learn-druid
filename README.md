@@ -21,7 +21,7 @@
 
 The Learn Druid project contains a set of Jupyter Notebooks to help you learn Apache Druid.
 
-Also included is a Docker Compose file that launches Jupyter Lab and Apache Druid to help you get started quickly.
+Also included is a Docker Compose file to help you get started quickly by using your own local running learning environment.
 
 ## Pre-requisites
 
