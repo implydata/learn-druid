@@ -19,9 +19,12 @@
 
 # Learn Druid
 
-The Learn Druid project contains a set of Jupyter Notebooks to help you learn Apache Druid.
+The "Learn Druid" repository contains all manner of resources to help you learn and apply Apache Druid.
 
-Also included is a Docker Compose file to help you get started quickly by using your own local running learning environment.
+It contains:
+
+* Jupyter Notebooks that guide you through query, ingestion, and data management with Apache Druid.
+* A Docker Compose file to get you up and running with a learning lab.
 
 ## Pre-requisites
 
@@ -89,6 +92,13 @@ You can use the web console to monitor ingestion tasks, compare query results, a
 
 Jupyter Labs is exposed by Docker Compose at:
 http://localhost:8889/
+
+To use the notebooks without using the Docker Compose image, you need:
+
+* [Jupyter Lab](https://jupyter.org/).
+* [druidapi](https://github.com/apache/druid/blob/master/examples/quickstart/jupyter-notebooks/druidapi/README.md), a Python client for Apache Druid.
+* [matplotlib](https://matplotlib.org/), a library for creating visualizations in Python.
+* [pandas](https://pandas.pydata.org/), a data analysis and manipulation tool.
 
 ## Profiles
 
