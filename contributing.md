@@ -12,9 +12,18 @@ To build the custom Jupyter image locally:
 5. Generate the new build using the following command:
 
    ```shell
-   DRUID_VERSION=25.0.0 docker compose --profile all-services -f docker-compose-local.yaml up -d --build
+   DRUID_VERSION=27.0.0 docker compose --profile all-services -f docker-compose-local.yaml up -d --build
    ```
 
    You can change the value of `DRUID_VERSION` or the profile used from the Docker Compose file.
-
-
+6. To test all notebooks,
+   make sure that docker compose is down and all volumes have been deleted, then start tests with: 
+   ```shell
+   cd tests
+   ./test-notebooks.sh
+   ``` 
+7. To test single notebook:
+   ```shell
+   cd tests
+   ./test-notebooks.sh ../notebooks/<path to test notebook>
+   ```

@@ -22,10 +22,13 @@ retry() {
 
   exit_code=999
  
-  while [[ $exit_code -ne 0 && $retries -gt 0 ]]; do
+  while [[ "$exit_code" -ne "0" && "$retries" -gt 0 ]]; do
     #run action and consume output, no need to show it
-    output=$action
+    echo " trying...[${action[@]}]"
+    output=`${action[@]}` 
     local exit_code=$?
+    echo "  output: [${output}]"
+    echo "  exit code:${exit_code}"
     retries=$(($retries - 1)) 
     if [[ $exit_code -ne 0 ]]; then
       sleep $sleep_seconds
@@ -47,12 +50,12 @@ fi
 
 # check that druid is running
 echo "Waiting for Druid readiness..."
-retry 'curl http://localhost:8888/status' 50 2
 retry 'curl http://localhost:8081/status' 50 2
 retry 'curl http://localhost:8082/status' 50 2
 retry 'curl http://localhost:8083/status' 50 2
 retry 'curl http://localhost:8091/status' 50 2
-echo "Waiting for Data Generator readiness..."
+retry 'curl http://localhost:8888/status' 50 2
+#echo "Waiting for Data Generator readiness..."
 retry 'curl http://localhost:9999/jobs' 50 2
 
 docker exec -it jupyter pytest --nbmake $TEST_PATH
