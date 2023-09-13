@@ -32,3 +32,4 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Using TopN approximation in Druid queries](./03-query/02-approx-ranking.ipynb)|Understand Druid's default GROUP BY approximation, TopN.|`druid-jupyter`|
 |[Counting distinct values](./03-query/03-approxCountDistinct.ipynb)|Work through approximate and accurate ways of counting unique occurences of data.|`druid-jupyter`|
 |[Analyzing data distributions](./03-query/04-approxdataDistribution.ipynb)|Use approximation to estimate quantiles, ranks, and histograms.|`druid-jupyter`|
+|[Using UNION ALL to address multiple tables in the same query](./03-query/05-UnionOperations.ipynb)|Work through using the two types of UNION ALL operation available in Druid.|`druid-jupyter`|
