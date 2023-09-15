@@ -41,7 +41,7 @@ To use the "Learn Druid" Docker Compose, you need:
 
 To get started quickly:
 
-1. Clone this repository locally:
+1. Clone this repository locally, if you have not already done so:
     
    ```bash
    git clone https://github.com/implydata/learn-druid
@@ -53,7 +53,14 @@ To get started quickly:
     cd learn-druid
    ```
 
-3. Launch the "Learn Druid" Docker environment:
+   To refresh your local copy with the latest notebooks:
+
+   ```bash
+   git restore .
+   git pull
+   ```
+
+4. Launch the "Learn Druid" Docker environment:
 
    ```bash
    docker compose --profile druid-jupyter up -d
@@ -61,7 +68,7 @@ To get started quickly:
 
    > The first time you lanch the environment, it can take a while to start all the services.
 
-4. Navigate to Jupyter Lab in your browser:
+5. Navigate to Jupyter Lab in your browser:
 
      http://localhost:8889/lab
 
