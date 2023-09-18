@@ -63,7 +63,7 @@ To get started quickly:
 4. Launch the "Learn Druid" Docker environment:
 
    ```bash
-   docker compose --profile druid-jupyter up -d
+   docker compose --profile all-services up -d
    ```
 
    > The first time you lanch the environment, it can take a while to start all the services.
