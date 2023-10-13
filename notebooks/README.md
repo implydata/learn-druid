@@ -36,3 +36,4 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Enriching and updating data using lookup tables](./03-query/06-lookup-tables)|See how lookup tables can be used to enrich and update data in Druid tables|`druid-jupyter`|
 |[Applying time functions](./03-query/07-functions-datetime.ipynb)|Using scalar functions against time data to transform, filter, and aggregate at ingestion and query time.|`druid-jupyter`|
 |[Applying string functions](./03-query/08-functions-strings.ipynb)|See how different string functions can be used at ingestion and query time.|`druid-jupyter`|
+|[Using IPv4 functions](./03-query/10-functions-ip.ipynb)|A short notebook on IPv4 functions in Druid SQL.|`druid-jupyter`|
