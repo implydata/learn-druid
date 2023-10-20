@@ -37,3 +37,4 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Applying time functions](./03-query/07-functions-datetime.ipynb)|Using scalar functions against time data to transform, filter, and aggregate at ingestion and query time.|`druid-jupyter`|
 |[Applying string functions](./03-query/08-functions-strings.ipynb)|See how different string functions can be used at ingestion and query time.|`druid-jupyter`|
 |[Using the CASE function](./03-query/09-functions-case.ipynb)|Examples of using the two forms of CASE function available in Druid SQL.|`druid-jupyter`|
+|[Using IPv4 functions](./03-query/10-functions-ip.ipynb)|A short notebook on IPv4 functions in Druid SQL.|`druid-jupyter`|
