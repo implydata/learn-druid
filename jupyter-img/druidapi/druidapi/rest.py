@@ -176,11 +176,7 @@ class DruidRestClient:
         Generic GET request which expects a JSON response.
         '''
         r = self.get(url_tail, args, params)
-        try:
-            result=r.json()
-        except Exception as e:
-            result='{"message":"ERROR: Unable to parse into JSON.", "raw_result":"' + r.text + '"}'
-        return result
+        return r.json()
 
     def post(self, req, body, args=None, headers=None, require_ok=True) -> requests.Response:
         '''
