@@ -165,7 +165,7 @@ class DruidRestClient:
         '''
         url = self.build_url(req, args)
         if self.trace:
-            print('GET:', url)
+            print(f'GET:{url} PARAMS:{params}')
         r = self.session.get(url, params=params)
         if require_ok:
             check_error(r)
@@ -176,6 +176,8 @@ class DruidRestClient:
         Generic GET request which expects a JSON response.
         '''
         r = self.get(url_tail, args, params)
+        if self.trace:
+            print(f'GET response text [{r.text}]')
         return r.json()
 
     def post(self, req, body, args=None, headers=None, require_ok=True) -> requests.Response:
