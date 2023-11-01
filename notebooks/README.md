@@ -28,6 +28,7 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |Title|Description|Docker Profile|
 |---|---|---|
 |[Learn the basics of Druid SQL](./03-query/00-using-sql-with-druidapi.ipynb)|An introduction to the unique aspects of Druid SQL.|`druid-jupyter`|
+|[Learn the basics of the SQL API](./03-query/13-query-api.ipynb)|See examples of getting results from the Druid SQL API directly.|`druid-jupyter`|
 |[Aggregating results by using GROUP BY](./03-query/01-groupby.ipynb)|Use GROUP BY in various forms to aggregate your data.|`druid-jupyter`|
 |[Using TopN approximation in Druid queries](./03-query/02-approx-ranking.ipynb)|Understand Druid's default GROUP BY approximation, TopN.|`druid-jupyter`|
 |[Counting distinct values](./03-query/03-approxCountDistinct.ipynb)|Work through approximate and accurate ways of counting unique occurences of data.|`druid-jupyter`|
