@@ -53,22 +53,22 @@ To get started quickly:
     cd learn-druid
    ```
 
-   To refresh your local copy with the latest notebooks:
+> To refresh your local copy with the latest notebooks:
+>
+>   ```bash
+>   git restore .
+>   git pull
+>   ```
+
+3. Launch the "Learn Druid" Docker environment:
 
    ```bash
-   git restore .
-   git pull
-   ```
-
-4. Launch the "Learn Druid" Docker environment:
-
-   ```bash
-   docker compose --profile all-services up -d
+   docker compose --profile druid-jupyter up -d
    ```
 
    > The first time you lanch the environment, it can take a while to start all the services.
 
-5. Navigate to Jupyter Lab in your browser:
+4. Navigate to Jupyter Lab in your browser:
 
      http://localhost:8889/lab
 
