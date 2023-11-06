@@ -30,6 +30,9 @@ FROM jupyter/base-notebook
 # Set the container working directory
 WORKDIR /home/jovyan
 
+# Set cell timeout for automated testing to 10 minutes
+ENV PYTEST_TIMEOUT=600
+
 # Install required Python packages
 RUN pip install requests \
     pip install pandas \
@@ -38,7 +41,7 @@ RUN pip install requests \
     pip install bokeh \
     pip install kafka-python \
     pip install sortedcontainers \
-    pip install tqdm
+    pip install tqdm 
 
 # Install druidapi client from apache/druid
 # Local install requires sudo privileges 

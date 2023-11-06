@@ -17,6 +17,8 @@ import requests, time
 from druidapi.consts import COORD_BASE
 from druidapi.rest import check_error
 from druidapi.util import dict_get
+from druidapi.error import DruidError, ClientError
+import json
 
 REQ_DATASOURCES = COORD_BASE + '/datasources'
 REQ_DATASOURCE = REQ_DATASOURCES + '/{}'
@@ -66,7 +68,10 @@ class DatasourceClient:
         check_error(r)
 
     def load_status_req(self, ds_name, params=None):
-        return self.rest_client.get_json(REQ_DS_LOAD_STATUS, args=[ds_name], params=params)
+        response = self.rest_client.get(REQ_DS_LOAD_STATUS, args=[ds_name], params=params)
+        if len(response.text)==0:
+            raise ClientError(f'Table "{ds_name}" not found.')
+        return json.loads(response.text)
 
     def load_status(self, ds_name):
         return self.load_status_req(ds_name, {
