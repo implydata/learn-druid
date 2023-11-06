@@ -20,6 +20,7 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |[Ingest and query data from Apache Kafka](./02-ingestion/01-streaming-from-kafka.ipynb)|An introduction to streaming ingestion using Apache Kafka.|`all-services`|
 |[Working with nested columns](./02-ingestion/02-working-with-nested-columns.ipynb)|Work through ingesting, querying, and transforming nested columns.|`druid-jupyter`|
 |[Generating Apache Datasketches at ingestion time](./02-ingestion/03-sketchIngestion.ipynb)|Generate sketch objects to support approximate distinct count operations as part of ingestion.|`druid-jupyter`|
+|[Druid data types](./02-ingestion/04-table-datatypes.ipynb)|Work through several examples of table schemas with different underlying data types, as well as methods for converting between them.|`druid-jupyter`|
 
 ### Querying data
 
@@ -28,6 +29,7 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |Title|Description|Docker Profile|
 |---|---|---|
 |[Learn the basics of Druid SQL](./03-query/00-using-sql-with-druidapi.ipynb)|An introduction to the unique aspects of Druid SQL.|`druid-jupyter`|
+|[Learn the basics of the SQL API](./03-query/13-query-api.ipynb)|See examples of getting results from the Druid SQL API directly.|`druid-jupyter`|
 |[Aggregating results by using GROUP BY](./03-query/01-groupby.ipynb)|Use GROUP BY in various forms to aggregate your data.|`druid-jupyter`|
 |[Using TopN approximation in Druid queries](./03-query/02-approx-ranking.ipynb)|Understand Druid's default GROUP BY approximation, TopN.|`druid-jupyter`|
 |[Counting distinct values](./03-query/03-approxCountDistinct.ipynb)|Work through approximate and accurate ways of counting unique occurences of data.|`druid-jupyter`|
