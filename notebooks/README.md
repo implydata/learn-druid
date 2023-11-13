@@ -21,6 +21,7 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |[Working with nested columns](./02-ingestion/02-working-with-nested-columns.ipynb)|Work through ingesting, querying, and transforming nested columns.|`druid-jupyter`|
 |[Generating Apache Datasketches at ingestion time](./02-ingestion/03-sketchIngestion.ipynb)|Generate sketch objects to support approximate distinct count operations as part of ingestion.|`druid-jupyter`|
 |[Druid data types](./02-ingestion/04-table-datatypes.ipynb)|Work through several examples of table schemas with different underlying data types, as well as methods for converting between them.|`druid-jupyter`|
+|[Generating and working with NULL values](./02-ingestion/05-generating-and-working-with-nulls.ipynb)|Examples of how to treat incoming data to generate NULL values, and work with them using scalar functions, aggregations, and arrays.|
 
 ### Querying data
 
