@@ -24,7 +24,7 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |[Working with nested columns](./02-ingestion/05-working-with-nested-columns.ipynb)|Work through ingesting, querying, and transforming nested columns.|`druid-jupyter`|
 |[Primary and secondary partitioning in batch ingestion](./02-ingestion/06-partitioning-data.ipynb)|Use PARTITIONED BY and CLUSTERED BY to optimize query performance.|`druid-jupyter`|
 |[Stream Ingestion and Compaction for Performance](./02-ingestion/07-partitioning-while-streaming.ipynb)|Understand how ingestion optimizes streaming throughput, the fragmentation it causes, and the compaction that solves it.|`all-services`|
-|[Generating and working with NULL values](./02-ingestion/05-generating-and-working-with-nulls.ipynb)|Examples of how to treat incoming data to generate NULL values, and work with them using scalar functions, aggregations, and arrays.|
+|[Generating and working with NULL values](./02-ingestion/08-generating-and-working-with-nulls.ipynb)|Examples of how to treat incoming data to generate NULL values, and work with them using scalar functions, aggregations, and arrays.|
 
 ### Querying data
 
