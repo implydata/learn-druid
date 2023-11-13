@@ -20,6 +20,7 @@ from druidapi.error import DruidError, ClientError
 
 REQ_SQL = consts.ROUTER_BASE + '/sql'
 REQ_SQL_TASK = REQ_SQL + '/task'
+REQ_SQL_ASYNC = REQ_SQL + '/statements'
 
 class SqlRequest:
 
@@ -435,7 +436,6 @@ class QueryTaskResult:
         self._schema = None
         self._rows = None
         self._reports = None
-        self._schema = None
         self._results = None
         self._error = None
         self._id = None
@@ -569,7 +569,7 @@ class QueryTaskResult:
         once this method returns without raising an error.
         '''
         if not self.join():
-            raise DruidError('Query failed: ' + self.error_message())
+            raise DruidError('Query failed: ' + self.error_message)
 
     def wait(self):
         '''
@@ -634,6 +634,200 @@ class QueryTaskResult:
             return
         display.data_table(data, [c.name for c in self.schema])
 
+class AsynchQueryResult:
+    '''
+    Response from an asynchronous MSQ SELECT query from Deep Storage.
+    '''
+
+    def __init__(self, request, response):
+        self._request = request
+        self.http_response = response
+        self._state = None         # state :init and status
+        self._durationMs = None    # durationMs :init and status
+        self._status_detail = None # result structure :status
+        self._schema = None        # schema :init
+        self._pages = None         # pages :status
+        self._rows = None          # response is json array of objects : statemets/<id>/results
+        self._error = None         # status ?? property unknown
+        self._id = None            # queryId
+        if not is_response_ok(response):
+            self._state = consts.FAILED_STATE
+            try:
+                self._error = response.json()
+            except Exception:
+                self._error = response.text
+                if not self._error:
+                    self._error = 'Failed with HTTP status {}'.format(response.status_code)
+            return
+
+        # Typical response:
+        # {'taskId': '6f7b514a446d4edc9d26a24d4bd03ade_fd8e242b-7d93-431d-b65b-2a512116924c_bjdlojgj',
+        # 'state': 'RUNNING'}
+        self.response_obj = response.json()
+        self._id = self.response_obj['queryId']
+        self._state = self.response_obj['state']
+
+    @property
+    def ok(self):
+        '''
+        Reports if the query completed successfully or is still running.
+        Use succeeded() to check if the task is done and successful.
+        '''
+        return not self._error
+
+    @property
+    def id(self):
+        return self._id
+
+    def _druid(self):
+        return self._request.query_client.druid_client
+
+    def _query_client(self):
+        return self._request.query_client
+    # def _tasks(self):
+    #     return self._druid().tasks
+
+    @property
+    def status(self):
+        '''
+        Polls Druid for an update on the query run status.
+        '''
+        self.check_valid()
+        status = self._query_client().statement_status(self._id)
+        self._state = dict_get( status, 'state')
+        self._schema = dict_get( status, 'schema')
+        self._durationMs = dict_get( status, 'durationMs', 0)
+        if 'result' in status.keys():
+            self._pages = dict_get( status['result'], 'pages')
+            self._results = status['result']
+        if self._state == consts.FAILED_STATE:
+            self._error = dict_get( dict_get(status,'errorDetails'), 'errorMessage')
+        return self._state
+
+
+    @property
+    def done(self):
+        '''
+        Reports whether the query is done. The query is done when the Overlord task
+        that runs the query completes. A completed task is one with a status of either
+        SUCCESS or FAILED.
+        '''
+        return self._state == consts.FAILED_STATE or self._state == consts.SUCCESS_STATE
+
+    @property
+    def succeeded(self):
+        '''
+        Reports if the query succeeded.
+        '''
+        return self._state == consts.SUCCESS_STATE
+
+    @property
+    def state(self):
+        '''
+        Reports the task state from the Overlord task.
+
+        Updated after each call to status().
+        '''
+        return self._state
+
+    @property
+    def error(self):
+        return self._error
+
+    @property
+    def error_message(self):
+        err = self.error
+        if not err:
+            return 'unknown'
+        if type(err) is str:
+            return err
+        msg = dict_get(err, 'error')
+        text = dict_get(err, 'errorMessage')
+        if not msg and not text:
+            return 'unknown'
+        if text:
+            text = text.replace('\\n', '\n')
+        if not msg:
+            return text
+        if not text:
+            return msg
+        return msg + ': ' + text
+
+    def join(self):
+        '''
+        Wait for the task to complete, if still running. Returns at task
+        completion: success or failure.
+
+        Returns True for success, False for failure.
+        '''
+        if not self.done:
+            self.status
+            while not self.done:
+                time.sleep(0.5)
+                self.status
+        return self.succeeded
+
+    def check_valid(self):
+        if not self._id:
+            raise ClientError('Operation is invalid on a failed query')
+
+    def wait_until_done(self):
+        '''
+        Wait for the task to complete. Raises an error if the task fails.
+        A caller can proceed to do something with the successful result
+        once this method returns without raising an error.
+        '''
+        if not self.join():
+            raise DruidError('Query failed: ' + self.error_message)
+
+    def wait(self):
+        '''
+        Wait for a SELECT query to finish running, then returns the rows from the query.
+        '''
+        self.wait_until_done()
+        return self.rows
+
+    @property
+    def schema(self):
+        return self._schema
+
+    @property
+    def rows(self):
+        import json
+        if not self._rows:
+            if self.succeeded:
+                page = 0
+                self._rows=[]
+                while page < len(self._pages):
+                    results = self._query_client().statement_results(self._id, page)
+                    for obj in results.text.splitlines():
+                        try:
+                            if len(obj) > 0 :
+                                self._rows.append( json.loads(obj))
+                        except Exception as ex:
+                            raise ClientError(f"Could not parse JSON from row [{obj}]")
+                    page+=1
+        return self._rows
+
+    def _display(self, display):
+        return self._druid().display if not display else display
+
+    def show(self, non_null=False, display=None):
+        display = self._display(display)
+        if not self.done:
+            display.alert('Task has not finished running')
+            return
+        if not self.succeeded:
+            display.error(self.error_message)
+            return
+        data = self.rows
+        if non_null:
+            data = filter_null_cols(data)
+        if not data:
+            display.alert('Query returned no {}rows'.format("visible " if non_null else ''))
+            return
+        display.data_table(data, [c.name for c in self.schema])
+
 class QueryClient:
 
     def __init__(self, druid, rest_client=None):
@@ -644,7 +838,7 @@ class QueryClient:
     def rest_client(self):
         return self._rest_client
 
-    def _prepare_query(self, request):
+    def _prepare_query(self, request, asynch=False):
         if not request:
             raise ClientError('No query provided.')
         # If the request is a dictionary, assume it is already in SqlQuery form.
@@ -658,6 +852,8 @@ class QueryClient:
             raise ClientError('No query provided.')
         if self.rest_client.trace:
             print(request.sql)
+        if asynch:
+            request.add_context( 'executionMode', 'ASYNC')
         if not query_obj:
             query_obj = request.to_request()
         return (request, query_obj)
@@ -750,6 +946,42 @@ class QueryClient:
         r = self.rest_client.post_only_json(REQ_SQL_TASK, query_obj, headers=request.headers)
         return QueryTaskResult(request, r)
 
+    def statement(self, query) -> AsynchQueryResult:
+        '''
+        Submits an MSQ asynch query. Returns a AsynchQueryResult to track the task.
+
+        Parameters
+        ----------
+        query
+            The query as either a string or a SqlRequest object.
+        '''
+        request, query_obj = self._prepare_query(query, asynch=True)
+        r = self.rest_client.post_only_json(REQ_SQL_ASYNC, query_obj, headers=request.headers)
+        return AsynchQueryResult(request, r)
+
+    def statement_status(self, id) :
+        '''
+
+        :param id:
+        :return:
+        '''
+        '''
+        Submits an MSQ asynch query status request. 
+        :param id: id of the query to retrieve status from 
+        :return: json response object.
+        '''
+        response = self.rest_client.get_json(REQ_SQL_ASYNC+f'/{id}', "")
+        return response
+
+    def statement_results(self, id, page=0 ):
+        '''
+        :param id: queryId to retrieve results from
+        :param page: the page of rows to retrieve
+        :return: json array with rows for the page of results
+        '''
+        response = self.rest_client.get(REQ_SQL_ASYNC+f'/{id}/results', f'{{"page"={page}}}' )
+        return response
+
     def run_task(self, query):
         '''
         Submits an MSQ query and wait for completion. Returns a QueryTaskResult to track the task.
@@ -763,6 +995,18 @@ class QueryClient:
         if not resp.ok:
             raise ClientError(resp.error_message)
         resp.wait_until_done()
+
+    def async_sql(self, query):
+        '''
+        Submits an MSQ asynchronous query request using the sql/statements API Returns a
+        :param query: The SQL query statement
+        :return: rows
+        '''
+        resp = self.statement(query)
+        if not resp.ok:
+            raise ClientError(resp.error_message)
+        resp.wait_until_done()
+        return resp
 
     def _tables_query(self, schema):
         return self.sql_query('''
