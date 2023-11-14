@@ -18,9 +18,13 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |Title|Description|Docker Profile|
 |---|---|---|
 |[Ingest and query data from Apache Kafka](./02-ingestion/01-streaming-from-kafka.ipynb)|An introduction to streaming ingestion using Apache Kafka.|`all-services`|
-|[Working with nested columns](./02-ingestion/02-working-with-nested-columns.ipynb)|Work through ingesting, querying, and transforming nested columns.|`druid-jupyter`|
-|[Generating Apache Datasketches at ingestion time](./02-ingestion/03-sketchIngestion.ipynb)|Generate sketch objects to support approximate distinct count operations as part of ingestion.|`druid-jupyter`|
+|[Batch data ingestion](./02-ingestion/02-batch-ingestion.ipynb)|Work through of SQL based batch ingestion.|`druid-jupyter`|
+|[Generating Apache Datasketches at ingestion time](./02-ingestion/03-generating-sketches.ipynb)|Generate sketch objects to support approximate distinct count operations as part of ingestion.|`druid-jupyter`|
 |[Druid data types](./02-ingestion/04-table-datatypes.ipynb)|Work through several examples of table schemas with different underlying data types, as well as methods for converting between them.|`druid-jupyter`|
+|[Working with nested columns](./02-ingestion/05-working-with-nested-columns.ipynb)|Work through ingesting, querying, and transforming nested columns.|`druid-jupyter`|
+|[Primary and secondary partitioning in batch ingestion](./02-ingestion/06-partitioning-data.ipynb)|Use PARTITIONED BY and CLUSTERED BY to optimize query performance.|`druid-jupyter`|
+|[Stream Ingestion and Compaction for Performance](./02-ingestion/07-partitioning-while-streaming.ipynb)|Understand how ingestion optimizes streaming throughput, the fragmentation it causes, and the compaction that solves it.|`all-services`|
+
 
 ### Querying data
 
@@ -29,14 +33,28 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |Title|Description|Docker Profile|
 |---|---|---|
 |[Learn the basics of Druid SQL](./03-query/00-using-sql-with-druidapi.ipynb)|An introduction to the unique aspects of Druid SQL.|`druid-jupyter`|
-|[Learn the basics of the SQL API](./03-query/13-query-api.ipynb)|See examples of getting results from the Druid SQL API directly.|`druid-jupyter`|
+|[Learn the basics of the SQL API](./03-query/12-query-api.ipynb)|See examples of getting results from the Druid SQL API directly.|`druid-jupyter`|
 |[Aggregating results by using GROUP BY](./03-query/01-groupby.ipynb)|Use GROUP BY in various forms to aggregate your data.|`druid-jupyter`|
 |[Using TopN approximation in Druid queries](./03-query/02-approx-ranking.ipynb)|Understand Druid's default GROUP BY approximation, TopN.|`druid-jupyter`|
-|[Counting distinct values](./03-query/03-approxCountDistinct.ipynb)|Work through approximate and accurate ways of counting unique occurences of data.|`druid-jupyter`|
-|[Analyzing data distributions](./03-query/04-approxdataDistribution.ipynb)|Use approximation to estimate quantiles, ranks, and histograms.|`druid-jupyter`|
-|[Using UNION ALL to address multiple tables in the same query](./03-query/05-UnionOperations.ipynb)|Work through using the two types of UNION ALL operation available in Druid.|`druid-jupyter`|
-|[Enriching and updating data using lookup tables](./03-query/06-lookup-tables)|See how lookup tables can be used to enrich and update data in Druid tables|`druid-jupyter`|
+|[Counting distinct values](./03-query/03-approx-count-distinct.ipynb)|Work through approximate and accurate ways of counting unique occurences of data.|`druid-jupyter`|
+|[Analyzing data distributions](./03-query/04-approx-distribution.ipynb)|Use approximation to estimate quantiles, ranks, and histograms.|`druid-jupyter`|
+|[Using UNION ALL to address multiple tables in the same query](./03-query/05-union-operations.ipynb)|Work through using the two types of UNION ALL operation available in Druid.|`druid-jupyter`|
+|[Enriching and updating data using lookup tables](./03-query/06-lookup-tables.ipynb)|See how lookup tables can be used to enrich and update data in Druid tables|`druid-jupyter`|
 |[Applying time functions](./03-query/07-functions-datetime.ipynb)|Using scalar functions against time data to transform, filter, and aggregate at ingestion and query time.|`druid-jupyter`|
 |[Applying string functions](./03-query/08-functions-strings.ipynb)|See how different string functions can be used at ingestion and query time.|`druid-jupyter`|
 |[Using the CASE function](./03-query/09-functions-case.ipynb)|Examples of using the two forms of CASE function available in Druid SQL.|`druid-jupyter`|
 |[Using IPv4 functions](./03-query/10-functions-ip.ipynb)|A short notebook on IPv4 functions in Druid SQL.|`druid-jupyter`|
+|[Using joins effectively in Druid](./03-query/11-joins.ipynb)|A full review of all join strategies available in Druid with examples and performance comparisons.|`druid-jupyter`|
+
+
+### Druid 28.0.0 Release
+
+For tutorials focused on Druid 28.0.0 and its new features, see the notebooks in `00-release-28.0.0`.
+
+|Title|Description|Docker Profile|
+|---|---|---|
+|[Window functions! (Experimental)](./00-release-28.0.0/01-query-functions-window.ipynb)|An introduction to Window functions which are a new experimental feature in Druid SQL.|`druid-jupyter`|
+|[Streaming from multiple topics](./00-release-28.0.0/02-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
+|[Query from Deep Storage includes real-time data](./00-release-28.0.0/03-full-timeline-queries.ipynb)|Query from Deep Storage has been enhanced to also view real-time segments making it capable of spanning the whole timeline.|`all-services`|
+|[Better SQL Compatibility](./00-release-28.0.0/04-nulls.ipynb)|Apache Druid now implements standard SQL NULL handling. This notebook walks through the changes for working with NULLs during ingestion and query. |`all-services`|
+|[ARRAYs and UNNEST](./00-release-28.0.0/05-arrays-unnest.ipynb)|ARRAYs graduate with both ingestion and query features!.|`all-services`|
