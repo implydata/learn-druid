@@ -21,6 +21,7 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |[Batch data ingestion](./02-ingestion/02-batch-ingestion.ipynb)|Work through of SQL based batch ingestion.|`druid-jupyter`|
 |[Generating Apache Datasketches at ingestion time](./02-ingestion/03-generating-sketches.ipynb)|Generate sketch objects to support approximate distinct count operations as part of ingestion.|`druid-jupyter`|
 |[Druid data types](./02-ingestion/04-table-datatypes.ipynb)|Work through several examples of table schemas with different underlying data types, as well as methods for converting between them.|`druid-jupyter`|
+|[Druid data types - arrays](./02-ingestion/08-table-datatypes-arrays)|Ingesting, manipulating, and generating arrays.|`druid-jupyter`|
 |[Working with nested columns](./02-ingestion/05-working-with-nested-columns.ipynb)|Work through ingesting, querying, and transforming nested columns.|`druid-jupyter`|
 |[Primary and secondary partitioning in batch ingestion](./02-ingestion/06-partitioning-data.ipynb)|Use PARTITIONED BY and CLUSTERED BY to optimize query performance.|`druid-jupyter`|
 |[Stream Ingestion and Compaction for Performance](./02-ingestion/07-partitioning-while-streaming.ipynb)|Understand how ingestion optimizes streaming throughput, the fragmentation it causes, and the compaction that solves it.|`all-services`|
