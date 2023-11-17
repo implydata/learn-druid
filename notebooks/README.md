@@ -58,4 +58,4 @@ For tutorials focused on Druid 28.0.0 and its new features, see the notebooks in
 |[Multi-topic Kafka ingestion](./00-release-28.0.0/02-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
 |[SQL-compatible NULL](./02-ingestion/08-generating-and-working-with-nulls.ipynb)|Apache Druid now implements standard SQL NULL handling. This notebook walks through working with NULLs during ingestion and query.|`druid-jupyter`|
 |[ARRAYS and UNNEST](./02-ingestion/08-table-datatypes-arrays)|ARRAYs graduate with both ingestion and query features and the UNNEST operator.|`druid-jupyter`|
-<!-- |[Query from Deep Storage includes real-time data](./00-release-28.0.0/03-full-timeline-queries.ipynb)|Query from Deep Storage has been enhanced to also view real-time segments making it capable of spanning the whole timeline.|`all-services`| -->
+|[Query from Deep Storage includes real-time data](./00-release-28.0.0/03-full-timeline-queries.ipynb)|Query from Deep Storage has been enhanced to also view real-time segments making it capable of spanning the whole timeline.|`all-services`| 
