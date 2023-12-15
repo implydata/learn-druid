@@ -6,7 +6,7 @@ Check out these notebooks, which were introduced or improved following the Druid
 
 * [SQL-compatible NULL](../02-ingestion/09-generating-and-working-with-nulls.ipynb)
 * [Multi-topic Kafka ingestion](../02-ingestion/11-stream-from-multiple-topics.ipynb)
-* [ARRAYS and UNNEST](../02-ingestion/08-table-datatypes-arrays)
+* [ARRAYS and UNNEST](../02-ingestion/08-table-datatypes-arrays.ipynb)
 * [Query from Deep Storage](../03-query/14-full-timeline-queries.ipynb)
 
 These notebooks were added in support of features that are experimental. Remember to drop [into the community](https://druid.apache.org/community) to give your thoughts, findings, and feedback.
