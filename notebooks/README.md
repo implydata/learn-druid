@@ -2,6 +2,14 @@
 
 > When viewing this file inside JupyterLab, right-click anywhere on the page and select "Show Markdown Preview".
 
+Welcome to the notebooks! The index below provides a list of functionality and topics you can find here.
+
+### Releases
+
+You can get quick access to new and updated notebooks following different releases of Apache Druid in the `00-releases` folder.
+
+* [Releases index](00-releases)
+
 ### Introduction
 
 The `01-introduction` folder contains notebooks that explain a little more about the learning environment and its components.
