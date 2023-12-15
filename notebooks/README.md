@@ -28,8 +28,8 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |[Generating and working with NULL values](./02-ingestion/09-generating-and-working-with-nulls.ipynb)|Examples of how to treat incoming data to generate NULL values, and work with them using scalar functions, aggregations, and arrays.|`druid-jupyter`|
 |[Updates, Deletes and Upserts in Druid](./02-ingestion/10-updating-data.ipynb)|Examples of how to apply changes to data in Druid, including updates, deletes and upsert logic.|`druid-jupyter`|
 |[Multi-topic Kafka ingestion](./02-ingestion/11-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
-|[SQL-compatible NULL](./02-ingestion/08-generating-and-working-with-nulls.ipynb)|Apache Druid now implements standard SQL NULL handling. This notebook walks through working with NULLs during ingestion and query.|`druid-jupyter`|
-|[ARRAYS and UNNEST](./02-ingestion/08-table-datatypes-arrays)|Ingesting, creating, and manipulating ARRAYs and the UNNEST operator.|`druid-jupyter`|
+|[SQL-compatible NULL](./02-ingestion/09-generating-and-working-with-nulls.ipynb)|Apache Druid now implements standard SQL NULL handling. This notebook walks through working with NULLs during ingestion and query.|`druid-jupyter`|
+|[ARRAYS and UNNEST](./02-ingestion/08-table-datatypes-arrays.ipynb)|Ingesting, creating, and manipulating ARRAYs and the UNNEST operator.|`druid-jupyter`|
 
 
 ### Querying data
