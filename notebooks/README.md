@@ -1,8 +1,10 @@
 # Notebook index
 
+Welcome to the notebooks! The index below provides a list of functionality and topics you can find here.
+
 > When viewing this file inside JupyterLab, right-click anywhere on the page and select "Show Markdown Preview".
 
-Welcome to the notebooks! The index below provides a list of functionality and topics you can find here.
+If you have suggestions or comments on any notebooks, remember to call into the [discussions](https://github.com/implydata/learn-druid/discussions) board here on Github. Should you want to ask more about the features and how they're used, drop into the [community](https://druid.apache.org/community].
 
 ### Releases
 
