@@ -4,7 +4,7 @@ Released in November 2023, Druid 28 includes a number standards compatibiility i
 
 Check out these notebooks, which were introduced or improved following the Druid 28 release.
 
-* [SQL-compatible NULL](../02-ingestion/08-generating-and-working-with-nulls.ipynb)
+* [SQL-compatible NULL](../02-ingestion/09-generating-and-working-with-nulls.ipynb)
 * [Multi-topic Kafka ingestion](../02-ingestion/11-stream-from-multiple-topics.ipynb)
 * [ARRAYS and UNNEST](../02-ingestion/08-table-datatypes-arrays)
 * [Query from Deep Storage](../03-query/14-full-timeline-queries.ipynb)
