@@ -1,6 +1,16 @@
 # Notebook index
 
+Welcome to the notebooks! The index below provides a list of functionality and topics you can find here.
+
 > When viewing this file inside JupyterLab, right-click anywhere on the page and select "Show Markdown Preview".
+
+If you have suggestions or comments on any notebooks, remember to call into the [discussions](https://github.com/implydata/learn-druid/discussions) board here on Github. Should you want to ask more about the features and how they're used, drop into the [community](https://druid.apache.org/community).
+
+### Releases
+
+You can get quick access to new and updated notebooks following different releases of Apache Druid in the `00-releases` folder.
+
+* [Releases index](00-releases)
 
 ### Introduction
 
@@ -27,6 +37,9 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |[Stream Ingestion and Compaction for Performance](./02-ingestion/07-partitioning-while-streaming.ipynb)|Understand how ingestion optimizes streaming throughput, the fragmentation it causes, and the compaction that solves it.|`all-services`|
 |[Generating and working with NULL values](./02-ingestion/09-generating-and-working-with-nulls.ipynb)|Examples of how to treat incoming data to generate NULL values, and work with them using scalar functions, aggregations, and arrays.|`druid-jupyter`|
 |[Updates, Deletes and Upserts in Druid](./02-ingestion/10-updating-data.ipynb)|Examples of how to apply changes to data in Druid, including updates, deletes and upsert logic.|`druid-jupyter`|
+|[Multi-topic Kafka ingestion](./02-ingestion/11-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
+|[SQL-compatible NULL](./02-ingestion/09-generating-and-working-with-nulls.ipynb)|Apache Druid now implements standard SQL NULL handling. This notebook walks through working with NULLs during ingestion and query.|`druid-jupyter`|
+|[ARRAYS and UNNEST](./02-ingestion/08-table-datatypes-arrays.ipynb)|Ingesting, creating, and manipulating ARRAYs and the UNNEST operator.|`druid-jupyter`|
 
 
 ### Querying data
@@ -48,16 +61,5 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Using the CASE function](./03-query/09-functions-case.ipynb)|Examples of using the two forms of CASE function available in Druid SQL.|`druid-jupyter`|
 |[Using IPv4 functions](./03-query/10-functions-ip.ipynb)|A short notebook on IPv4 functions in Druid SQL.|`druid-jupyter`|
 |[Using joins effectively in Druid](./03-query/11-joins.ipynb)|A full review of all join strategies available in Druid with examples and performance comparisons.|`druid-jupyter`|
-
-
-### Druid 28.0.0 Release
-
-For tutorials focused on Druid 28.0.0 and its new features, see the notebooks in `00-release-28.0.0`.
-
-|Title|Description|Docker Profile|
-|---|---|---|
-|[Window functions (Experimental)](./00-release-28.0.0/01-query-functions-window.ipynb)|An introduction to Window functions which are a new experimental feature in Druid SQL.|`druid-jupyter`|
-|[Multi-topic Kafka ingestion](./00-release-28.0.0/02-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
-|[SQL-compatible NULL](./02-ingestion/08-generating-and-working-with-nulls.ipynb)|Apache Druid now implements standard SQL NULL handling. This notebook walks through working with NULLs during ingestion and query.|`druid-jupyter`|
-|[ARRAYS and UNNEST](./02-ingestion/08-table-datatypes-arrays)|ARRAYs graduate with both ingestion and query features and the UNNEST operator.|`druid-jupyter`|
-|[Query from Deep Storage includes real-time data](./00-release-28.0.0/03-full-timeline-queries.ipynb)|Query from Deep Storage has been enhanced to also view real-time segments making it capable of spanning the whole timeline.|`all-services`| 
+|[Window functions (Experimental)](./03-query/13-query-functions-window.ipynb)|An introduction to Window functions which are a new experimental feature in Druid SQL.|`druid-jupyter`|
+|[Query from Deep Storage](./03-query/14-full-timeline-queries.ipynb)|Query from Deep Storage has been enhanced to also view real-time segments making it capable of spanning the whole timeline.|`all-services`| 
