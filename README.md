@@ -19,7 +19,7 @@
 
 # Learn Druid
 
-The "Learn Druid" repository contains all manner of resources to help you learn and apply Apache Druid.
+The "Learn Druid" repository contains many resources to help you learn and apply Apache Druid.
 
 It contains:
 
