@@ -39,7 +39,7 @@ retry() {
 
 
 
-docker compose --profile all-services up -d
+docker compose -f ../docker-compose-local.yaml --profile all-services up -d --build
 docker exec -it jupyter pip install nbmake
 
 if [ $# -ge 1 ];
@@ -61,4 +61,4 @@ retry 'curl http://localhost:9999/jobs' 50 2
 docker exec -it jupyter pytest --nbmake $TEST_PATH
 # run it a second time to test re-runnability of the notebooks
 docker exec -it jupyter pytest --nbmake $TEST_PATH
-docker compose --profile all-services down -v
+docker compose -f ../docker-compose-local.yaml --profile all-services down -v
