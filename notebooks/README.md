@@ -8,9 +8,7 @@ If you have suggestions or comments on any notebooks, remember to call into the 
 
 ### Releases
 
-You can get quick access to new and updated notebooks following different releases of Apache Druid in the `00-releases` folder.
-
-* [Releases index](00-releases)
+You can get quick access to new and updated notebooks following different releases of Apache Druid in the [New Features by Release](#features_by_release) index below.
 
 ### Introduction
 
@@ -63,3 +61,11 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Using joins effectively in Druid](./03-query/11-joins.ipynb)|A full review of all join strategies available in Druid with examples and performance comparisons.|`druid-jupyter`|
 |[Window functions (Experimental)](./03-query/13-query-functions-window.ipynb)|An introduction to Window functions which are a new experimental feature in Druid SQL.|`druid-jupyter`|
 |[Query from Deep Storage](./03-query/14-full-timeline-queries.ipynb)|Query from Deep Storage has been enhanced to also view real-time segments making it capable of spanning the whole timeline.|`all-services`| 
+
+
+### New Features by Release
+<a id='features_by_release'></a>
+#### Druid 29.0.0 
+* [Ingestion using System Fields](./02-ingestion/02-batch-ingestion.ipynb#system_fields)
+
+
