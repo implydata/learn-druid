@@ -68,5 +68,4 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 #### Druid 29.0.0 
 * [Ingestion using System Fields](./02-ingestion/02-batch-ingestion.ipynb#system_fields)
 * [IPV6 Support for filtering subnects](./03-query/10-functions-ip.ipynb#ipv6_match)
-
-
+* [INNER JOIN with inequalities](./03-query/11-joins.ipynb#join_with_inequality)
