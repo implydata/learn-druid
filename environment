@@ -55,5 +55,19 @@ druid_indexer_logs_directory=/opt/shared/indexing-logs
 druid_processing_numThreads=2
 druid_processing_numMergeBuffers=2
 
+
+# setup up durable Storage for asynchronous query processing
+druid_msq_intermediate_storage_enable=true
+druid_msq_intermediate_storage_type=local
+druid_msq_intermediate_storage_tempDir=/opt/shared/tmp
+druid_msq_intermediate_storage_basePath=/opt/shared/intermediate
+druid_msq_intermediate_storage_cleaner_enabled=true
+
+
+
+
+
+
+
 DRUID_LOG4J=<?xml version="1.0" encoding="UTF-8" ?><Configuration status="WARN"><Appenders><Console name="Console" target="SYSTEM_OUT"><PatternLayout pattern="%d{ISO8601} %p [%t] %c - %m%n"/></Console></Appenders><Loggers><Root level="info"><AppenderRef ref="Console"/></Root><Logger name="org.apache.druid.jetty.RequestLog" additivity="false" level="DEBUG"><AppenderRef ref="Console"/></Logger></Loggers></Configuration>
 
