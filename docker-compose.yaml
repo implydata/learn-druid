@@ -94,6 +94,7 @@ services:
     profiles: ["druid-jupyter", "all-services"]
     volumes:
       - broker_var:/opt/druid/var
+      - druid_shared:/opt/shared
     depends_on: 
       - zookeeper
       - postgres
