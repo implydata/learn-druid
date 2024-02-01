@@ -38,7 +38,7 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |[Multi-topic Kafka ingestion](./02-ingestion/11-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
 |[SQL-compatible NULL](./02-ingestion/09-generating-and-working-with-nulls.ipynb)|Apache Druid now implements standard SQL NULL handling. This notebook walks through working with NULLs during ingestion and query.|`druid-jupyter`|
 |[ARRAYS and UNNEST](./02-ingestion/08-table-datatypes-arrays.ipynb)|Ingesting, creating, and manipulating ARRAYs and the UNNEST operator.|`druid-jupyter`|
-
+|[Ingest and query spatial dimensions](./02-ingestion/12-spatial-dimensions.ipynb)|Ingest spatial dimensions and use rectagular, circular and polygon filters to query.|`druid-jupyter`|
 
 ### Querying data
 
