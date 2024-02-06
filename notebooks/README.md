@@ -74,3 +74,4 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 * [INNER JOIN with inequalities](./03-query/11-joins.ipynb#join_with_inequality)
 * [Expressions for path parameter in JSON functions](./02-ingestion/05-working-with-nested-columns.ipynb#expression_for_path)
 * [PIVOT and UNPIVOT functions](./03-query/15-pivot-unpivot.ipynb)
+* [LATEST/EARLIEST rollup in MSQ](./03-query/01-groupby.ipynb#groupby)
