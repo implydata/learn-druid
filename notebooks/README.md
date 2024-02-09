@@ -61,6 +61,8 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Using joins effectively in Druid](./03-query/11-joins.ipynb)|A full review of all join strategies available in Druid with examples and performance comparisons.|`druid-jupyter`|
 |[Window functions (Experimental)](./03-query/13-query-functions-window.ipynb)|An introduction to Window functions which are a new experimental feature in Druid SQL.|`druid-jupyter`|
 |[Query from Deep Storage](./03-query/14-full-timeline-queries.ipynb)|Query from Deep Storage has been enhanced to also view real-time segments making it capable of spanning the whole timeline.|`all-services`| 
+|[PIVOT and UNPIVOT functions](./03-query/15-pivot-unpivot.ipynb)|Use PIVOT to convert row values into columns. Use UNPIVOT to convert column values into rows.|`druid-jupyter`| 
+
 
 
 ### New Features by Release
@@ -71,6 +73,7 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 * [Control rows per page when retrieving async results](./03-query/14-sync-async-queries.ipynb#async_rows_per_page)
 * [INNER JOIN with inequalities](./03-query/11-joins.ipynb#join_with_inequality)
 * [Expressions for path parameter in JSON functions](./02-ingestion/05-working-with-nested-columns.ipynb#expression_for_path)
+* [PIVOT and UNPIVOT functions](./03-query/15-pivot-unpivot.ipynb)
 * [UNNESTing arrays of objects](./02-ingestion/08-table-datatypes-arrays.ipynb#json_array_of_objects)
 * [Ingest primitive arrays from input source](./02-ingestion/08-table-datatypes-arrays.ipynb#ingest_array)
 * [LATEST/EARLIEST rollup in MSQ](./03-query/01-groupby.ipynb#groupby)
