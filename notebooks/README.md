@@ -71,4 +71,6 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 * [Control rows per page when retrieving async results](./03-query/14-sync-async-queries.ipynb#async_rows_per_page)
 * [INNER JOIN with inequalities](./03-query/11-joins.ipynb#join_with_inequality)
 * [Expressions for path parameter in JSON functions](./02-ingestion/05-working-with-nested-columns.ipynb#expression_for_path)
+* [UNNESTing arrays of objects](./02-ingestion/08-table-datatypes-arrays.ipynb#json_array_of_objects)
+* [Ingest primitive arrays from input source](./02-ingestion/08-table-datatypes-arrays.ipynb#ingest_array)
 * [LATEST/EARLIEST rollup in MSQ](./03-query/01-groupby.ipynb#groupby)
