@@ -38,7 +38,7 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |[Multi-topic Kafka ingestion](./02-ingestion/11-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
 |[SQL-compatible NULL](./02-ingestion/09-generating-and-working-with-nulls.ipynb)|Apache Druid now implements standard SQL NULL handling. This notebook walks through working with NULLs during ingestion and query.|`druid-jupyter`|
 |[ARRAYS and UNNEST](./02-ingestion/08-table-datatypes-arrays.ipynb)|Ingesting, creating, and manipulating ARRAYs and the UNNEST operator.|`druid-jupyter`|
-
+|[Ingest and query spatial dimensions](./02-ingestion/12-spatial-dimensions.ipynb)|Ingest spatial dimensions and use rectangular, circular, and polygon filters to query.|`druid-jupyter`|
 
 ### Querying data
 
@@ -74,4 +74,6 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 * [INNER JOIN with inequalities](./03-query/11-joins.ipynb#join_with_inequality)
 * [Expressions for path parameter in JSON functions](./02-ingestion/05-working-with-nested-columns.ipynb#expression_for_path)
 * [PIVOT and UNPIVOT functions](./03-query/15-pivot-unpivot.ipynb)
+* [UNNESTing arrays of objects](./02-ingestion/08-table-datatypes-arrays.ipynb#json_array_of_objects)
+* [Ingest primitive arrays from input source](./02-ingestion/08-table-datatypes-arrays.ipynb#ingest_array)
 * [LATEST/EARLIEST rollup in MSQ](./03-query/01-groupby.ipynb#groupby)
