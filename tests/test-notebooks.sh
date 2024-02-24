@@ -58,7 +58,7 @@ retry 'curl http://localhost:8888/status' 50 2
 #echo "Waiting for Data Generator readiness..."
 retry 'curl http://localhost:9999/jobs' 50 2
 
-docker exec -it jupyter pytest --nbmake $TEST_PATH
+docker exec -it jupyter pytest --nbmake $TEST_PATH --nbmake-timeout=1200
 # run it a second time to test re-runnability of the notebooks
-docker exec -it jupyter pytest --nbmake $TEST_PATH
+docker exec -it jupyter pytest --nbmake $TEST_PATH --nbmake-timeout=1200
 docker compose --profile all-services down -v

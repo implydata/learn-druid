@@ -809,6 +809,19 @@ class AsynchQueryResult:
                     page+=1
         return self._rows
 
+    def paged_rows(self, pageNum):
+        import json
+        if self.succeeded:
+            self._rows=[]
+            if pageNum < len(self._pages):
+                results = self._query_client().statement_results(self._id, pageNum)
+                try:
+                  self._rows = json.loads(results.text)
+                except Exception as ex:
+                  raise ClientError(f"Could not parse JSON from result [{results}]")
+        return self._rows
+
+
     def _display(self, display):
         return self._druid().display if not display else display
 
@@ -838,7 +851,7 @@ class QueryClient:
     def rest_client(self):
         return self._rest_client
 
-    def _prepare_query(self, request, asynch=False):
+    def _prepare_query(self, request, asynch=False, rowsPerPage= None ):
         if not request:
             raise ClientError('No query provided.')
         # If the request is a dictionary, assume it is already in SqlQuery form.
@@ -854,6 +867,8 @@ class QueryClient:
             print(request.sql)
         if asynch:
             request.add_context( 'executionMode', 'ASYNC')
+        if rowsPerPage:
+            request.add_context( 'rowsPerPage', rowsPerPage)
         if not query_obj:
             query_obj = request.to_request()
         return (request, query_obj)
@@ -946,7 +961,7 @@ class QueryClient:
         r = self.rest_client.post_only_json(REQ_SQL_TASK, query_obj, headers=request.headers)
         return QueryTaskResult(request, r)
 
-    def statement(self, query) -> AsynchQueryResult:
+    def statement(self, query, rowsPerPage=None) -> AsynchQueryResult:
         '''
         Submits an MSQ asynch query. Returns a AsynchQueryResult to track the task.
 
@@ -955,7 +970,7 @@ class QueryClient:
         query
             The query as either a string or a SqlRequest object.
         '''
-        request, query_obj = self._prepare_query(query, asynch=True)
+        request, query_obj = self._prepare_query(query, asynch=True, rowsPerPage=rowsPerPage)
         r = self.rest_client.post_only_json(REQ_SQL_ASYNC, query_obj, headers=request.headers)
         return AsynchQueryResult(request, r)
 
@@ -979,7 +994,7 @@ class QueryClient:
         :param page: the page of rows to retrieve
         :return: json array with rows for the page of results
         '''
-        response = self.rest_client.get(REQ_SQL_ASYNC+f'/{id}/results', f'{{"page"={page}}}' )
+        response = self.rest_client.get(REQ_SQL_ASYNC+f'/{id}/results', params={"page":page} )
         return response
 
     def run_task(self, query):
@@ -996,16 +1011,15 @@ class QueryClient:
             raise ClientError(resp.error_message)
         resp.wait_until_done()
 
-    def async_sql(self, query):
+    def async_sql(self, query, rowsPerPage=None):
         '''
         Submits an MSQ asynchronous query request using the sql/statements API Returns a
         :param query: The SQL query statement
         :return: rows
         '''
-        resp = self.statement(query)
+        resp = self.statement(query, rowsPerPage=rowsPerPage)
         if not resp.ok:
             raise ClientError(resp.error_message)
-        resp.wait_until_done()
         return resp
 
     def _tables_query(self, schema):
