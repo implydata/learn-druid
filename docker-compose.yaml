@@ -72,7 +72,7 @@ services:
       - KAFKA_ENABLE_KRAFT=false
 
   coordinator:
-    image: imply/druid:${DRUID_VERSION:-28.0.1}
+    image: imply/druid:${DRUID_VERSION:-29.0.0}
     container_name: coordinator
     profiles: ["druid-jupyter", "all-services"]
     volumes:
@@ -89,11 +89,12 @@ services:
       - environment
 
   broker:
-    image: imply/druid:${DRUID_VERSION:-28.0.1}
+    image: imply/druid:${DRUID_VERSION:-29.0.0}
     container_name: broker
     profiles: ["druid-jupyter", "all-services"]
     volumes:
       - broker_var:/opt/druid/var
+      - druid_shared:/opt/shared
     depends_on: 
       - zookeeper
       - postgres
@@ -106,7 +107,7 @@ services:
       - environment
 
   historical:
-    image: imply/druid:${DRUID_VERSION:-28.0.1}
+    image: imply/druid:${DRUID_VERSION:-29.0.0}
     container_name: historical
     profiles: ["druid-jupyter", "all-services"]
     volumes:
@@ -124,7 +125,7 @@ services:
       - environment
 
   middlemanager:
-    image: imply/druid:${DRUID_VERSION:-28.0.1}
+    image: imply/druid:${DRUID_VERSION:-29.0.0}
     container_name: middlemanager
     profiles: ["druid-jupyter", "all-services"]
     volumes:
@@ -143,7 +144,7 @@ services:
       - environment
 
   router:
-    image: imply/druid:${DRUID_VERSION:-28.0.1}
+    image: imply/druid:${DRUID_VERSION:-29.0.0}
     container_name: router
     profiles: ["druid-jupyter", "all-services"]
     volumes:

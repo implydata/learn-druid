@@ -8,9 +8,7 @@ If you have suggestions or comments on any notebooks, remember to call into the 
 
 ### Releases
 
-You can get quick access to new and updated notebooks following different releases of Apache Druid in the `00-releases` folder.
-
-* [Releases index](00-releases)
+You can get quick access to new and updated notebooks following different releases of Apache Druid in the [New Features by Release](#features_by_release) index below.
 
 ### Introduction
 
@@ -40,7 +38,7 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |[Multi-topic Kafka ingestion](./02-ingestion/11-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
 |[SQL-compatible NULL](./02-ingestion/09-generating-and-working-with-nulls.ipynb)|Apache Druid now implements standard SQL NULL handling. This notebook walks through working with NULLs during ingestion and query.|`druid-jupyter`|
 |[ARRAYS and UNNEST](./02-ingestion/08-table-datatypes-arrays.ipynb)|Ingesting, creating, and manipulating ARRAYs and the UNNEST operator.|`druid-jupyter`|
-
+|[Ingest and query spatial dimensions](./02-ingestion/12-spatial-dimensions.ipynb)|Ingest spatial dimensions and use rectangular, circular, and polygon filters to query.|`druid-jupyter`|
 
 ### Querying data
 
@@ -63,3 +61,19 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Using joins effectively in Druid](./03-query/11-joins.ipynb)|A full review of all join strategies available in Druid with examples and performance comparisons.|`druid-jupyter`|
 |[Window functions (Experimental)](./03-query/13-query-functions-window.ipynb)|An introduction to Window functions which are a new experimental feature in Druid SQL.|`druid-jupyter`|
 |[Query from Deep Storage](./03-query/14-full-timeline-queries.ipynb)|Query from Deep Storage has been enhanced to also view real-time segments making it capable of spanning the whole timeline.|`all-services`| 
+|[PIVOT and UNPIVOT functions](./03-query/15-pivot-unpivot.ipynb)|Use PIVOT to convert row values into columns. Use UNPIVOT to convert column values into rows.|`druid-jupyter`| 
+
+
+
+### New Features by Release
+<a id='features_by_release'></a>
+#### Druid 29.0.0 
+* [Ingestion using System Fields](./02-ingestion/02-batch-ingestion.ipynb#system_fields)
+* [IPV6 Support for filtering subnects](./03-query/10-functions-ip.ipynb#ipv6_match)
+* [Control rows per page when retrieving async results](./03-query/14-sync-async-queries.ipynb#async_rows_per_page)
+* [INNER JOIN with inequalities](./03-query/11-joins.ipynb#join_with_inequality)
+* [Expressions for path parameter in JSON functions](./02-ingestion/05-working-with-nested-columns.ipynb#expression_for_path)
+* [PIVOT and UNPIVOT functions](./03-query/15-pivot-unpivot.ipynb)
+* [UNNESTing arrays of objects](./02-ingestion/08-table-datatypes-arrays.ipynb#json_array_of_objects)
+* [Ingest primitive arrays from input source](./02-ingestion/08-table-datatypes-arrays.ipynb#ingest_array)
+* [LATEST/EARLIEST rollup in MSQ](./03-query/01-groupby.ipynb#groupby)
