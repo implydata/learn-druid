@@ -63,8 +63,8 @@ druid_msq_intermediate_storage_tempDir=/opt/shared/tmp
 druid_msq_intermediate_storage_basePath=/opt/shared/intermediate
 druid_msq_intermediate_storage_cleaner_enabled=true
 
-
-
+# setup export location so that local exports can be used
+druid_export_storage_baseDir=/opt/shared/exports
 
 
 
