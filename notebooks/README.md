@@ -60,9 +60,9 @@ The `05-operations` folder contains notebooks related to on-going administration
 
 |Title|Description|Docker Profile|
 |---|---|---|
-|[Log configurations](./05-operations/01-logs-configuration.ipynb)|Walk through configuration options for log files.|`jupyter`|
-|[Task logs](./05-operations/02-logs-asynch.ipynb)|A notebook focused on task logs.|`jupyter`|
-|[Metrics configuration](./05-operations/03-metrics-configuration.ipynb)|An overview of metrics available from Apache Druid.|`jupyter`|
+|[Apache Druid logging](./05-operations/01-logs-configuration.ipynb)|Walk through configuration options for log files.|`jupyter`|
+|[Streaming and SQL-based ingestion logs](./05-operations/02-logs-asynch.ipynb)|A notebook focused on task logs.|`jupyter`|
+|[Apache Druid metrics](./05-operations/03-metrics-configuration.ipynb)|An overview of metrics available from Apache Druid.|`jupyter`|
 
 ## Components
 
