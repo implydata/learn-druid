@@ -6,20 +6,11 @@ Welcome to the notebooks! The index below provides a list of functionality and t
 
 If you have suggestions or comments on any notebooks, remember to call into the [discussions](https://github.com/implydata/learn-druid/discussions) board here on Github. Should you want to ask more about the features and how they're used, drop into the [community](https://druid.apache.org/community).
 
-### Releases
+## Releases
 
 You can get quick access to new and updated notebooks following different releases of Apache Druid in the [New Features by Release](#features_by_release) index below.
 
-### Introduction
-
-The `01-introduction` folder contains notebooks that explain a little more about the learning environment and its components.
-
-|Title|Description|Docker Profile|
-|---|---|---|
-|[Druid Python API](./01-introduction/01-druidapi-package-intro.ipynb)|Learn more about the Python wrapper used by the notebooks.|None|
-|[Data Generator Server](./01-introduction/02-datagen-intro.ipynb)|Learn more about the included Data Generator.|`all-services`|
-
-### Ingesting data
+## Ingestion
 
 Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-based (`INSERT` / `REPLACE`) ingestion.
 
@@ -40,7 +31,7 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 |[ARRAYS and UNNEST](./02-ingestion/08-table-datatypes-arrays.ipynb)|Ingesting, creating, and manipulating ARRAYs and the UNNEST operator.|`druid-jupyter`|
 |[Ingest and query spatial dimensions](./02-ingestion/12-spatial-dimensions.ipynb)|Ingest spatial dimensions and use rectangular, circular, and polygon filters to query.|`druid-jupyter`|
 
-### Querying data
+### Query
 
 For tutorials focused on effective use of all manner of `SELECT` statements in Apache Druid, see the notebooks in `03-query`.
 
@@ -63,11 +54,29 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Query from Deep Storage](./03-query/14-full-timeline-queries.ipynb)|Query from Deep Storage has been enhanced to also view real-time segments making it capable of spanning the whole timeline.|`all-services`| 
 |[PIVOT and UNPIVOT functions](./03-query/15-pivot-unpivot.ipynb)|Use PIVOT to convert row values into columns. Use UNPIVOT to convert column values into rows.|`druid-jupyter`| 
 
+### Operations
 
+The `05-operations` folder contains notebooks related to on-going administration and operation of the Apache Druid database.
+
+|Title|Description|Docker Profile|
+|---|---|---|
+|[Log configurations](./05-operations/01-logs-configuration.ipynb)|Walk through configuration options for log files.|`jupyter`|
+|[Task logs](./05-operations/02-logs-asynch.ipynb)|A notebook focused on task logs.|`jupyter`|
+|[Metrics configuration](./05-operations/03-metrics-configuration.ipynb)|An overview of metrics available from Apache Druid.|`jupyter`|
+
+## Components
+
+The `01-introduction` folder contains notebooks that explain a little more about the learning environment and its components.
+
+|Title|Description|Docker Profile|
+|---|---|---|
+|[Druid Python API](./01-introduction/01-druidapi-package-intro.ipynb)|Learn more about the Python wrapper used by the notebooks.|None|
+|[Data Generator Server](./01-introduction/02-datagen-intro.ipynb)|Learn more about the included Data Generator.|`all-services`|
 
 ### New Features by Release
 <a id='features_by_release'></a>
-#### Druid 29.0.0 
+
+#### Druid 29 
 * [Ingestion using System Fields](./02-ingestion/02-batch-ingestion.ipynb#system_fields)
 * [IPV6 Support for filtering subnects](./03-query/10-functions-ip.ipynb#ipv6_match)
 * [Control rows per page when retrieving async results](./03-query/14-sync-async-queries.ipynb#async_rows_per_page)
