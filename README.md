@@ -66,7 +66,7 @@ To get started quickly:
    docker compose --profile druid-jupyter up -d
    ```
 
-   > The first time you lanch the environment, it can take a while to start all the services.
+   > The first time you launch the environment, it can take a while to start all the services.
 
 4. Navigate to Jupyter Lab in your browser:
 
@@ -74,7 +74,7 @@ To get started quickly:
 
 From there you can read the introduction or use Jupyter Lab to navigate the notebooks folder.
 
-<!-- ToDo: when notebook gets an update, add a screen shot -->
+<!-- TODO: when notebook gets an update, add a screen shot -->
 
 ## Components
 
@@ -98,7 +98,7 @@ You can use the web console to monitor ingestion tasks, compare query results, a
 
    http://localhost:8888
 
-## Profiles
+## Profiles 
 
 You can use the following Docker Compose profiles to start various combinations of the components based upon your specific needs.
 
