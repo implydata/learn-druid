@@ -64,14 +64,14 @@ The `05-operations` folder contains notebooks related to on-going administration
 |[Streaming and SQL-based ingestion logs](./05-operations/02-logs-asynch.ipynb)|A notebook focused on task logs.|`jupyter`|
 |[Apache Druid metrics](./05-operations/03-metrics-configuration.ipynb)|An overview of metrics available from Apache Druid.|`jupyter`|
 
-## Components
+## Contributing
 
-The `01-introduction` folder contains notebooks that explain a little more about the learning environment and its components.
+The `99-contributing` folder contains notebooks that explain a little more about the learning environment and its components.
 
 |Title|Description|Docker Profile|
 |---|---|---|
-|[Druid Python API](./01-introduction/01-druidapi-package-intro.ipynb)|Learn more about the Python wrapper used by the notebooks.|None|
-|[Data Generator Server](./01-introduction/02-datagen-intro.ipynb)|Learn more about the included Data Generator.|`all-services`|
+|[Druid Python API](./99-contributing/01-druidapi-package-intro.ipynb)|Learn more about the Python wrapper used by the notebooks.|None|
+|[Data Generator Server](./99-contributing/02-datagen-intro.ipynb)|Learn more about the included Data Generator.|`all-services`|
 
 ### New Features by Release
 <a id='features_by_release'></a>
