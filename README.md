@@ -122,6 +122,6 @@ The Learn Druid environment includes the following services:
 
 [**Apache Druid**](https://druid.apache.org/): The currently released version of Apache Druid by default.
 
--
+---
 
 **This repository is not affiliated with, endorsed by, or otherwise associated with the Apache Software Foundation (ASF) or any of its projects.  Apache, Apache Druid, Druid, and the Druid logo are either registered trademarks or trademarks of ASF in the USA and other countries.**
