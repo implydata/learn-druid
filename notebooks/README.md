@@ -67,4 +67,7 @@ The `99-contributing` folder contains notebooks that explain a little more about
 |Title|Description|Docker Profile|
 |---|---|---|
 |[Druid Python API](./99-contributing/01-druidapi-package-intro.ipynb)|Learn more about the Python wrapper used by the notebooks.|None|
-|[Data Generator Server](./99-contributing/02-datagen-intro.ipynb)|Learn more about the included Data Generator.|`all-services`|
+|[Data generator - files](./99-contributing/11-datagen-batch.ipynb)|Use the data generator to create batch-ingestable files.|`all-services`|
+|[Data generator - streams](./99-contributing/12-datagen-streaming.ipynb)|Send data to Kafka directly from the data generator.|`all-services`|
+|[Data generator profiles](./99-contributing/13-datagen-configurations.ipynb)|Learn how to use different data generator simulation profiles.|`all-services`|
+|[Boilerplate data generator ingestions](./99-contributing/14-datagen-boilerplate-ingest.ipynb)|Example SQL and native ingestion specifications for grabbing data generator sample data.|`all-services`|
