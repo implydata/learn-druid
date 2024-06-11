@@ -51,7 +51,7 @@ services:
       - ALLOW_ANONYMOUS_LOGIN=yes
   
   kafka:
-    image: bitnami/kafka:latest
+    image: bitnami/kafka:3.6.2
     container_name: kafka-broker
     profiles: ["kafka-jupyter", "all-services"]
     ports:
