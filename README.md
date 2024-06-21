@@ -19,12 +19,16 @@
 
 # Learn Druid
 
-The "Learn Druid" repository contains all manner of resources to help you learn and apply Apache Druid.
+The "Learn Druid" repository contains all manner of resources to help you learn and apply [Apache Druid](https://druid.apache.org/)®.
 
 It contains:
 
 * Jupyter Notebooks that guide you through query, ingestion, and data management with Apache Druid.
 * A Docker Compose file to get you up and running with a learning lab.
+
+Suggestions or comments? Call into the [discussions](https://github.com/implydata/learn-druid/discussions). Found a problem or want to request a notebook? Raise an [issue](https://github.com/implydata/learn-druid/issues). Want to contribute? Raise a [PR](https://github.com/implydata/learn-druid/pulls).
+ 
+Come meet your friendly Apache Druid [community](https://druid.apache.org/community) if you have any questions about the functionality you see here.
 
 ## Pre-requisites
 
@@ -41,7 +45,7 @@ To use the "Learn Druid" Docker Compose, you need:
 
 To get started quickly:
 
-1. Clone this repository locally, if you have not already done so:
+1. Clone the repository:
     
    ```bash
    git clone https://github.com/implydata/learn-druid
@@ -53,38 +57,64 @@ To get started quickly:
     cd learn-druid
    ```
 
-> To refresh your local copy with the latest notebooks:
->
->   ```bash
->   git restore .
->   git pull
->   ```
-
-3. Launch the "Learn Druid" Docker environment:
+3. Launch the environment:
 
    ```bash
    docker compose --profile druid-jupyter up -d
    ```
 
-   > The first time you lanch the environment, it can take a while to start all the services.
+   > The first time you launch the environment, it can take a while to start all the services.
 
-4. Navigate to Jupyter Lab in your browser:
+4. Navigate to Jupyter Lab in your browser at `http://localhost:8889/lab`. <br/> From there you can read the introduction or use Jupyter Lab to navigate the notebooks folder.
 
-     http://localhost:8889/lab
+5. When you're finished, stop all services:
 
-From there you can read the introduction or use Jupyter Lab to navigate the notebooks folder.
+```bash
+docker compose --profile druid-jupyter down
+```
 
-<!-- ToDo: when notebook gets an update, add a screen shot -->
+Once you have cloned the repository, get the latest version as follows:
+
+```bash
+git restore .
+git pull
+```
+
+While using the notebooks, monitor ingestion tasks, compare query results, and more in the [web console](https://druid.apache.org/docs/latest/operations/web-console) directly at `http://localhost:8888`.
+
+## Profiles
+
+Individual notebooks may state a specific compose profile that you need to use.
+
+Specify the profile after the `--profile` parameter to the `docker compose` command. For example, to start with the `all-services` profile, use this command:
+
+```bash
+docker compose --profile all-services up -d
+```
+
+To stop all services:
+
+```bash
+docker compose --profile all-services down
+```
+
+Run the notebooks against an existing Apache Druid database using the `DRUID_HOST` parameter and the `jupyter` profile.
+
+```bash
+DRUID_HOST=[host address] docker compose --profile jupyter up -d
+```
+
+When you have Druid running on the local machine, use `host.docker.internal` as the _host address_.
+
+```bash
+DRUID_HOST=host.docker.internal docker compose --profile jupyter up -d
+```
 
 ## Components
 
-The Learn Druid environment Docker Compose file includes the following services:
+The Learn Druid environment includes the following services:
 
 [**Jupyter Lab**](https://jupyter.org/): An interactive environment to run Jupyter Notebooks. The image for Jupyter used in the environment contains Python along with all the supporting libraries you need to run the notebooks.
-
-* Jupyter Labs is exposed at:
-
-  http://localhost:8889/
 
 [**Apache Kafka**](https://kafka.apache.org/): Streaming service as a data source for Druid.
 
@@ -92,70 +122,6 @@ The Learn Druid environment Docker Compose file includes the following services:
 
 [**Apache Druid**](https://druid.apache.org/): The currently released version of Apache Druid by default.
 
-You can use the web console to monitor ingestion tasks, compare query results, and more. To learn about the Druid web console, see [Web console](https://druid.apache.org/docs/latest/operations/web-console).
+---
 
-*  The Druid web console is exposed at:
-
-   http://localhost:8888
-
-## Profiles
-
-You can use the following Docker Compose profiles to start various combinations of the components based upon your specific needs.
-
-Individual notebooks may prescribe a specific profile that you need to use.
-
-### Jupyter only
-
-Use this profile when you want to run the notebooks against an existing Apache Druid database. Use the `DRUID_HOST` parameter to set the Apache Druid host address.
-
-To start Jupyter only:
-
-   ```bash
-  DRUID_HOST=[host address] docker compose --profile jupyter up -d
-   ```
-
-For example, if Druid is running on the local machine:
-
-   ```bash
-  DRUID_HOST=host.docker.internal docker compose --profile jupyter up -d
-   ```
-
-To stop Jupyter:
-
-   ```bash
-  docker compose --profile jupyter down
-   ```
-
-### Jupyter and Druid
-
-Use this profile when you need to query data and do batch ingestion only.
-
-To start Jupyter and Druid:
-
-   ```bash
-   docker compose --profile druid-jupyter up -d
-   ```
-
-To stop Jupyter and Druid:
-
-   ```bash
-   docker compose --profile druid-jupyter down
-   ```
-
-### All services
-
-To start all services:
-
-   ```bash
-   docker compose --profile all-services up -d
-   ```
-
-To stop all services:
-
-   ```bash
-   docker compose --profile all-services down
-   ```
-
-## Feedback and help
-
-For feedback and help, start a discussion in the [Discussions board](https://github.com/implydata/learn-druid/discussions) or make contact in the [docs and training channel](https://apachedruidworkspace.slack.com/archives/docs-and-training) in [Apache Druid Slack](https://druid.apache.org/community/).
+**This repository is not affiliated with, endorsed by, or otherwise associated with the Apache Software Foundation (ASF) or any of its projects.  Apache, Apache Druid, Druid, and the Druid logo are either registered trademarks or trademarks of ASF in the USA and other countries.**

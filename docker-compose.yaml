@@ -17,7 +17,6 @@
 # under the License.
 #
 ---
-version: "2.2"
 
 volumes:
   metadata_data: {}
@@ -32,7 +31,7 @@ volumes:
 
 services:
   postgres:
-    image: postgres:latest
+    image: postgres:alpine3.20
     container_name: postgres
     profiles: ["druid-jupyter", "all-services"]
     volumes:
@@ -44,7 +43,7 @@ services:
 
   # Need 3.5 or later for container nodes
   zookeeper:
-    image: zookeeper:latest
+    image: zookeeper:3.9.2
     container_name: zookeeper
     profiles: ["druid-jupyter", "kafka-jupyter", "all-services"]
     environment:
@@ -52,7 +51,7 @@ services:
       - ALLOW_ANONYMOUS_LOGIN=yes
   
   kafka:
-    image: bitnami/kafka:latest
+    image: bitnami/kafka:3.6.2
     container_name: kafka-broker
     profiles: ["kafka-jupyter", "all-services"]
     ports:
