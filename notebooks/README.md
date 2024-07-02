@@ -48,7 +48,8 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Using joins effectively in Druid](./03-query/11-joins.ipynb)|A full review of all join strategies available in Druid with examples and performance comparisons.|`druid-jupyter`|
 |[Window functions (Experimental)](./03-query/13-query-functions-window.ipynb)|An introduction to Window functions which are a new experimental feature in Druid SQL.|`druid-jupyter`|
 |[Query from Deep Storage](./03-query/14-full-timeline-queries.ipynb)|Query from Deep Storage has been enhanced to also view real-time segments making it capable of spanning the whole timeline.|`all-services`| 
-|[PIVOT and UNPIVOT functions](./03-query/15-pivot-unpivot.ipynb)|Use PIVOT to convert row values into columns. Use UNPIVOT to convert column values into rows.|`druid-jupyter`| 
+|[PIVOT and UNPIVOT functions](./03-query/15-pivot-unpivot.ipynb)|Use PIVOT to convert row values into columns. Use UNPIVOT to convert column values into rows.|`druid-jupyter`|
+|[Using TABLE(APPEND) to address multiple tables in the same query](./03-query/17-table-append-operations.ipynb)|Work through using the TABLE(APPEND) operation available in Druid to combine multiple tables for queries.|`druid-jupyter`|
 
 ## Operations
 
