@@ -8,4 +8,4 @@
 * [PIVOT and UNPIVOT functions](../03-query/15-pivot-unpivot.ipynb)
 * [UNNESTing arrays of objects](../02-ingestion/08-table-datatypes-arrays.ipynb#json_array_of_objects)
 * [Ingest primitive arrays from input source](../02-ingestion/08-table-datatypes-arrays.ipynb#ingest_array)
-* [LATEST/EARLIEST rollup in MSQ](../03-query/01-groupby.ipynb#groupby)
+* [LATEST/EARLIEST rollup in MSQ](../03-query/19-groupby-earliest.ipynb)
