@@ -27,6 +27,8 @@ It contains:
 * A Docker Compose file to get you up and running with a learning lab.
 
 Suggestions or comments? Call into the [discussions](https://github.com/implydata/learn-druid/discussions). Found a problem or want to request a notebook? Raise an [issue](https://github.com/implydata/learn-druid/issues). Want to contribute? Raise a [PR](https://github.com/implydata/learn-druid/pulls).
+
+[Contributions](contributing.md) to this community resource are welcome! Contribute your own notebook on a topic that's not listed here, and check out the [issue](https://github.com/implydata/learn-druid/issues) list, where you'll find bugs and enhancement requests.
  
 Come meet your friendly Apache Druid [community](https://druid.apache.org/community) if you have any questions about the functionality you see here.
 
