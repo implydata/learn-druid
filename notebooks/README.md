@@ -34,6 +34,7 @@ Visit the `02-ingestion` folder for notebooks focused on using streaming and bat
 |[Defining data schemas](./02-ingestion/15-native-dimensions.ipynb)|Manual and automatic schema detection for incoming data streams.|`all-services`|
 |[Transforming incoming rows](./02-ingestion/13-native-transforms.ipynb)|Examples of transforming data in real-time as it arrives.|`all-services`|
 |[Filtering incoming rows](./02-ingestion/14-native-filters.ipynb)|Work through examples of using filters on incoming data streams.|`all-services`|
+|[Rollup](./02-ingestion/16-native-groupby-rollup.ipynb)|Applying a GROUP BY at ingestion time and emit SUM, MAX, MIN, and other aggregates, including Apache Datasketches.|`all-services`|
 |[Streaming segment generation and care](./02-ingestion/07-partitioning-while-streaming.ipynb)|Scale up a streaming ingestion, see the impact on segments, and try out a compaction job.|`all-services`|
 |[Multi-topic Kafka ingestion](./02-ingestion/11-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
 
