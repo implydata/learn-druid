@@ -1,6 +1,6 @@
 # Apache Druid 28
 
-Released in November 2023, Druid 28 includes a number standards compatibiility improvements in the [SQL dialect](https://druid.apache.org/docs/latest/querying/sql), to [Apache Kafka ingestion](https://druid.apache.org/docs/latest/development/extensions-core/kafka-ingestion), and opens the door to using data direct from [Deep Storage](https://druid.apache.org/docs/latest/design/deep-storage) through the MSQ engine.
+Released in November 2023, Druid 28 includes a number standards compatibility improvements in the [SQL dialect](https://druid.apache.org/docs/latest/querying/sql), to [Apache Kafka ingestion](https://druid.apache.org/docs/latest/development/extensions-core/kafka-ingestion), and opens the door to using data direct from [Deep Storage](https://druid.apache.org/docs/latest/design/deep-storage) through the MSQ engine.
 
 Check out these notebooks, which were introduced or improved following the Druid 28 release.
 
