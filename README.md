@@ -100,6 +100,12 @@ To stop all services:
 docker compose --profile all-services down
 ```
 
+To stop all services without keeping any data:
+
+```bash
+docker compose --profile all-services down -v
+```
+
 Run the notebooks against an existing Apache Druid database using the `DRUID_HOST` parameter and the `jupyter` profile.
 
 ```bash
