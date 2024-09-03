@@ -130,6 +130,15 @@ The Learn Druid environment includes the following services:
 
 [**Apache Druid**](https://druid.apache.org/): The currently released version of Apache Druid by default.
 
+## Contributing
+
+Please install and run the [pre-commit](https://pre-commit.com/) before raising PRs.
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
 ---
 
 **This repository is not affiliated with, endorsed by, or otherwise associated with the Apache Software Foundation (ASF) or any of its projects.  Apache, Apache Druid, Druid, and the Druid logo are either registered trademarks or trademarks of ASF in the USA and other countries.**
