@@ -29,7 +29,7 @@ It contains:
 Suggestions or comments? Call into the [discussions](https://github.com/implydata/learn-druid/discussions). Found a problem or want to request a notebook? Raise an [issue](https://github.com/implydata/learn-druid/issues). Want to contribute? Raise a [PR](https://github.com/implydata/learn-druid/pulls).
 
 [Contributions](contributing.md) to this community resource are welcome! Contribute your own notebook on a topic that's not listed here, and check out the [issue](https://github.com/implydata/learn-druid/issues) list, where you'll find bugs and enhancement requests.
- 
+
 Come meet your friendly Apache Druid [community](https://druid.apache.org/community) if you have any questions about the functionality you see here.
 
 ## Pre-requisites
@@ -48,7 +48,7 @@ To use the "Learn Druid" Docker Compose, you need:
 To get started quickly:
 
 1. Clone the repository:
-    
+
    ```bash
    git clone https://github.com/implydata/learn-druid
    ```
@@ -129,6 +129,15 @@ The Learn Druid environment includes the following services:
 [**Imply Data Generator**](https://github.com/implydata/druid-datagenerator): A tool to generate sample data for Druid. It can produce either batch or streaming data.
 
 [**Apache Druid**](https://druid.apache.org/): The currently released version of Apache Druid by default.
+
+## Contributing
+
+Please install and run the [pre-commit](https://pre-commit.com/) before raising PRs.
+
+```bash
+pip install pre-commit
+pre-commit install
+```
 
 ---
 
