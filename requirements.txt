@@ -1,0 +1,4 @@
+pre-commit
+black
+flake
+codespell
