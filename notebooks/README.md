@@ -12,8 +12,42 @@ Visit the `02-ingestion` folder for notebooks focused on using JSON- and SQL-bas
 
 |Title|Description|Docker Profile|
 |---|---|---|
+<<<<<<< HEAD
 |[Ingest and query data from Apache Kafka](./02-ingestion/01-streaming-from-kafka.ipynb)|An introduction to streaming ingestion using Apache Kafka.|`all-services`|
 |[Batch data ingestion](./02-ingestion/02-batch-ingestion.ipynb)|Work through of SQL based batch ingestion.|`druid-jupyter`|
+=======
+|[Druid data types](./02-ingestion/04-table-datatypes.ipynb)|Work through several examples of table schemas with different underlying data types, as well as methods for converting between them.|`druid-jupyter`|
+|[Arrays](./02-ingestion/08-table-datatypes-arrays.ipynb)|Ingesting, creating, and manipulating ARRAYs and the UNNEST operator.|`druid-jupyter`|
+|[Spatial](./02-ingestion/12-spatial-dimensions.ipynb)|Ingest spatial dimensions and use rectangular, circular, and polygon filters to query.|`druid-jupyter`|
+|[Nested objects](./02-ingestion/05-working-with-nested-columns.ipynb)|Work through ingesting, querying, and transforming nested columns.|`druid-jupyter`|
+|[NULL](./02-ingestion/09-generating-and-working-with-nulls.ipynb)|Examples of how to treat incoming data to generate NULL values, and work with them using scalar functions, aggregations, and arrays.|`druid-jupyter`|
+|[UPDATE, DELETE and UPSERT](./02-ingestion/10-updating-data.ipynb)|Examples of how to apply changes to data in Druid, including updates, deletes and upsert logic.|`druid-jupyter`|
+
+
+### Streaming
+
+|Title|Description|Docker Profile|
+|---|---|---|
+|[Introduction to streaming ingestion](./02-ingestion/01-streaming-from-kafka.ipynb)|An introduction to streaming ingestion using Apache Kafka.|`all-services`|
+|[Defining data schemas](./02-ingestion/15-native-dimensions.ipynb)|Manual and automatic schema detection for incoming data streams.|`all-services`|
+|[Transforming incoming rows](./02-ingestion/13-native-transforms.ipynb)|Examples of transforming data in real-time as it arrives.|`all-services`|
+|[Filtering incoming rows](./02-ingestion/14-native-filters.ipynb)|Work through examples of using filters on incoming data streams.|`all-services`|
+<<<<<<< HEAD
+|[Rollup](./02-ingestion/16-native-groupby-rollup.ipynb)|Applying a GROUP BY at ingestion time and emit SUM, MAX, MIN, and other aggregates, including Apache Datasketches.|`all-services`|
+=======
+>>>>>>> 9743232 (Update README.md)
+|[Streaming segment generation and care](./02-ingestion/07-partitioning-while-streaming.ipynb)|Scale up a streaming ingestion, see the impact on segments, and try out a compaction job.|`all-services`|
+|[Multi-topic Kafka ingestion](./02-ingestion/11-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
+
+
+
+### Batch
+
+|Title|Description|Docker Profile|
+|---|---|---|
+|[Introduction to batch ingestion](./02-ingestion/02-batch-ingestion.ipynb)|Work through of SQL based batch ingestion.|`druid-jupyter`|
+|[Primary and secondary partitioning in batch ingestion](./02-ingestion/06-partitioning-data.ipynb)|Use PARTITIONED BY and CLUSTERED BY to optimize query performance.|`druid-jupyter`|
+>>>>>>> d1087cb (Add GHA for testing notebooks)
 |[Generating Apache Datasketches at ingestion time](./02-ingestion/03-generating-sketches.ipynb)|Generate sketch objects to support approximate distinct count operations as part of ingestion.|`druid-jupyter`|
 |[Druid data types](./02-ingestion/04-table-datatypes.ipynb)|Work through several examples of table schemas with different underlying data types, as well as methods for converting between them.|`druid-jupyter`|
 |[Druid data types - arrays](./02-ingestion/08-table-datatypes-arrays.ipynb)|Ingesting, manipulating, and generating arrays.|`druid-jupyter`|
@@ -60,6 +94,25 @@ The `05-operations` folder contains notebooks related to on-going administration
 |[Apache Druid logging](./05-operations/01-logs-configuration.ipynb)|Walk through configuration options for log files.|`jupyter`|
 |[Streaming and SQL-based ingestion logs](./05-operations/02-logs-asynch.ipynb)|A notebook focused on task logs.|`jupyter`|
 |[Apache Druid metrics](./05-operations/03-metrics-configuration.ipynb)|An overview of metrics available from Apache Druid.|`jupyter`|
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+|[Compaction - partitioning](./05-operations/04-compaction-partitioning.ipynb)|A walkthrough of compaction tasks being used to change the PARTITIONED BY and CLUSTERED BY of an existing table, especially important for streaming use cases.|`druid-jupyter`|
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+|[Compaction - data and schema](./05-operations/05-compaction-data.ipynb)|Examples of compaction jobs being used to remove dimensions, filter out data, and apply a new level of aggregation.|`druid-jupyter`|
+=======
+>>>>>>> 1ced601 (Update README.md)
+|[Compaction - data and schema](./05-operations/04-compaction-partitioning.ipynb)|Examples of compaction jobs being used to remove dimensions, filter out data, and apply a new level of aggregation.|`druid-jupyter`|
+=======
+|[Re-partitioning and re-clustering using compaction](./05-operations/04-compaction-partitioning.ipynb)|See how to apply a new layout to your table using compaction.|`druid-jupyter`|
+>>>>>>> 0806a26 (Update README.md)
+<<<<<<< HEAD
+=======
+>>>>>>> 9743232 (Update README.md)
+>>>>>>> 1ced601 (Update README.md)
+>>>>>>> d1087cb (Add GHA for testing notebooks)
 
 ## Contributing
 

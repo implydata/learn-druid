@@ -34,14 +34,14 @@ WORKDIR /home/jovyan
 ENV PYTEST_TIMEOUT=600
 
 # Install required Python packages
-RUN pip install requests \
-    pip install pandas \
-    pip install numpy \
-    pip install seaborn \
-    pip install bokeh \
-    pip install kafka-python \
-    pip install sortedcontainers \
-    pip install tqdm 
+RUN pip install requests
+RUN pip install pandas
+RUN pip install numpy
+RUN pip install seaborn
+RUN pip install bokeh
+RUN pip install kafka-python
+RUN pip install sortedcontainers
+RUN pip install tqdm 
 
 # Install druidapi client from apache/druid
 # Local install requires sudo privileges 
