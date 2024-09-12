@@ -11,13 +11,20 @@ Here are some general guidelines on making a notebook.
 The [contributing](https://github.com/implydata/learn-druid/tree/main/notebooks/99-contributing) folder contains a notebook template as a starting point. You'll find boilerplate elements including:
 
 * Setting the connection to Druid, Kafka, and the data generator.
-* Starter elements for ingesting from example datas sets or the data generator.
+* Starter elements for ingesting from example data sets or the data generator.
 * Clean-up elements, like dropping tables, stopping streaming ingestion, and halting data generator jobs.
-* Re-usable code elements that other contributors have found useful.
+* Reusable code elements that other contributors have found useful.
 
 And don't forget that the template itself is open to contribution!
 
 ### Raise a PR
+
+Please install and run the [pre-commit](https://pre-commit.com/) before raising PRs.
+
+```bash
+pip install pre-commit
+pre-commit install
+```
 
 When you have a notebook and you're ready for feedback, it's a good idea to raise a draft PR first. Feel free to use the comments section to ask for initial feedback, or drop into the docs channel in the official Apache Druid Slack channel.
 
@@ -39,12 +46,12 @@ Use the same route to run a locally-built Docker image by using the appropriate 
 
 ### Run automated tests on notebooks
 
-Make sure that docker compose is down and all volumes have been deleted, then start tests with: 
+Make sure that docker compose is down and all volumes have been deleted, then start tests with:
 
    ```shell
    cd tests
    ./test-notebooks.sh
-   ``` 
+   ```
 
 To test single notebook:
 
