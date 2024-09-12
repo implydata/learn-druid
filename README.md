@@ -23,7 +23,7 @@ The "Learn Druid" repository contains all manner of resources to help you learn 
 
 It contains:
 
-* Jupyter Notebooks that guide you through query, ingestion, and data management with Apache Druid.
+* [Jupyter Notebooks](notebooks) that guide you through query, ingestion, and data management with Apache Druid.
 * A Docker Compose file to get you up and running with a learning lab.
 
 Suggestions or comments? Call into the [discussions](https://github.com/implydata/learn-druid/discussions). Found a problem or want to request a notebook? Raise an [issue](https://github.com/implydata/learn-druid/issues). Want to contribute? Raise a [PR](https://github.com/implydata/learn-druid/pulls).
