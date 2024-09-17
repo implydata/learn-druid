@@ -647,7 +647,7 @@ class AsynchQueryResult:
         self._status_detail = None # result structure :status
         self._schema = None        # schema :init
         self._pages = None         # pages :status
-        self._rows = None          # response is json array of objects : statemets/<id>/results
+        self._rows = None          # response is json array of objects : statements/<id>/results
         self._error = None         # status ?? property unknown
         self._id = None            # queryId
         if not is_response_ok(response):
@@ -898,7 +898,7 @@ class QueryClient:
         Returns
         -------
         A SqlQueryResult object that provides either the error message for a failed query,
-        or the results of a successul query. The object provides access to the schema and
+        or the results of a successful query. The object provides access to the schema and
         rows if data is requested in a supported format. The default request object sets the
         options to return data in the required format.
         '''
@@ -981,8 +981,8 @@ class QueryClient:
         :return:
         '''
         '''
-        Submits an MSQ asynch query status request. 
-        :param id: id of the query to retrieve status from 
+        Submits an MSQ asynch query status request.
+        :param id: id of the query to retrieve status from
         :return: json response object.
         '''
         response = self.rest_client.get_json(REQ_SQL_ASYNC+f'/{id}', "")
@@ -1093,7 +1093,7 @@ class QueryClient:
 
     def function_parameters(self,  table_name):
         '''
-        Retruns the list of parameters for a partial external table defined in
+        Returns the list of parameters for a partial external table defined in
         the Druid catalog. Returns the parameters as an array of objects in the
         form {"Position": <n>, "Parameter": "<name>", "Type": "<type>",
               "Optional": True|False}

@@ -30,7 +30,7 @@ def check_error(response):
 
     This method attempts to parse these variations. If the error response JSON
     matches one of the known error formats, then raises a `ClientError` with the error
-    message. Otherise, raises a Requests library `HTTPError` for a generic error.
+    message. Otherwise, raises a Requests library `HTTPError` for a generic error.
     If the response includes a JSON payload, then the it is returned in the json field
     of the `HTTPError` object so that the client can perhaps decode it.
     '''
@@ -217,7 +217,7 @@ class DruidRestClient:
             Additional HTTP header fields to send in the request.
 
         params: dict, default = None
-            Parameters to inlude in the URL as the `?name=value` query string.
+            Parameters to include in the URL as the `?name=value` query string.
 
         Returns
         -------
@@ -251,7 +251,7 @@ class DruidRestClient:
             Additional HTTP header fields to send in the request.
 
         params: dict, default = None
-            Parameters to inlude in the URL as the `?name=value` query string.
+            Parameters to include in the URL as the `?name=value` query string.
 
         Returns
         -------
