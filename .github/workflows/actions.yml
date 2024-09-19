@@ -24,8 +24,8 @@ jobs:
       env:
         ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
       run: |
-        chmod +x ./tests/test-changed-notebooks.sh
-        ./tests/test-changed-notebooks.sh
+        chmod +x ./tests/launch-test-environment.sh
+        ./tests/launch-test-environment.sh
       shell: bash
 
     - name: Test all changed files
