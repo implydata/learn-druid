@@ -53,7 +53,7 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |---|---|---|
 |[Learn the basics of Druid SQL](./03-query/00-using-sql-with-druidapi.ipynb)|An introduction to the unique aspects of Druid SQL.|`druid-jupyter`|
 |[GROUP BY](./03-query/01-groupby.ipynb)|Use GROUP BY in various forms to aggregate your data.|`druid-jupyter`|
-|[COUNT DISTINCT](./03-query/03-approx-count-distinct.ipynb)|Work through approximate and accurate ways of counting unique occurences of data.|`druid-jupyter`|
+|[COUNT DISTINCT](./03-query/03-approx-count-distinct.ipynb)|Work through approximate and accurate ways of counting unique occurrences of data.|`druid-jupyter`|
 |[SQL API](./03-query/12-query-api.ipynb)|See examples of getting results from the Druid SQL API directly.|`druid-jupyter`|
 |[TopN approximation](./03-query/02-approx-ranking.ipynb)|Understand the approximation used for GROUP BY queries with ORDER BY and LIMIT.|`druid-jupyter`|
 |[Analyzing data distributions](./03-query/04-approx-distribution.ipynb)|Use approximation to estimate quantiles, ranks, and histograms.|`druid-jupyter`|
@@ -70,7 +70,7 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[PIVOT and UNPIVOT](./03-query/15-pivot-unpivot.ipynb)|Use PIVOT to convert row values into columns. Use UNPIVOT to convert column values into rows.|`druid-jupyter`|
 |[Query from Deep Storage](./03-query/14-sync-async-queries.ipynb)|Use asynchronous queries to access data directly from deep storage.|`all-services`|
 |[Exporting data (experimental)](./03-query/16-export-msq-query.ipynb)|Walk through using INSERT INTO EXTERN to export query results.|`druid-jupyter`|
-|[Retention load rules](./03-query/20-tiering-historicals.ipynb)|Using load rules to prescribe up how much data is cached on historicals, including when used with multiple tiers.|`druid-jupyter-tiered-hist`|
+|[Retention load rules](./03-query/20-tiering-historicals.ipynb)|Using load rules to prescribe up how much data is cached on historicals, including when used with multiple tiers.|`tiered-druid-jupyter`|
 
 ## Operations
 
