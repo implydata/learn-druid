@@ -17,7 +17,7 @@ class ClientError(Exception):
     '''
     Indicates an error with usage of the Python API.
     '''
-    
+
     def __init__(self, msg):
         self.message = msg
 
