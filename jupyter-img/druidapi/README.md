@@ -16,14 +16,14 @@
   ~ specific language governing permissions and limitations
   ~ under the License.
   -->
-  
+
 # Python API for Druid
 
 
 `druidapi` is a Python library to interact with all aspects of your
-[Apache Druid](https://druid.apache.org/) cluster. 
-`druidapi` picks up where the venerable [pydruid](https://github.com/druid-io/pydruid) library 
-left off to include full SQL support and support for many of of Druid APIs. `druidapi` is usable 
+[Apache Druid](https://druid.apache.org/) cluster.
+`druidapi` picks up where the venerable [pydruid](https://github.com/druid-io/pydruid) library
+left off to include full SQL support and support for many of of Druid APIs. `druidapi` is usable
 in any Python environment, but is optimized for use in Jupyter, providing a complete interactive
 environment which complements the UI-based Druid console. The primary use of `druidapi` at present
 is to support the set of tutorial notebooks provided in the parent directory.
@@ -153,7 +153,7 @@ status_client.wait_until_ready()
 Without this step, your operations may mysteriously fail, and you'll wonder if you did something wrong.
 Some clients retry operations multiple times in case a service is not yet ready. For typical scripts
 against a stable cluster, the above line should be sufficient instead. This step is built into the
-`jupyter_client()` method to ensure notebooks provide a good exerience.
+`jupyter_client()` method to ensure notebooks provide a good experience.
 
 If your notebook or script uses newer features, you should start by ensuring that the target Druid cluster
 is of the correct version:
@@ -194,7 +194,7 @@ of messages and so on.
 
 ## Interactive queries
 
-The original [`pydruid`](https://pythonhosted.org/pydruid/) library revolves around Druid 
+The original [`pydruid`](https://pythonhosted.org/pydruid/) library revolves around Druid
 "native" queries. Most new applications now use SQL. `druidapi` provides two ways to run
 queries, depending on whether you want to display the results (typical in a notebook), or
 use the results in Python code. You can run SQL queries using the SQL client:
@@ -318,7 +318,7 @@ resp.schema
 ```
 
 The result is a list of `ColumnSchema` objects. Get column information from the `name`, `sql_type`
-and `druid_type` fields in each object. 
+and `druid_type` fields in each object.
 
 For other formats, you can obtain the REST payload directly:
 
@@ -389,7 +389,7 @@ You can combine the run-and-wait operations into a single call:
 task = sql_client.run_task(sql)
 ```
 
-A quirk of Druid is that MSQ reports task completion as soon as ingestion is done. However, it takes a 
+A quirk of Druid is that MSQ reports task completion as soon as ingestion is done. However, it takes a
 while for Druid to load the resulting segments, so you must wait for the table to become queryable:
 
 ```python
@@ -426,14 +426,14 @@ from druidapi.rest import DruidRestClient
 rest_client = DruidRestClient("http://localhost:8888")
 ```
 
-Or, if you have already created the Druid client, you can reuse the existing REST client. This is how 
+Or, if you have already created the Druid client, you can reuse the existing REST client. This is how
 the various other clients work internally.
 
 ```python
 rest_client = druid.rest
 ```
 
-The REST API maintains the Druid host: you just provide the specifc URL tail. There are methods to get or 
+The REST API maintains the Druid host: you just provide the specific URL tail. There are methods to get or
 post JSON results. For example, to get status information:
 
 ```python
@@ -507,4 +507,3 @@ Use the following guidelines for incrementing the version number:
 * Increment the first position for major changes and changes that are not backwards compatible.
 
 Submit your contribution by opening a pull request to the `apache/druid` GitHub repository.
-
