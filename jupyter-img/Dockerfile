@@ -41,10 +41,10 @@ RUN pip install requests \
     pip install bokeh \
     pip install kafka-python \
     pip install sortedcontainers \
-    pip install tqdm 
+    pip install tqdm
 
 # Install druidapi client from apache/druid
-# Local install requires sudo privileges 
+# Local install requires sudo privileges
 USER root
 ADD druidapi /home/jovyan/druidapi
 WORKDIR /home/jovyan/druidapi
@@ -56,4 +56,3 @@ RUN mkdir -p /home/jovyan/notebooks
 
 WORKDIR /home/jovyan/notebooks
 USER jovyan
-

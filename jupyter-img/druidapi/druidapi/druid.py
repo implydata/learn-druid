@@ -117,7 +117,7 @@ class DruidClient:
         if not self.datasource_client:
             self.datasource_client = DatasourceClient(self.rest_client)
         return self.datasource_client
-    
+
     def basic_security(self, authenticator, authorizer=None):
         '''
         Returns a client to work with a basic authorization authenticator/authorizer pair.
