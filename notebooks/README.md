@@ -68,7 +68,8 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Window functions (Experimental)](./03-query/13-query-functions-window.ipynb)|An introduction to Window functions which are a new experimental feature in Druid SQL.|`druid-jupyter`|
 |[JOIN](./03-query/11-joins.ipynb)|A full review of all join strategies available in Druid with examples and performance comparisons.|`druid-jupyter`|
 |[PIVOT and UNPIVOT](./03-query/15-pivot-unpivot.ipynb)|Use PIVOT to convert row values into columns. Use UNPIVOT to convert column values into rows.|`druid-jupyter`|
-|[Query from Deep Storage](./03-query/14-sync-async-queries.ipynb)|Use asynchronous queries to access data directly from deep storage.|`all-services`|
+|[Asychronous historical queries](./03-query/21-query-async-historical.ipynb)|Use asynchronous queries to access data without prefetch to historicals.|`all-services`|
+|[Asychronous real-time queries](./03-query/14-query-async-realtime.ipynb)|Use asynchronous queries to combine real-time and historical data.|`all-services`|
 |[Exporting data (experimental)](./03-query/16-export-msq-query.ipynb)|Walk through using INSERT INTO EXTERN to export query results.|`druid-jupyter`|
 |[Retention load rules](./03-query/20-tiering-historicals.ipynb)|Using load rules to prescribe up how much data is cached on historicals, including when used with multiple tiers.|`tiered-druid-jupyter`|
 
