@@ -37,7 +37,7 @@ class StatusClient:
 
     See https://druid.apache.org/docs/latest/api-reference/api-reference.html#process-information
     '''
-    
+
     def __init__(self, rest_client, owns_client=False):
         self.rest_client = rest_client
         self.owns_client = owns_client
@@ -46,19 +46,19 @@ class StatusClient:
         if self.owns_client:
             self.rest_client.close()
         self.rest_client = None
-    
+
     #-------- Common --------
 
     @property
     def status(self):
         '''
-        Returns the Druid version, loaded extensions, memory used, total memory 
+        Returns the Druid version, loaded extensions, memory used, total memory
         and other useful information about the Druid service.
 
         GET `/status`
         '''
         return self.rest_client.get_json(REQ_STATUS)
-    
+
     @property
     def is_healthy(self) -> bool:
         '''
@@ -66,14 +66,14 @@ class StatusClient:
         before using other Druid API methods to ensure the server is ready.
 
         See also `wait_until_ready()`.
- 
+
         GET `/status/health`
         '''
         try:
             return self.rest_client.get_json(REQ_HEALTH)
         except Exception:
             return False
-    
+
     def wait_until_ready(self):
         '''
         Sleeps until the node reports itself as healthy. Will run forever if the node
@@ -81,18 +81,18 @@ class StatusClient:
         '''
         while not self.is_healthy:
             time.sleep(0.5)
-    
+
     @property
     def properties(self) -> map:
         '''
         Returns the effective set of Java properties used by the service, including
-        system properties and properties from the `common_runtime.propeties` and
+        system properties and properties from the `common_runtime.properties` and
         `runtime.properties` files.
 
         GET `/status/properties`
         '''
         return self.rest_client.get_json(REQ_PROPERTIES)
-    
+
     @property
     def in_cluster(self):
         '''
