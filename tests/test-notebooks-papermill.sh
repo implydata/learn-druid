@@ -1,7 +1,8 @@
-bash launch-test-environment.sh
+#!/bin/bash
+
+bash ./launch-test-environment.sh
 
 skiplList=("notebooks/03-query/11-joins.ipynb"
-"notebooks/03-query/08-functions-strings.ipynb"
 "notebooks/03-query/07-functions-datetime.ipynb"
 "notebooks/03-query/19-groupby-earliest.ipynb"
 "notebooks/02-ingestion/13-native-transforms.ipynb"
@@ -16,7 +17,7 @@ for file in ${ALL_CHANGED_FILES}; do
 		docker exec jupyter papermill ../$file output.ipynb --log-level ERROR
 	else
 		echo "Skipped"
-	fi 
+	fi
 done
 
 docker compose --profile all-services down -v
