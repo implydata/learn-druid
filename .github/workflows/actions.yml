@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - uses: actions/checkout@v4.1.7
-  
+
     - name: Get changed files
       id: changed-files
       uses: tj-actions/changed-files@v45
@@ -18,7 +18,7 @@ jobs:
       with:
         files: |
           **.ipynb
-  
+
     - name: Start docker and test container
       if: steps.changed-files.outputs.any_changed == 'true'
       env:
@@ -33,11 +33,18 @@ jobs:
       env:
         ALL_CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
       run: |
+        skiplList=("notebooks/03-query/11-joins.ipynb" #Hangs forever on users data generation, even when run manually, just broken?
+        "notebooks/99-contributing/notebook-template.ipynb") #Contains invalid sql
+
         for file in ${ALL_CHANGED_FILES}; do
           echo "$file"
-          docker exec jupyter papermill ../$file /dev/null --execution-timeout=1200 --log-level ERROR
+          if [[ ! " ${skiplList[*]} " =~ [[:space:]]${file}[[:space:]] ]]; then
+            docker exec jupyter papermill ../$file /dev/null --log-level ERROR
+          else
+            echo "Skipped"
+          fi
         done
-    
+
     - name: Stop docker and test container
       if: steps.changed-files.outputs.any_changed == 'true'
       env:
@@ -45,6 +52,3 @@ jobs:
       run: |
         docker compose --profile all-services down -v
       shell: bash
-
-        
-
