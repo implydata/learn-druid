@@ -3,8 +3,7 @@
 bash ./launch-test-environment.sh
 
 skiplList=("notebooks/03-query/11-joins.ipynb" #Hangs forever on users data generation, even when run manually, just broken?
-"notebooks/03-query/19-groupby-earliest.ipynb"
-"notebooks/02-ingestion/12-spatial-dimensions.ipynb"
+"notebooks/03-query/19-groupby-earliest.ipynb" #Queries for session length column which has already been filtered out at ingestion?
 "notebooks/99-contributing/notebook-template.ipynb")
 
 ALL_CHANGED_FILES=$(find notebooks -type f -name '*.ipynb' | awk '!/\/\./')
