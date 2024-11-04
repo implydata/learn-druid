@@ -50,7 +50,7 @@ services:
     environment:
       - ZOO_MY_ID=1
       - ALLOW_ANONYMOUS_LOGIN=yes
-  
+
   kafka:
     image: bitnami/kafka:3.6.2
     container_name: kafka-broker
@@ -78,7 +78,7 @@ services:
     volumes:
       - druid_shared:/opt/shared
       - coordinator_var:/opt/druid/var
-    depends_on: 
+    depends_on:
       - zookeeper
       - postgres
     ports:
@@ -95,7 +95,7 @@ services:
     volumes:
       - broker_var:/opt/druid/var
       - druid_shared:/opt/shared
-    depends_on: 
+    depends_on:
       - zookeeper
       - postgres
       - coordinator
@@ -113,7 +113,7 @@ services:
     volumes:
       - druid_shared:/opt/shared
       - historical_var:/opt/druid/var
-    depends_on: 
+    depends_on:
       - zookeeper
       - postgres
       - coordinator
@@ -131,7 +131,7 @@ services:
     volumes:
       - druid_shared:/opt/shared
       - middle_var:/opt/druid/var
-    depends_on: 
+    depends_on:
       - zookeeper
       - postgres
       - coordinator

@@ -25,12 +25,12 @@ def padded(array, width, fill):
     else:
         result = array.copy()
     return pad(result, width, fill)
-    
+
 def pad(array, width, fill):
     for _ in range(len(array), width):
         array.append(fill)
     return array
-       
+
 def infer_keys(data):
     if type(data) is list:
         data = data[0]
@@ -50,7 +50,7 @@ class BaseTable:
 
     def headers(self, headers):
         self._headers = headers
-    
+
     def rows(self, rows):
         self._rows = rows
 
@@ -123,7 +123,7 @@ class BaseTable:
                 if not headers[i]:
                     headers[i] = ''
         return pad(headers, width, '')
-    
+
     def from_object_list(self, objects, cols=None):
         cols = infer_keys(objects) if not cols else cols
         self._rows = []
