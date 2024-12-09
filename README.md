@@ -30,7 +30,13 @@ Suggestions or comments? Call into the [discussions](https://github.com/implydat
 
 [Contributions](contributing.md) to this community resource are welcome! Contribute your own notebook on a topic that's not listed here, and check out the [issue](https://github.com/implydata/learn-druid/issues) list, where you'll find bugs and enhancement requests.
 
-Come meet your friendly Apache Druid [community](https://druid.apache.org/community) if you have any questions about the functionality you see here.
+## Learn more
+
+Come meet the friendly Apache Druid [community](https://druid.apache.org/community) if you have any questions about the functionality you see here.
+
+Imply's courses on Apache Druid at [https://learn.imply.io](https://learn.imply.io) have additional commentary for these notebooks, and you can earn a certificate of completion.
+
+If your team is just getting to know Druid, Imply also offer bookable [team tech talks](https://calendly.com/druidcommunity) on the basics of Apache Druid. And if you want to check whether Apache Druid is the right fit, or would like to get hints on the functionality you should look at, book one of Imply's [getting started with Druid](https://calendly.com/druidcommunity) meetings.
 
 ## Pre-requisites
 
