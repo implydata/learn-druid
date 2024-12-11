@@ -4,9 +4,10 @@ This index provides a list of notebooks for [ingesting](#ingestion), [querying](
 
 Visit the index of [notebooks by release](./00-releases/) for quick access to new and updated notebooks following different releases of Apache Druid.
 
-* [Ingestion](#ingestion)
-* [Query](#query)
-* [Operations](#operations)
+* [Ingestion](#ingestion) into Apache Druid.
+* [Query](#query) with both the interactive and MSQ API.
+* [Operations](#operations) to manage and administer your cluster.
+* [Guides](#guides) for specific use cases.
 
 There are also [dedicated notebooks](#contributing) that dive more into the components used to create this learning environment.
 
@@ -84,6 +85,10 @@ The `05-operations` folder contains notebooks related to on-going administration
 |[Apache Druid metrics](./05-operations/03-metrics-configuration.ipynb)|An overview of metrics available from Apache Druid.|`jupyter`|
 |[Compaction - partitioning](./05-operations/04-compaction-partitioning.ipynb)|A walkthrough of compaction tasks being used to change the PARTITIONED BY and CLUSTERED BY of an existing table, especially important for streaming use cases.|`druid-jupyter`|
 |[Compaction - data and schema](./05-operations/05-compaction-data.ipynb)|Examples of compaction jobs being used to remove dimensions, filter out data, and apply a new level of aggregation.|`druid-jupyter`|
+
+## Guides
+
+* [Clickstream](01-introduction/01-clickstream/README.md)
 
 ## Contributing
 
