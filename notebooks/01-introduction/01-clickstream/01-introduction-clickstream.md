@@ -44,14 +44,14 @@ Analytics on clickstream is generally difficult for these reasons:
 
 * It's hard to collect the data.
    * Data can come in from multiple sources, so a database needs to be able to draw from multiple real-time and batch streams - both at ingestion and query time.
-   * Data can be very large, so a database must not only be able to scale with the ingestion velocity, but index and compress the data efficiently both for long-term storage and for speedy computation.
+   * Data volume can be very large, so a database must not only be able to scale with the ingestion velocity, but index and compress the data efficiently both for long term storage and speedy computation.
 * It's hard to query the data.
    * The websites, mobile apps, and other channels change over time. A database needs to be adaptable to changing integrations and schemas.
    * Filtering and statistical needs of uses are often unpredictable, or lead to a large number of reports that have to be maintained. A database needs to be able to cope with a range of query profiles that can be executed in a number of different ways depending on needs.
    * A broad number of clickstream queries concern distinct counts, especially of visitors. Databases need to have ways to calculate distinct counts quickly.
-   * Statistics very often concern intersections, unions, and differences - visitors who used a channel today but not in the last 30 days. A database needs to be able to carry out set operations quickly enough for the answers to still be relevant.
+   * Statistics very often concern intersections, unions, and differences. For example, visitors who used a channel today but not in the last 30 days. A database needs to be able to carry out set operations quickly enough for the answers to be relevant.
 
-The index for this guide signposts you to functionality in Apache Druid that many adoptees are using to solve for these challenges.
+The index for this guide directs you to functionality in Apache Druid that many adoptees are using to solve for these challenges.
 
 ## Entities and events
 
@@ -63,7 +63,7 @@ Clickstream event data aggregates information from one or more entities. Common 
 | --- | --- | --- |
 | Visitor | A user.| Driving loyalty. Informing advertising and promotion strategies. Testing churn-reducing tactics. |
 | Session | A user's journey. It might include data about what happened before the journey started (like the referring site). | Personalizing "grazing and hunting" experiences. Improving navigation. Attempting to build "first visit, first buy" to prevent attrition. |
-| Page | A place in a channel where a visitor can take some actions. | Changing the products or services shown depending on their journey so far. |
+| Page | A place in a channel where a visitor can perform actions. | Changing the products or services shown depending on their journey so far. |
 | Action | User actions that took place on a page, also known as a click or a hit. | Building up a picture of common journeys. Measuring system responsiveness. |
 
 Events are typically added to, and read from, an event hub such as Apache Kafka, Amazon Kinesis, or Azure Event Hub. Event hubs allow data to be collected globally in one place, and to scale up to hundreds of thousands, if not millions of recorded user actions.
@@ -82,15 +82,15 @@ Event data in web server logs, like W3C Extended Log Files and NCSA Common Forma
 
 Network logs might also be used, whether passively or proactively using packet sniffing.
 
-Additional information may be captured from code embedded on the client (visitor) side. Client-side event generation is often richer, able to bring in more information that simply what's being requested by a server.
+Additional information may be captured from code embedded on the client (visitor) side. Client-side event generation is often richer, able to bring in more information that simply what's being requested by a server, including:
 
 * Javascript code.
 * Pixels.
 * Embedded components.
 
-Apache Druid can ingest this data directly, whether from a event hub or in batch, making it queryable quickly.
+Druid can ingest this data directly, whether from an event hub or in batch, making it queryable quickly.
 
-Before _all_ entities can be analysed, however, events need additional processing using something like Apache Flink or Apache Spark.
+Before _all_ entities can be analyzed, however, events need additional processing using something like Apache Flink or Apache Spark.
 
 * Clickstream data is stateless, it's often very easy to know when a _session_ started, but not so easy to know when a session ended.
 * Clickstream data is often anonymous, so _visitor_ data needs to be enriched by joining to an internal database and / or to online enrichment services.
@@ -100,4 +100,4 @@ The results of this processing may be posted into data lake technologies, or pos
 * For _session_ analysis, enough time must elapse for the session to end before certain analysis can be done, such as calculating average session length by a particular _visitor_ demographic.
 * For _action_ data, the data must be made available quickly enough for decisions to be taken in a timely manner. For example, A/B testing of a new navigation structure, or determining the effectiveness of a campaign for a flash sale.
 
-Apache Druid ingestion-time transformations allow for row-wise functions to be applied to data as it arrives. More complex enrichment and processing is possible in batch using MSQ. Examples are given in the main portion of the guide.
+Druid ingestion-time transformations allow for row-wise functions to be applied to data as it arrives. More complex enrichment and processing is possible in batch using MSQ. Examples are given in the main portion of the guide.

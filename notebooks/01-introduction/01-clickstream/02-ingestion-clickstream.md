@@ -18,7 +18,7 @@ With many thousands of producers all generating data across multiple networks co
 * Read about [segment optimization](https://druid.apache.org/docs/latest/operations/segment-optimization) and use this to inform the selection of both your [primary timestamp](https://druid.apache.org/docs/latest/ingestion/ingestion-spec#timestampspec) in `timestampSpec` and the [primary partitioning period](https://druid.apache.org/docs/latest/ingestion/ingestion-spec#timestampspec) using `granularitySpec/segmentGranularity`.
 * Learn about [compaction](https://druid.apache.org/docs/latest/data-management/compaction) and try the [notebook](../../05-operations/04-compaction-partitioning.ipynb).
 
-Clickstream data can very often have a fluid schema - one of the objectives is to improve the experience upstream, so new attributes and measures can – and will – be added all the time to help analyse that experience.
+Clickstream data can very often have a fluid schema. One of the objectives is to improve the experience upstream, so new attributes and measures can – and will – be added all the time to help analyse that experience.
 
 * Plan change control for ingestion specifications.
 * Plan ahead for data governance.

@@ -11,5 +11,5 @@ Clickstream events often contain data that technical users and machines understa
 
 Avoid including low-value rows from the source system. When a number of sites are all running on the same server, for example, you may only need actions on a specific host. Or perhaps you are building a UI for security operations who only need 500 errors.  Carefully consider whether a table needs to contain _all_ action events, or whether only specific actions are needed, such as conversions.
 
-* Use filters in the `transformSpec` to front-load `WHERE`, reducing storage cost and increasing query performance.
+* Use filters in the `transformSpec` to front-load `WHERE` operations, reducing storage cost and increasing query performance.
 * Consider applying filters upstream, reducing Druid ingestion infrastructure requirements, especially when filters begin to throw away more than 25% of rows.
