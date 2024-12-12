@@ -28,3 +28,9 @@ Clickstream data can be particularly granular and noisy. Optimize your storage a
 COUNT DISTINCT operations are very common in clickstream. Provide a speed boost to Druid's approximate query results by utilizing Druid's support for embedded Apache Datasketches created during rollup.
 
 * Try the [notebook](02-ingestion/03-generating-sketches.ipynb) on generating sketches.
+
+---
+
+[back](01-connect.md) [index](README.md) [next](03-optimize.md) 
+
+---

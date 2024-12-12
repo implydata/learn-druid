@@ -34,3 +34,9 @@ When funnel stage membership is _implicitly_ in _time order_, here are some appr
 * Use standard set analytics through [Theta sketches](https://druid.apache.org/docs/latest/querying/sql-scalar#theta-sketch-functions), replacing intersection, difference, and union subqueries with approximate operations. Try out the associated [notebook](03-query/03-approx-count-distinct.ipynb).
 * Add dimensions, one for each funnel stage, containing a 1 or a 0 to indicate that a funnel stage / goal was achieved, for example "impression", "click", and "conversion". To calculate the funnel, execute a SUM. Consider, though, the impact that changing the funnel stages might have.
 * Emit the final funnel stage achieved in your session data. A COUNT can then be taken, GROUP BY the last funnel stage, to give the data required to create the funnel. This is easier to adapt than fixed dimensions.
+
+---
+
+[back](03-optimize.md) [index](README.md) [next](05-manage.md) 
+
+---

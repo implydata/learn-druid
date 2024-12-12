@@ -11,3 +11,9 @@ Applying a secondary partitioning scheme can speed up queries by providing an ad
 
 * Read about [secondary partitions](https://druid.apache.org/docs/latest/ingestion/partitioning#secondary-partitioning) and try the notebook on [applying secondary partitioning using compaction](../../05-operations/04-compaction-partitioning.ipynb).
 * Read about how Druid [sorts data](https://druid.apache.org/docs/latest/ingestion/partitioning#sorting) inside segments and test whether an explicit order in your `dimensions` list improves query performance.
+
+---
+
+[back](02-transform.md) [index](README.md) [next](04-query.md) 
+
+---

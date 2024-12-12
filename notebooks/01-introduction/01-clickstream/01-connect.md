@@ -12,3 +12,9 @@ Very busy websites create very large volumes of data. When Druid’s ingestion t
 * Check the balance of each incoming stream partition and, if necessary, force balance upstream.
 * Understand the effect of [resetting supervisors](https://druid.apache.org/docs/latest/api-reference/supervisor-api#reset-a-supervisor).
 * [Read about](https://druid.apache.org/docs/latest/ingestion/supervisor#tuning-configuration) automatic supervisor resets using `tuningConfig/resetOffsetAutomatically`.
+
+---
+
+[index](README.md) [next](02-transform.md) 
+
+---
