@@ -7,7 +7,7 @@ Visit the index of [notebooks by release](./00-releases/) for quick access to ne
 * [Ingestion](#ingestion) into Apache Druid.
 * [Query](#query) with both the interactive and MSQ API.
 * [Operations](#operations) to manage and administer your cluster.
-* [Guides](#guides) for specific use cases.
+* [Insider guides](#guides) for specific use cases.
 
 There are also [dedicated notebooks](#contributing) that dive more into the components used to create this learning environment.
 
@@ -86,13 +86,15 @@ The `05-operations` folder contains notebooks related to on-going administration
 |[Compaction - partitioning](./05-operations/04-compaction-partitioning.ipynb)|A walkthrough of compaction tasks being used to change the PARTITIONED BY and CLUSTERED BY of an existing table, especially important for streaming use cases.|`druid-jupyter`|
 |[Compaction - data and schema](./05-operations/05-compaction-data.ipynb)|Examples of compaction jobs being used to remove dimensions, filter out data, and apply a new level of aggregation.|`druid-jupyter`|
 
-## Guides
+## Insider guides
+
+In `01-introduction` you'll find a library of docs created in partnership with Apache Druid community members around the world. Each one includes links to useful docs and videos, and to notebooks in this repository.
 
 * [Clickstream](01-introduction/01-clickstream/README.md)
 
 ## Contributing
 
-The `99-contributing` folder contains notebooks that explain a little more about the learning environment and its components.
+The `99-contributing` folder contains notebooks that explain a little more about the learning environment and its components. You'll also find templates for submitting your own content.
 
 |Title|Description|Docker Profile|
 |---|---|---|
