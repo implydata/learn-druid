@@ -88,7 +88,7 @@ The `05-operations` folder contains notebooks related to on-going administration
 
 ## Insider guides
 
-In `01-introduction` you'll find a library of docs created in partnership with Apache Druid community members around the world. Each one includes links to useful docs and videos, and to notebooks in this repository.
+In `01-introduction` you'll find a library of insider guides created in partnership with Apache Druid community members around the world. Each one includes links to official documentation that you should read, and to notebooks that will give you knowledge of relevant functionality in Druid.
 
 * [Clickstream](01-introduction/01-clickstream/README.md)
 
