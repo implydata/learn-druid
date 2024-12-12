@@ -9,7 +9,7 @@ The Apache Druid database can be used to gain real-time insight into activity ta
 * [Querying clickstream](04-query.md)
 * [Managing clickstream data](05-manage.md)
 
-## Introduction
+## Introduction
 
 As website visitors, we are all being coaxed toward achieving a particular goal that the owning organization has in mind for us, whether that's placing an order for a product, signing up for a service, or passing on contact information for sales leads.
 
