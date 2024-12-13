@@ -2,7 +2,7 @@
 
 Below you'll find sample `INSERT` statements for the Chicago Taxi Data, starting with a basic statement, and advancing through different functionality. Each change applies one of the data modelling principles from the training course by Imply.
 
-* [Apache Druid Ingestion and Data Modeling](https://learn.imply.io/apache-druid-ingestion-and-data-modeling)
+* [Apache Druid Ingestion and Data Modeling](https://learn.imply.io/)
 
 > The notebook presumes the files are in S3-compatible storage. Replace these portions as necessary.
 
