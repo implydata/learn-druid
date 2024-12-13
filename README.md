@@ -19,7 +19,7 @@
 
 # Learn Druid
 
-The "Learn Druid" repository contains all manner of resources to help you learn and apply [Apache Druid](https://druid.apache.org/)®.
+The [Learn Druid](https://github.com/implydata/learn-druid) repository contains all manner of resources to help you learn and apply [Apache Druid](https://druid.apache.org/)®.
 
 It contains:
 
