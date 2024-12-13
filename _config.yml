@@ -1,3 +1,2 @@
 theme: minima
-minima:
-   header_pages: ['']
+header_pages: ['']
