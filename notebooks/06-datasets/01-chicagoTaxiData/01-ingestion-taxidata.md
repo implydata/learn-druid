@@ -1,10 +1,10 @@
-# Chicago Taxi Data - ingesting using INSERT
+# Ingesting the Chicago Taxi dataset
 
 Below you'll find sample `INSERT` statements for the Chicago Taxi Data, starting with a basic statement, and advancing through different functionality. Each change applies one of the data modelling principles from the training course by Imply.
 
 * [Apache Druid Ingestion and Data Modeling](https://learn.imply.io/apache-druid-ingestion-and-data-modeling)
 
-Note that these scripts were built for basic auth to min.io - you will need to connect to your external data in the usual way.
+> The notebook presumes the files are in S3-compatible storage. Replace these portions as necessary.
 
 It's also a good idea to ensure you've split up the incoming data. Then you can address the `EXTERN` to a few of the files at first to check that the ingestion works OK, and to check the effect that it has on query execution and patterns. Below, you will see that, because S3-compatible storage was being used, specific `uris` are used in the `EXTERN` rather than a prefix.
 
@@ -12,7 +12,7 @@ It's also a good idea to ensure you've split up the incoming data. Then you can 
 
 The dataset has two timestamps, so here we apply the [RADStack paper](http://static.druid.io/docs/radstack.pdf) principle strictly that event rows are "about when the event occured" by using the Trip End Timestamp as the __time field value. This requires a `COALESCE` on the `__time` because the `Trip End Timestamp` is not always present; we need to deal with the potential for `NULL` values.
 
-```
+```sql
 REPLACE INTO "taxi_0_sample" OVERWRITE ALL
 
 WITH
@@ -70,7 +70,7 @@ Now we add some transformations.
 * Calculates a fare percentage
 * Calculates the dropoff coordinates and drops the other fields
 
-```
+```sql
 REPLACE INTO "taxi_1_sample" OVERWRITE ALL
 
 WITH
@@ -129,7 +129,7 @@ Because the community area codes are settled, we can do the KV lookup early.
 * JOINs to a lookup
 * Corrects the data type on the lookup key to string
 
-```
+```sql
 REPLACE INTO "taxi_2_sample" OVERWRITE ALL
 
 WITH
@@ -211,7 +211,7 @@ Now there's quite a few columns we don't need either logically or through conver
 * Removes superfluous columns (census tract, trip ID, start time, and the lat / long columns)
 * Corrected the calculation of percentages to handle divide by zero
 
-```
+```sql
 REPLACE INTO "taxi_3_sample" OVERWRITE ALL
 
 WITH
@@ -281,7 +281,7 @@ PARTITIONED BY ALL
 
 Turns out they want buckets of seconds taken - and that are only interested in trips over 5 minutes. So we apply some `WHERE` clauses to do that.
 
-```
+```sql
 REPLACE INTO "taxi_4_sample" OVERWRITE ALL
 
 WITH
@@ -355,7 +355,7 @@ Now we get to reduce the granularity for the intended graphical elements of the 
 * Added GROUP BY and converted a lot of measures into aggregated metrics of various types
 * Added HLL for Taxi Id for approximate distinct count, and Trip Id back in with Theta for set operations.
 
-```
+```sql
 REPLACE INTO "taxi_5_sample" OVERWRITE ALL
 
 WITH
@@ -436,7 +436,7 @@ In conversation with imaginary web developers, and looking at segment sizes and 
 > In testing, the following version completed in _one quarter_ of
 > the time that the original "starting out" version took to complete.
 
-```
+```sql
 REPLACE INTO "taxi_6_sample" OVERWRITE ALL
 
 WITH
