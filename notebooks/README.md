@@ -7,7 +7,8 @@ Visit the index of [notebooks by release](./00-releases/) for quick access to ne
 * [Ingestion](#ingestion) into Apache Druid.
 * [Query](#query) with both the interactive and MSQ API.
 * [Operations](#operations) to manage and administer your cluster.
-* [Insider guides](#guides) for specific use cases.
+* [Insider guides](#insider-guides) for specific use cases.
+* More [sample data sets](#sample-data).
 
 There are also [dedicated notebooks](#contributing) that dive more into the components used to create this learning environment.
 
@@ -91,6 +92,12 @@ The `05-operations` folder contains notebooks related to on-going administration
 In `01-introduction` you'll find a library of insider guides created in partnership with Apache Druid community members around the world. Each one includes links to official documentation that you should read, and to notebooks that will give you knowledge of relevant functionality in Druid.
 
 * [Clickstream](01-introduction/01-clickstream/README.md)
+
+## Sample data
+
+The `06-datasets` folder contains guidance for ingesting other datasets into Druid. These can be useful when wanting to try out some of Druid's features.
+
+* [Chicago Taxis](06-datasets/01-chicagoTaxiData/README.md)
 
 ## Contributing
 
