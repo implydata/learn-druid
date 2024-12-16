@@ -72,7 +72,7 @@ services:
       - KAFKA_ENABLE_KRAFT=false
 
   coordinator:
-    image: imply/druid:${DRUID_VERSION:-31.0.1}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: coordinator
     profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
@@ -89,7 +89,7 @@ services:
       - environment
 
   broker:
-    image: imply/druid:${DRUID_VERSION:-31.0.1}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: broker
     profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
@@ -107,7 +107,7 @@ services:
       - environment
 
   historical:
-    image: imply/druid:${DRUID_VERSION:-31.0.1}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: historical
     profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
@@ -125,7 +125,7 @@ services:
       - environment
 
   historical_slow:
-    image: imply/druid:${DRUID_VERSION:-31.0.1}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: historical_slow
     profiles: ["tiered-druid-jupyter"]
     volumes:
@@ -148,7 +148,7 @@ services:
       druid_server_tier: "slow"
 
   middlemanager:
-    image: imply/druid:${DRUID_VERSION:-31.0.1}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: middlemanager
     profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
@@ -167,7 +167,7 @@ services:
       - environment
 
   router:
-    image: imply/druid:${DRUID_VERSION:-31.0.1}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: router
     profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
