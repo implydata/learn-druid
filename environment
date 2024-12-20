@@ -66,8 +66,7 @@ druid_msq_intermediate_storage_cleaner_enabled=true
 # setup export location so that local exports can be used
 druid_export_storage_baseDir=/opt/shared/exports
 
-
-
+# Druid 31 : enable dart
+druid_msq_dart_enabled=true
 
 DRUID_LOG4J=<?xml version="1.0" encoding="UTF-8" ?><Configuration status="WARN"><Appenders><Console name="Console" target="SYSTEM_OUT"><PatternLayout pattern="%d{ISO8601} %p [%t] %c - %m%n"/></Console></Appenders><Loggers><Root level="info"><AppenderRef ref="Console"/></Root><Logger name="org.apache.druid.jetty.RequestLog" additivity="false" level="DEBUG"><AppenderRef ref="Console"/></Logger></Loggers></Configuration>
-

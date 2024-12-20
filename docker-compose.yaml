@@ -22,6 +22,7 @@ volumes:
   metadata_data: {}
   middle_var: {}
   historical_var: {}
+  historical_2_var: {}
   broker_var: {}
   coordinator_var: {}
   router_var: {}
@@ -33,7 +34,7 @@ services:
   postgres:
     image: postgres:alpine3.20
     container_name: postgres
-    profiles: ["druid-jupyter", "all-services"]
+    profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
       - metadata_data:/var/lib/postgresql/data
     environment:
@@ -45,11 +46,11 @@ services:
   zookeeper:
     image: zookeeper:3.9.2
     container_name: zookeeper
-    profiles: ["druid-jupyter", "kafka-jupyter", "all-services"]
+    profiles: ["druid-jupyter", "kafka-jupyter", "all-services", "tiered-druid-jupyter"]
     environment:
       - ZOO_MY_ID=1
       - ALLOW_ANONYMOUS_LOGIN=yes
-  
+
   kafka:
     image: bitnami/kafka:3.6.2
     container_name: kafka-broker
@@ -71,13 +72,13 @@ services:
       - KAFKA_ENABLE_KRAFT=false
 
   coordinator:
-    image: imply/druid:${DRUID_VERSION:-30.0.0}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: coordinator
-    profiles: ["druid-jupyter", "all-services"]
+    profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
       - druid_shared:/opt/shared
       - coordinator_var:/opt/druid/var
-    depends_on: 
+    depends_on:
       - zookeeper
       - postgres
     ports:
@@ -88,13 +89,13 @@ services:
       - environment
 
   broker:
-    image: imply/druid:${DRUID_VERSION:-30.0.0}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: broker
-    profiles: ["druid-jupyter", "all-services"]
+    profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
       - broker_var:/opt/druid/var
       - druid_shared:/opt/shared
-    depends_on: 
+    depends_on:
       - zookeeper
       - postgres
       - coordinator
@@ -106,13 +107,13 @@ services:
       - environment
 
   historical:
-    image: imply/druid:${DRUID_VERSION:-30.0.0}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: historical
-    profiles: ["druid-jupyter", "all-services"]
+    profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
       - druid_shared:/opt/shared
       - historical_var:/opt/druid/var
-    depends_on: 
+    depends_on:
       - zookeeper
       - postgres
       - coordinator
@@ -123,14 +124,37 @@ services:
     env_file:
       - environment
 
+  historical_slow:
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
+    container_name: historical_slow
+    profiles: ["tiered-druid-jupyter"]
+    volumes:
+      - druid_shared:/opt/shared
+      - historical_2_var:/opt/druid/var
+    depends_on:
+      - zookeeper
+      - postgres
+      - coordinator
+      - historical
+    ports:
+      - "8084:8084"
+    command:
+      - historical
+    env_file:
+      - environment
+    environment:
+      DRUID_SINGLE_NODE_CONF: "nano-quickstart"
+      druid_plaintextport: "8084"
+      druid_server_tier: "slow"
+
   middlemanager:
-    image: imply/druid:${DRUID_VERSION:-30.0.0}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: middlemanager
-    profiles: ["druid-jupyter", "all-services"]
+    profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
       - druid_shared:/opt/shared
       - middle_var:/opt/druid/var
-    depends_on: 
+    depends_on:
       - zookeeper
       - postgres
       - coordinator
@@ -143,9 +167,9 @@ services:
       - environment
 
   router:
-    image: imply/druid:${DRUID_VERSION:-30.0.0}
+    image: imply/druid:${DRUID_VERSION:-31.0.0}
     container_name: router
-    profiles: ["druid-jupyter", "all-services"]
+    profiles: ["druid-jupyter", "all-services", "tiered-druid-jupyter"]
     volumes:
       - router_var:/opt/druid/var
     depends_on:
@@ -162,7 +186,7 @@ services:
   jupyter:
     image: imply/druid-notebook:latest
     container_name: jupyter
-    profiles: ["jupyter", "kafka-jupyter", "druid-jupyter", "all-services"]
+    profiles: ["jupyter", "kafka-jupyter", "druid-jupyter", "all-services", "tiered-druid-jupyter"]
     environment:
       JUPYTER_ENABLE_LAB: "yes"
       JUPYTER_TOKEN: "docker"
@@ -179,7 +203,7 @@ services:
   datagen:
     image: imply/datagen:latest
     container_name: datagen
-    profiles: ["jupyter", "kafka-jupyter", "druid-jupyter", "all-services"]
+    profiles: ["jupyter", "kafka-jupyter", "druid-jupyter", "all-services", "tiered-druid-jupyter"]
     ports:
       - "${DATAGEN_PORT:-9999}:9999"
     volumes:

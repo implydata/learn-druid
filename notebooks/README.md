@@ -4,9 +4,11 @@ This index provides a list of notebooks for [ingesting](#ingestion), [querying](
 
 Visit the index of [notebooks by release](./00-releases/) for quick access to new and updated notebooks following different releases of Apache Druid.
 
-* [Ingestion](#ingestion)
-* [Query](#query)
-* [Operations](#operations)
+* [Ingestion](#ingestion) into Apache Druid.
+* [Query](#query) with both the interactive and MSQ API.
+* [Operations](#operations) to manage and administer your cluster.
+* [Insider guides](#insider-guides) for specific use cases.
+* More [sample data sets](#sample-data).
 
 There are also [dedicated notebooks](#contributing) that dive more into the components used to create this learning environment.
 
@@ -25,7 +27,6 @@ Visit the `02-ingestion` folder for notebooks focused on using streaming and bat
 |[NULL](./02-ingestion/09-generating-and-working-with-nulls.ipynb)|Examples of how to treat incoming data to generate NULL values, and work with them using scalar functions, aggregations, and arrays.|`druid-jupyter`|
 |[UPDATE, DELETE and UPSERT](./02-ingestion/10-updating-data.ipynb)|Examples of how to apply changes to data in Druid, including updates, deletes and upsert logic.|`druid-jupyter`|
 
-
 ### Streaming
 
 |Title|Description|Docker Profile|
@@ -38,8 +39,6 @@ Visit the `02-ingestion` folder for notebooks focused on using streaming and bat
 |[Streaming segment generation and care](./02-ingestion/07-partitioning-while-streaming.ipynb)|Scale up a streaming ingestion, see the impact on segments, and try out a compaction job.|`all-services`|
 |[Multi-topic Kafka ingestion](./02-ingestion/11-stream-from-multiple-topics.ipynb)|A walk through of automatic topic detection for streaming ingestion.|`all-services`|
 
-
-
 ### Batch
 
 |Title|Description|Docker Profile|
@@ -47,7 +46,6 @@ Visit the `02-ingestion` folder for notebooks focused on using streaming and bat
 |[Introduction to batch ingestion](./02-ingestion/02-batch-ingestion.ipynb)|Work through of SQL based batch ingestion.|`druid-jupyter`|
 |[Primary and secondary partitioning in batch ingestion](./02-ingestion/06-partitioning-data.ipynb)|Use PARTITIONED BY and CLUSTERED BY to optimize query performance.|`druid-jupyter`|
 |[Generating Apache Datasketches at ingestion time](./02-ingestion/03-generating-sketches.ipynb)|Generate sketch objects to support approximate distinct count operations as part of ingestion.|`druid-jupyter`|
-
 
 ## Query
 
@@ -57,7 +55,7 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |---|---|---|
 |[Learn the basics of Druid SQL](./03-query/00-using-sql-with-druidapi.ipynb)|An introduction to the unique aspects of Druid SQL.|`druid-jupyter`|
 |[GROUP BY](./03-query/01-groupby.ipynb)|Use GROUP BY in various forms to aggregate your data.|`druid-jupyter`|
-|[COUNT DISTINCT](./03-query/03-approx-count-distinct.ipynb)|Work through approximate and accurate ways of counting unique occurences of data.|`druid-jupyter`|
+|[COUNT DISTINCT](./03-query/03-approx-count-distinct.ipynb)|Work through approximate and accurate ways of counting unique occurrences of data.|`druid-jupyter`|
 |[SQL API](./03-query/12-query-api.ipynb)|See examples of getting results from the Druid SQL API directly.|`druid-jupyter`|
 |[TopN approximation](./03-query/02-approx-ranking.ipynb)|Understand the approximation used for GROUP BY queries with ORDER BY and LIMIT.|`druid-jupyter`|
 |[Analyzing data distributions](./03-query/04-approx-distribution.ipynb)|Use approximation to estimate quantiles, ranks, and histograms.|`druid-jupyter`|
@@ -72,9 +70,10 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[Window functions (Experimental)](./03-query/13-query-functions-window.ipynb)|An introduction to Window functions which are a new experimental feature in Druid SQL.|`druid-jupyter`|
 |[JOIN](./03-query/11-joins.ipynb)|A full review of all join strategies available in Druid with examples and performance comparisons.|`druid-jupyter`|
 |[PIVOT and UNPIVOT](./03-query/15-pivot-unpivot.ipynb)|Use PIVOT to convert row values into columns. Use UNPIVOT to convert column values into rows.|`druid-jupyter`|
-|[Query from Deep Storage](./03-query/14-sync-async-queries.ipynb)|Use asynchronous queries to access data directly from deep storage.|`all-services`|
+|[Asychronous historical queries](./03-query/21-query-async-historical.ipynb)|Use asynchronous queries to access data without prefetch to historicals.|`all-services`|
+|[Asychronous real-time queries](./03-query/14-query-async-realtime.ipynb)|Use asynchronous queries to combine real-time and historical data.|`all-services`|
 |[Exporting data (experimental)](./03-query/16-export-msq-query.ipynb)|Walk through using INSERT INTO EXTERN to export query results.|`druid-jupyter`|
-
+|[Retention load rules](./03-query/20-tiering-historicals.ipynb)|Using load rules to prescribe up how much data is cached on historicals, including when used with multiple tiers.|`tiered-druid-jupyter`|
 
 ## Operations
 
@@ -88,9 +87,21 @@ The `05-operations` folder contains notebooks related to on-going administration
 |[Compaction - partitioning](./05-operations/04-compaction-partitioning.ipynb)|A walkthrough of compaction tasks being used to change the PARTITIONED BY and CLUSTERED BY of an existing table, especially important for streaming use cases.|`druid-jupyter`|
 |[Compaction - data and schema](./05-operations/05-compaction-data.ipynb)|Examples of compaction jobs being used to remove dimensions, filter out data, and apply a new level of aggregation.|`druid-jupyter`|
 
+## Insider guides
+
+In `01-introduction` you'll find a library of insider guides created in partnership with Apache Druid community members around the world. Each one includes links to official documentation that you should read, and to notebooks that will give you knowledge of relevant functionality in Druid.
+
+* [Clickstream](01-introduction/01-clickstream/README.md)
+
+## Sample data
+
+The `06-datasets` folder contains guidance for ingesting other datasets into Druid. These can be useful when wanting to try out some of Druid's features.
+
+* [Chicago Taxis](06-datasets/01-chicagoTaxiData/README.md)
+
 ## Contributing
 
-The `99-contributing` folder contains notebooks that explain a little more about the learning environment and its components.
+The `99-contributing` folder contains notebooks that explain a little more about the learning environment and its components. You'll also find templates for submitting your own content.
 
 |Title|Description|Docker Profile|
 |---|---|---|

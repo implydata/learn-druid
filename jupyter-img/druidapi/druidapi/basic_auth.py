@@ -101,13 +101,13 @@ class BasicAuthClient:
 
     def drop_authentication_user(self, user) -> None:
         self.rest_client.delete(REQ_AUTHENTICATION_USER, args=[self.authenticator, user])
-    
+
     def authentication_user(self, user) -> dict:
         return self.rest_client.get_json(REQ_AUTHENTICATION_USER, args=[self.authenticator, user])
-    
+
     def authentication_users(self) -> list:
         return self.rest_client.get_json(REQ_AUTHENTICATION_USERS, args=[self.authenticator])
-    
+
     # Authorization
     # Groups are not documented. Use at your own risk.
 
@@ -122,13 +122,13 @@ class BasicAuthClient:
 
     def drop_authorization_user(self, user) -> None:
         self.rest_client.delete(REQ_AUTHORIZATION_USER, args=[self.authenticator, user])
-    
+
     def authorization_user(self, user) -> dict:
         return self.rest_client.get_json(REQ_AUTHORIZATION_USER, args=[self.authorizer, user])
-    
+
     def authorization_users(self) -> list:
         return self.rest_client.get_json(REQ_AUTHORIZATION_USERS, args=[self.authorizer])
-    
+
     def create_group(self, group, payload):
         self.rest_client.post_json(REQ_AUTHORIZATION_GROUP_MAPPING, payload, args=[self.authorizer, group])
 
@@ -140,13 +140,13 @@ class BasicAuthClient:
 
     def group(self, group) -> dict:
         return self.rest_client.get_json(REQ_AUTHORIZATION_GROUP_MAPPING, args=[self.authorizer, group])
-    
+
     def roles(self):
         return self.rest_client.get_json(REQ_AUTHORIZATION_ROLES, args=[self.authenticator])
- 
+
     def add_role(self, role):
         self.rest_client.post(REQ_AUTHORIZATION_ROLE, None, args=[self.authenticator, role])
-   
+
     def drop_role(self, role):
         self.rest_client.delete(REQ_AUTHORIZATION_ROLE, args=[self.authorizer, role])
 
@@ -155,7 +155,7 @@ class BasicAuthClient:
 
     def role_permissions(self, role):
         return self.rest_client.get_json(REQ_AUTHORIZATION_ROLE_PERMISSIONS, args=[self.authenticator, role])
-    
+
     def assign_role_to_user(self, role, user):
         self.rest_client.post(REQ_AUTHORIZATION_USER_ROLE, None, args=[self.authenticator, user, role])
 
@@ -209,13 +209,13 @@ class BasicAuthClient:
             "authenticator": self.authentication_status(),
             "authorizer": self.authorization_status()
         }
-    
+
     def resource(self, type, name):
         return {
             'type': type,
             'name': name
         }
-    
+
     def action(self, resource, action):
         return {
             'resource': resource,

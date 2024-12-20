@@ -1,0 +1,11 @@
+theme: minima
+header_pages: ['']
+description: >
+  A library of Apache Druid notebooks and guides from Imply. This repository is not affiliated with,
+  endorsed by, or otherwise associated with the Apache Software Foundation (ASF) or any of its projects.
+minima:
+  social_links:
+    - { platform: linkedin,       user_url: "https://www.linkedin.com/company/imply" }
+    - { platform: x,              user_url: "https://x.com/implydata" }
+    - { platform: stackoverflow,  user_url: "https://stackoverflow.com/questions/tagged/druid" }
+    - { platform: github,         user_url: "https://github.com/apache/druid" }

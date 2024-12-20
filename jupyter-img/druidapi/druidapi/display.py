@@ -24,7 +24,7 @@ class DisplayClient:
     def __init__(self, druid=None):
         # If the client is None, it must be backfilled by the caller.
         # This case occurs only when creating the DruidClient to avoid
-        # a circular depencency.
+        # a circular dependency.
         self._druid = druid
 
     # Basic display operations
@@ -93,7 +93,7 @@ class DisplayClient:
 
         labels: list, Default = None
             A list of column headings in the form `['key', 'value']`. Default headings
-            are used if the lables are not provided.
+            are used if the labels are not provided.
         '''
         table = self.new_table()
         table.from_object(obj, labels)
