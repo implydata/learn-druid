@@ -12,4 +12,4 @@ Check out these notebooks, which were introduced or improved following the Druid
 
 These notebooks were added in support of features that are experimental. Remember to drop [into the community](https://druid.apache.org/community) to give your thoughts, findings, and feedback.
 
-* [Window Functions (Experimental)](../03-query/13-query-functions-window.ipynb)
+* [Window Functions (Experimental)](../03-query/13-functions-window.ipynb)
