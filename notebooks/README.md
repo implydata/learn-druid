@@ -67,7 +67,7 @@ For tutorials focused on effective use of all manner of `SELECT` statements in A
 |[String functions](./03-query/08-functions-strings.ipynb)|See how different string functions can be used at ingestion and query time.|`druid-jupyter`|
 |[IPv4 functions](./03-query/10-functions-ip.ipynb)|A short notebook on IPv4 functions in Druid SQL.|`druid-jupyter`|
 |[CASE](./03-query/09-functions-case.ipynb)|Examples of using the two forms of CASE function available in Druid SQL.|`druid-jupyter`|
-|[Window functions (Experimental)](./03-query/13-query-functions-window.ipynb)|An introduction to Window functions which are a new experimental feature in Druid SQL.|`druid-jupyter`|
+|[Window functions](./03-query/13-functions-window.ipynb)|Examples of RANK, LAG, LEAD, and other window functions.|`druid-jupyter`|
 |[JOIN](./03-query/11-joins.ipynb)|A full review of all join strategies available in Druid with examples and performance comparisons.|`druid-jupyter`|
 |[PIVOT and UNPIVOT](./03-query/15-pivot-unpivot.ipynb)|Use PIVOT to convert row values into columns. Use UNPIVOT to convert column values into rows.|`druid-jupyter`|
 |[Asychronous historical queries](./03-query/21-query-async-historical.ipynb)|Use asynchronous queries to access data without prefetch to historicals.|`all-services`|
