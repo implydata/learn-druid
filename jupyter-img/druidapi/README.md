@@ -39,7 +39,7 @@ At present, the best way to use `druidapi` is to clone the Druid repo itself:
 git clone git@github.com:apache/druid.git
 ```
 
-`druidapi` is located in `examples/quickstart/jupyter-notebooks/druidapi/`.
+`druidapi` is located in `jupyter-img/druidapi/`.
 From this directory, install the package and its dependencies with pip using the following command:
 
 ```
