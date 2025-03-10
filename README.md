@@ -65,13 +65,15 @@ To get started quickly:
     cd learn-druid
    ```
 
-3. Launch the environment:
+3. Launch the environment using the appropriate profile:
 
    ```bash
    docker compose --profile druid-jupyter up -d
    ```
 
    > The first time you launch the environment, it can take a while to start all the services.
+   > 
+   > Check each notebook to see which `--profile` is required; some notebooks require additional components such as Apache Kafka.
 
 4. Navigate to Jupyter Lab in your browser at `http://localhost:8889/lab`. <br/> From there you can read the introduction or use Jupyter Lab to navigate the notebooks folder.
 
