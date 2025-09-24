@@ -56,7 +56,7 @@ const FeatureList = [
 
 function Feature({image, title, year, description, link}) {
   return (
-    <div className={clsx('col col--3')}>
+    <div className={clsx('col col--3 feature-box')}>
       <div className="text--center padding-horiz--md">
         <Link to={link}>
          <img src={image} style={{maxHeight: 250}} />

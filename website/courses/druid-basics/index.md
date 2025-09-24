@@ -20,8 +20,6 @@ If you'd like to talk to through what you learn in this course, why not say hi t
           </Link>
         </div>
 
-TBD EMBED VIDEO
-
 ## Get started with Druid
 
 The official Apache Druid documentation Quick Start guide helps you through downloading the latest Apache Druid release and getting it up and running. If you have time, running Apache Druid on your laptop is a great first step.
