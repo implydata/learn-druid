@@ -12,7 +12,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Learn Druid',
   tagline: 'Brought to you by contributors and committers to the Apache Druid® project. Welcome to Imply\'s public catalog of practical courses on all things Druid!',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.jpg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
