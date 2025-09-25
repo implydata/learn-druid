@@ -3,6 +3,7 @@ sidebar_position: 1
 ---
 import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
+import WistiaVideo from '@site/src/components/WistiaVideo';
 
 # Apache Druid Basics
 
@@ -20,6 +21,8 @@ If you'd like to talk to through what you learn in this course, why not say hi t
           </Link>
         </div>
 
+
+
 ## Get started with Druid
 
 The official Apache Druid documentation Quick Start guide helps you through downloading the latest Apache Druid release and getting it up and running. If you have time, running Apache Druid on your laptop is a great first step.
@@ -29,6 +32,10 @@ The official Apache Druid documentation Quick Start guide helps you through down
 1. Follow the instructions to Druid it on your own machine!
 
 If you don't have time, don't worry – watch the walkthrough in the follwoing video:
+
+THIS IS JUST AN EXAMPLE
+
+<WistiaVideo videoId="yz0vrf2ilb" />
 
 TBD EMBED VIDEO
 
