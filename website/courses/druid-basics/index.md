@@ -33,9 +33,25 @@ The official Apache Druid documentation Quick Start guide helps you through down
 
 If you don't have time, don't worry – watch the walkthrough in the follwoing video:
 
-THIS IS JUST AN EXAMPLE
+<!--TBD UPDATE FINAL VIDEO-->
 
 <WistiaVideo videoId="yz0vrf2ilb" />
 
-TBD EMBED VIDEO
+## Druid use cases
+
+The team behind Druid open sourced  the project in 2012.
+Druid [graduated to a top-level Apache Project in 2019](https://lists.apache.org/thread/16b4h20gpo2m14mjgb4hz4563glwzs7c).
+It's been a massive hit amongst teams who want to reduce latency of event data being delivered to their users, and to support more flexible, ad-hoc querying by their users.
+
+The official Druid website contains an overview of how this real-time analytics database supports multiple [use cases](https://druid.apache.org/use-cases/) including user activity, network flows, digital marketing, and application performance management.
+<!-- Feel like we should do a deeper link than imply.io here -->
+See the [Imply website](https://imply.io/) for even more uses for Druid.
+
+For a sample of the companies using Apache Druid, take a look at the [Powered By page](https://druid.apache.org/druid-powered/).
+You can also watchvideos from Apache Druid users at Druid Summit [2023](https://www.youtube.com/playlist?list=PLDZysOZKycN4UZTJ8B3xQXdpqdmK8iiC5), [2022](https://www.youtube.com/playlist?list=PLDZysOZKycN6Bhp8sfenweb0qtRQELbDx), and [2021](https://www.youtube.com/playlist?list=PLDZysOZKycN4FuohgyYNEuI_Azt2ySIE_)
+There you'll find technolgists from Confluent, Reddit, Shopify, PayPal, Rakuten, and Netflix, to name a few.
+
+
+
+
 
