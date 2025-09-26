@@ -21,7 +21,13 @@ If you'd like to talk to through what you learn in this course, why not say hi t
           </Link>
         </div>
 
+## Welcome video
 
+Watch the following video for an introduction to this course:
+
+<!--TBD UPDATE FINAL VIDEO-->
+
+<WistiaVideo videoId="yz0vrf2ilb" />
 
 ## Get started with Druid
 
