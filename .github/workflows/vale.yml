@@ -1,0 +1,31 @@
+name: Imply Docs
+on: [pull_request]
+
+jobs:
+
+  spelling_and_style:
+    runs-on: [self-hosted, imply-ubuntu-latest]
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+    - name: Vale
+      uses: errata-ai/vale-action@reviewdog
+      with:
+        fail_on_error: true
+        version: 3.6.0
+      env:
+        # Required
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  links:
+    runs-on: [self-hosted, imply-ubuntu-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+      - name: Markdown link check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          base-branch: 'main'
+          check-modified-files-only: 'yes'
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
