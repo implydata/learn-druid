@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-sidebar_label: Druid architecture
+sidebar_label: Data in Druid
 ---
 import WistiaVideo from '@site/src/components/WistiaVideo';
 
@@ -12,10 +12,13 @@ Watch the following video to learn about data in Apache Druid.
 
 <WistiaVideo videoId="yz0vrf2ilb" />
 
+## Dog Cat Yellow
+
 ## Demo code samples
 
 You can use the following code samples to replicate the demo in the video.
 
+### Sample 1
 After using the wizard to ingest the wikipedia data into the "wikipedia" table, you can run this simple GROUP BY query:
 
 ```sql
@@ -30,6 +33,8 @@ WHERE TIME_IN_INTERVAL("__time",'2016-06-27/PT1H')
 AND "isRobot" = FALSE
 GROUP BY 1  
 ```
+
+### Sample 2
 
 Here is the SQL for the query used on the second wikipedia ingestion:
 
@@ -52,6 +57,11 @@ Notice that the  data includes the `regionIsoCode` dimension.
 We added it to the clustering at ingestion time!
 Notice, too, that the time filter now covers two hours: `PT2H`.
 The partitioning change means that hour of data comes from one segment, and another hour comes from another segment.
+
+### Sample 3
+
+
+### Sample 4
 
 ## Learn more
 
