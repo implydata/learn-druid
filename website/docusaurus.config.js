@@ -15,8 +15,9 @@ const config = {
   favicon: 'img/favicon.jpg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
+   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    experimental_faster: true  // Faster builds
   },
 
   // Set the production url of your site here
@@ -40,6 +41,7 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
   presets: [
     [
       'classic',
@@ -66,7 +68,7 @@ const config = {
       navbar: {
         title: '',
         logo: {
-          alt: 'Imply lofo',
+          alt: 'Imply logo',
           src: 'img/logo-imply.svg',
         },
         items: [
@@ -85,48 +87,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()}. All rights reserved. Imply, the Imply logo, Imply Lumi, and Polaris are either trademarks or registered trademarks of Imply Data, Inc. in the U.S. and/or other countries. Apache Kafka, Apache Druid, Druid and the Druid logo are either registered trademarks or trademarks of the Apache Software Foundation in the U.S. and/or other countries. All other marks and logos are the property of their respective owners.`,
       },
       prism: {
         theme: prismThemes.github,
