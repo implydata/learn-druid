@@ -4,7 +4,7 @@ on: [pull_request]
 jobs:
 
   spelling_and_style:
-    runs-on: [self-hosted, imply-ubuntu-latest]
+    runs-on: [ubuntu-latest]
     steps:
     - name: Checkout
       uses: actions/checkout@main
@@ -18,7 +18,7 @@ jobs:
         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   links:
-    runs-on: [self-hosted, imply-ubuntu-latest]
+    runs-on: [ubuntu-latest]
     steps:
       - name: Checkout
         uses: actions/checkout@main
