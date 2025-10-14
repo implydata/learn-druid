@@ -1,0 +1,28 @@
+---
+sidebar_position: 4
+sidebar_label: Druid architecture
+---
+import WistiaVideo from '@site/src/components/WistiaVideo';
+
+# Apache Druid architecture
+
+Apache Druid is comprises independently scalable and configurable services.
+Each service is responsible for different tasks. For details about the services that make up a Druid deployment, read the [Architecture](https://druid.apache.org/docs/latest/design/architecture) topic in the Druid documentation.
+
+The following video is another great resource to learn about Apache Druid architecture.
+
+<!--TBD UPDATE FINAL VIDEO-->
+
+<WistiaVideo videoId="yz0vrf2ilb" />
+
+## Learn more
+
+Refer to the following topics to learn more about clustered Druid environments:
+
+- [Clustered deployment](https://druid.apache.org/docs/latest/tutorials/cluster) for information on setting up a simple cluster.
+- [High availability](https://druid.apache.org/docs/latest/operations/high-availability) for setup recommendations for high availability environments.
+
+
+
+
+
