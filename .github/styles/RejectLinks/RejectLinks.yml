@@ -1,0 +1,10 @@
+extends: existence
+message: Add the .md to your link
+level: error
+ignorecase: false
+nonword: true
+scope: raw
+# This regex is supposed to find Markdown links except for those that point to something in ./assets
+# That should cover miscellaneous things in assets in addition to imgs
+tokens:
+  - \[[^\]]+\]\(\.(?!.*\/assets\/)(?![^)]*\.md(#[^\)]*)?)[^\)]+\)

@@ -1,0 +1,12 @@
+extends: substitution
+message: Use '%s' instead of '%s'
+level: error
+ignorecase: true
+# swap maps tokens in form of bad: good
+swap:
+  "Coordinator process": Coordinator service
+  "Overlord process": "Overlord service"
+  "Router process": "Router service"
+  "Broker process": "Broker service"
+  "MiddleManager process": "Middle Manager service"
+  "middlemanager": "Middle Manger"
