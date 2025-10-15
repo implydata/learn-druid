@@ -77,7 +77,10 @@ const config = {
           },
         ],
       },
-      disableSwitch: "true",
+      colorMode:{
+      disableSwitch: true,
+      defaultMode: 'light'
+      },
       footer: {
         style: 'dark',
         copyright: `Copyright © ${new Date().getFullYear()}. All rights reserved. Imply, the Imply logo, Imply Lumi, and Polaris are either trademarks or registered trademarks of Imply Data, Inc. in the U.S. and/or other countries. Apache Kafka, Apache Druid, Druid and the Druid logo are either registered trademarks or trademarks of the Apache Software Foundation in the U.S. and/or other countries. All other marks and logos are the property of their respective owners.`,
