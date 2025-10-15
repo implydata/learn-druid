@@ -21,7 +21,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://learn.imply.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -32,16 +32,8 @@ const config = {
   projectName: 'learn-druid', // Usually your repo name.
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
-
+  onBrokenMarkdownLinks: 'throw',
+  plugins: [require.resolve('docusaurus-lunr-search')],
   presets: [
     [
       'classic',
@@ -85,6 +77,7 @@ const config = {
           },
         ],
       },
+      disableSwitch: "true",
       footer: {
         style: 'dark',
         copyright: `Copyright © ${new Date().getFullYear()}. All rights reserved. Imply, the Imply logo, Imply Lumi, and Polaris are either trademarks or registered trademarks of Imply Data, Inc. in the U.S. and/or other countries. Apache Kafka, Apache Druid, Druid and the Druid logo are either registered trademarks or trademarks of the Apache Software Foundation in the U.S. and/or other countries. All other marks and logos are the property of their respective owners.`,
