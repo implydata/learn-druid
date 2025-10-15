@@ -2,7 +2,7 @@
 sidebar_position: 4
 sidebar_label: Druid architecture
 ---
-import WistiaVideo from '@site/src/components/WistiaVideo';
+import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 # Apache Druid architecture
 
@@ -12,8 +12,7 @@ Each service is responsible for different tasks. For details about the services 
 The following video is another great resource to learn about Apache Druid architecture.
 
 <!--TBD UPDATE FINAL VIDEO-->
-
-<WistiaVideo videoId="yz0vrf2ilb" />
+<!-- YouTubePlayer videoId="h7U_CsDTNBw" /-->
 
 ## Learn more
 
