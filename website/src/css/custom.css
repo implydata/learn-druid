@@ -73,7 +73,7 @@ footer.footer-component .container {
     display: flex;
 }
 footer.footer-component .footer_copy {
-    flex: 0 0 30%;
+    display: block;
     padding-right: 7em;
 }
 
@@ -159,3 +159,4 @@ footer #copyright-widget li {
 footer #copyright-widget a {
     font-weight: bold;
 }
+
