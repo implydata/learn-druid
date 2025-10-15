@@ -37,7 +37,7 @@ The official Apache Druid documentation Quick Start guide helps you through down
 1. Check that you have the prerequisite hardware and software.
 1. Follow the instructions to Druid it on your own machine!
 
-If you don't have time, don't worry – watch the walkthrough in the following video:
+If you don't have time, don't worry–watch the walkthrough in the following video:
 
 <!--TBD UPDATE FINAL VIDEO-->
 
