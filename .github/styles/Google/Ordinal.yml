@@ -1,0 +1,7 @@
+extends: existence
+message: "Spell out all ordinal numbers ('%s') in text."
+link: 'https://developers.google.com/style/numbers'
+level: error
+nonword: true
+tokens:
+  - (?<!\S)\d(?:st|nd|rd|th) # This is a departure from the Google YAML files. This makes sure it only catches single digit numbers in cases like 95th. The original regex was keying off the '5th' part of that and triggering an error.
