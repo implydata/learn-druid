@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
-import WistiaVideo from '@site/src/components/WistiaVideo';
+import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 # Apache Druid Basics
 
@@ -26,8 +26,7 @@ If you'd like to talk to through what you learn in this course, why not say hi t
 Watch the following video for an introduction to this course:
 
 <!--TBD UPDATE FINAL VIDEO-->
-
-<WistiaVideo videoId="yz0vrf2ilb" />
+<!-- YouTubePlayer videoId="h7U_CsDTNBw" /-->
 
 ## Get started with Druid
 
@@ -40,8 +39,7 @@ The official Apache Druid documentation Quick Start guide helps you through down
 If you don't have time, don't worry–watch the walkthrough in the following video:
 
 <!--TBD UPDATE FINAL VIDEO-->
-
-<WistiaVideo videoId="yz0vrf2ilb" />
+<!-- YouTubePlayer videoId="h7U_CsDTNBw" /-->
 
 ## Druid use cases
 

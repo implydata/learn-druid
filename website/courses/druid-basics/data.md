@@ -2,17 +2,14 @@
 sidebar_position: 4
 sidebar_label: Data in Druid
 ---
-import WistiaVideo from '@site/src/components/WistiaVideo';
+import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 # Data in Druid
 
 Watch the following video to learn about data in Apache Druid.
 
 <!--TBD UPDATE FINAL VIDEO-->
-
-<WistiaVideo videoId="yz0vrf2ilb" />
-
-## Dog Cat Yellow
+<!--YouTubePlayer videoId="h7U_CsDTNBw" /-->
 
 ## Demo code samples
 
@@ -60,17 +57,72 @@ The partitioning change means that hour of data comes from one segment, and anot
 
 ### Sample 3
 
+And here is the ingestion SQL for the third table.
+You can paste this into the SQL query view on the console to create a new table named "wikipedia-2".
+
+
+```sql
+SELECT
+ REPLACE INTO "wikipedia-2" OVERWRITE ALL
+WITH "ext" AS (
+  SELECT *
+  FROM TABLE(
+    EXTERN(
+      '{"type":"http","uris":["https://druid.apache.org/data/wikipedia.json.gz"]}',
+      '{"type":"json"}'
+    )
+  ) EXTEND ("isRobot" VARCHAR, "channel" VARCHAR, "timestamp" VARCHAR, "flags" VARCHAR, "isUnpatrolled" VARCHAR, "page" VARCHAR, "diffUrl" VARCHAR, "added" BIGINT, "comment" VARCHAR, "commentLength" BIGINT, "isNew" VARCHAR, "isMinor" VARCHAR, "delta" BIGINT, "isAnonymous" VARCHAR, "user" VARCHAR, "deltaBucket" BIGINT, "deleted" BIGINT, "namespace" VARCHAR, "cityName" VARCHAR, "countryName" VARCHAR, "regionIsoCode" VARCHAR, "metroCode" BIGINT, "countryIsoCode" VARCHAR, "regionName" VARCHAR)
+)
+SELECT
+  TIME_FLOOR(TIME_PARSE("timestamp"),'PT10M') AS "__time",
+  "isRobot",
+  "isAnonymous",
+  "channel",
+  "regionIsoCode",
+  "countryIsoCode",
+  SUM("added") AS "added-keys",
+  SUM("deleted") AS "deleted-keys",
+  DS_HLL("user") AS "user-hll",
+  MAX("commentLength") AS "comment-longest",
+  COUNT(*) AS "count"
+FROM "ext"
+GROUP BY 1, 2, 3, 4, 5, 6
+PARTITIONED BY HOUR
+CLUSTERED BY "channel"
+```
 
 ### Sample 4
 
+This is the final query that you see in the demo.
+It runs against the "wikipedia-2" table you just created.
+Notice how the distinct count of the number of users is calculated using the APPROX_COUNT_DISTINCT_HLL function.
+
+```sql
+SELECT
+  "__time",
+  "regionIsoCode",
+  APPROX_COUNT_DISTINCT_DS_HLL("user-hll") AS "users-approx",
+  COUNT(DISTINCT "channel") AS "channels"
+FROM "wikipedia-2"
+WHERE TIME_IN_INTERVAL("__time",'2016-06-27/PT1H')
+AND "isRobot" = FALSE
+GROUP BY 1, 2
+```
+
+## Exercises
+
+If you have run the Druid quickstart, why not use the data loader in the console to play with all the available example datasets.
+
+- Try all of the datasets.
+- See if you can work out how to apply a function to the data.
+- Can you figure out how to apply a filter?
+- Dig around to find the segments view. Can you see how these relate to the tables you're creating?
+
 ## Learn more
 
-Refer to the following topics to learn more about clustered Druid environments:
+Refer to the following topics to learn more about Druid data concepts
 
-- [Clustered deployment](https://druid.apache.org/docs/latest/tutorials/cluster) for information on setting up a simple cluster.
-- [High availability](https://druid.apache.org/docs/latest/operations/high-availability) for setup recommendations for high availability environments.
-
-
-
-
-
+- [Segments](https://druid.apache.org/docs/latest/design/segments.html)
+- [Ingestion](https://druid.apache.org/docs/latest/ingestion/index.html)
+- [Partitioning](https://druid.apache.org/docs/latest/ingestion/partitioning.html)
+- [Rollup](https://druid.apache.org/docs/latest/ingestion/rollup.html)
