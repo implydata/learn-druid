@@ -55,7 +55,7 @@ The official Druid website contains an overview of how this real-time analytics 
 See the [Imply website](https://imply.io/) for even more uses for Druid.
 
 For a sample of the companies using Apache Druid, take a look at the [Powered By page](https://druid.apache.org/druid-powered/).
-You can also watchvideos from Apache Druid users at Druid Summit [2023](https://www.youtube.com/playlist?list=PLDZysOZKycN4UZTJ8B3xQXdpqdmK8iiC5), [2022](https://www.youtube.com/playlist?list=PLDZysOZKycN6Bhp8sfenweb0qtRQELbDx), and [2021](https://www.youtube.com/playlist?list=PLDZysOZKycN4FuohgyYNEuI_Azt2ySIE_)
+You can also watch videos from Apache Druid users at Druid Summit [2023](https://www.youtube.com/playlist?list=PLDZysOZKycN4UZTJ8B3xQXdpqdmK8iiC5), [2022](https://www.youtube.com/playlist?list=PLDZysOZKycN6Bhp8sfenweb0qtRQELbDx), and [2021](https://www.youtube.com/playlist?list=PLDZysOZKycN4FuohgyYNEuI_Azt2ySIE_)
 There you'll find technolgists from Confluent, Reddit, Shopify, PayPal, Rakuten, and Netflix, to name a few.
 
 
