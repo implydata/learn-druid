@@ -160,3 +160,6 @@ footer #copyright-widget a {
     font-weight: bold;
 }
 
+.wrapcode code {
+  white-space: pre-wrap;
+}
