@@ -41,7 +41,11 @@ If you have time, running Apache Druid on your laptop is a great first step.
 2. Check that you have the prerequisite hardware and software.
 3. Follow the instructions to Druid it on your own machine!
 
-If you don't have time, you can watch the demonstration in the following video:
+:::info
+The video is coming soon. We're in the process of migrating this content.
+:::
+
+<!-- If you don't have time, you can watch the demonstration in the following video: -->
 
 <!--TBD UPDATE FINAL VIDEO-->
 <!-- YouTubePlayer videoId="h7U_CsDTNBw" /-->
