@@ -1,0 +1,247 @@
+
+
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+    a {
+        color: #7209B7;
+    }
+
+    a:hover, a:focus, .back-to-catalog-v3:hover,
+    .header-left .left-nav-toggle:hover {
+        color: #550689;
+    }
+
+    #lp-left-nav .lesson {
+        color: #9546c9;
+    }
+
+    #lp-left-nav .lesson:hover,
+    #lp-left-nav .lesson:active {
+        background: #2f034c;
+        color: white;
+    }
+
+    #lp-left-nav .lesson-active,
+    #lp-left-nav .current-item {
+        background: #7209B7;
+        color: white;
+    }
+
+    #lp-left-nav .left-nav-return {
+        color: #7209B7;
+    }
+
+    .link-color {
+        color: #7209B7;
+    }
+
+    .theme-color {
+        color: #7209B7;
+    }
+
+    .theme-color-bg {
+        background-color: #7209B7;
+    }
+
+    .theme-color-border-hover:hover, .theme-color-border-hover:focus {
+        border-color: #7209B7;
+    }
+
+    a.theme-no-hover{
+        color: #7209B7;
+    }
+
+    a.theme-no-hover:hover, a.theme-no-hover:focus {
+        color: #7209B7;
+    }
+
+    .tooltip {
+        background: #3f0466;
+        border: 1px solid #2f034c;
+    }
+
+    .tooltip.tip-top .nub {
+        border-color: transparent transparent #3f0466 transparent;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .tooltip.tip-top .nub {
+            border-color: #3f0466 transparent transparent transparent;
+        }
+    }
+
+    #curriculum-list-2 ul.scorm-item-list {
+        border-color: #7209B7;
+    }
+
+    
+    
+
+
+
+
+
+    #header,
+    #header-mobile-dropdown {
+        background-color: #001b47 !important;
+    }
+
+
+
+
+    #header, .header-link,
+    .header-left .left-nav-toggle {
+        color: #FFFFFF;
+    }
+
+    #header .header-dash-dropdown {
+        color: #FFFFFF;
+    }
+
+    #header .header-dropdown-button:before {
+        border-color: #FFFFFF transparent transparent transparent;
+    }
+
+
+
+
+    button, .button {
+        background-color: #7209B7;
+        border-color: #550689;
+    }
+
+    button:hover:disabled, .button:hover:disabled,
+    button:disabled:focus, .button:disabled:focus,
+    button:focus, .button:focus,
+    button:disabled, .button:disabled,
+    button:hover, .button:hover,
+    .button.disabled, .button.disabled:focus, .button.disabled:hover {
+        background-color: #550689;
+        border-color: #3f0466;
+    }
+
+    .button-background {
+        background-color: #7209B7;
+    }
+
+    .button-background-shade3 {
+        background-color: #2f034c;
+    }
+
+
+    .button-group li {
+        background-color: #7209B7;
+        border-right-color: #af74d6;
+    }
+    .button-group li:hover {
+        background-color: #9546c9;
+    }
+    .button-group li.active,
+    .button-group li:active {
+        background-color: #550689;
+    }
+
+    .button-border-color {
+        border-color: #7209B7;
+    }
+
+    a.coursebox-container .sj-ribbon-wrapper .sj-ribbon,
+    a.coursebox-container .sj-course-ribbon-wrapper .sj-course-ribbon {
+        color: #2f034c;
+        border-color: #7209B7;
+        background: #c396e0;
+    }
+
+    a.coursebox-container .sj-ribbon-wrapper .sj-ribbon-complete,
+    a.coursebox-container .sj-course-ribbon-wrapper .sj-course-ribbon-complete {
+        border-color: #7209B7;
+        background: #7209B7;
+    }
+
+    .quiz .question .form-answers .linear-scale-question__choice__label.linear-scale-question__choice__selected {
+      background: #7209B7;
+    }
+
+
+
+
+/* LEX styles */
+
+
+    
+        /* focus styles */
+
+        button:not(.focus-after-v2):focus::before,
+        a.button:focus::before,
+        .focus-link-v2:focus::before,
+        .course-text-content a:focus::before,
+        #profile-course-table td > a:focus::before,
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="date"]:focus,
+        input[type="datetime"]:focus,
+        input[type="datetime-local"]:focus,
+        input[type="month"]:focus,
+        input[type="week"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        input[type="search"]:focus,
+        input[type="tel"]:focus,
+        input[type="time"]:focus,
+        input[type="url"]:focus,
+        textarea:focus,
+        input[type="text"].catalog-search-input:focus,
+        input[type="text"].sj-search-input:focus,
+        .focus-link-v2:focus::before,
+        a.coursebox-container:focus,
+        .filter-group-title:focus::before,
+        #ep-footer .language-pack-wrapper #languagePackSelect:focus,
+        select:focus,
+        #lp-footer .toggle-fullscreen:focus::before,
+        #header .header-dropdown-button:focus img,
+        .inline-collapsible-section__label:focus::before,
+        .alert-box a:focus::before,
+        #change-avatar-button #upload-new-avatar-button:focus::before,
+        .linear-scale-question__choice__label:focus-within {
+            border: 1px solid #550689;
+            box-shadow: 0 0 0 3px #9546c9;
+        }
+        input[type='radio']:checked,
+        input[type='radio']:disabled:active:checked {
+            border-color: #550689;
+        }
+        input[type='radio']:checked::before,
+        input[type='radio']:disabled:active:checked::before {
+            background-color: #550689;
+        }
+        input[type='radio']:focus::after {
+            border-color: #9546c9;
+        }
+        input[type='checkbox']:focus {
+            box-shadow: 0 0 0 3px #9546c9;
+        }
+        input[type='checkbox']:checked,
+        input[type='checkbox']:disabled:active:checked {
+            background-color: #550689;
+        }
+        .sj-forms .inline-form-field:focus-within input {
+            border: none;
+        }
+
+        .sj-forms .inline-form-field:focus-within {
+            box-shadow: 0 0 0 3px #9546c9;
+        }
+
+        .sj-forms .inline-form-field:focus-within .input-wrapper {
+            border: 1px solid #550689;
+        }
+        .focus-after-v2:focus::after {
+            border: 1px solid #550689;
+            box-shadow: 0 0 0 3px #9546c9;
+        }
+    
+
