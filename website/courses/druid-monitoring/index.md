@@ -6,6 +6,9 @@ import styles from '../../../website/src/pages';
 
 # Apache Druid Monitoring
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 
 <div className={styles.buttons}>
           <Link
