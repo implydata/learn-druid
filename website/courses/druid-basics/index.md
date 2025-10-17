@@ -24,10 +24,13 @@ If you'd like to talk to through what you learn in this course, why not say hi t
 
 ## Welcome video
 
-Watch the following video for an introduction to this course:
+:::info
+The video is coming soon. We're in the process of migrating this content.
+:::
 
-<!--TBD UPDATE FINAL VIDEO-->
-<!-- YouTubePlayer videoId="h7U_CsDTNBw" /-->
+<!--TBD UPDATE FINAL VIDEO
+Watch the following video for an introduction to this course:
+< YouTubePlayer videoId="h7U_CsDTNBw" /-->
 
 ## Get started with Druid
 
