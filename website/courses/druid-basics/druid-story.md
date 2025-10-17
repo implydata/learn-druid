@@ -22,6 +22,11 @@ Listen to the episode to learn:
 <!-- TBD Embed. Current video is on Wistia. Not sure if the same video player will work for audio only. -->
 <YouTubePlayer videoId="h7U_CsDTNBw" />
 
+<br />
+<br />
+
+<details>
+    <summary>Read the **Transcript**</summary>
 Copy
 <!-- vale off -->
 
@@ -231,6 +236,10 @@ Well, it was useful for me. I love it.
 I guess that’s really what matters, right? This is all about we got one viewer at least, and they’re happy.
 
 [00:35:44.280] – **Eric Tschetter**
+And my mom probably, but she’ll have no idea what we’re talking about. All right, folks, if you want to know more about Apache Druid, visit Druid. Apache.org. And if you want to know about what we’re doing with Druid at Imply, visit us at imply IO. That’s going to do it for me. Stay tuned for more.
+
+</details>
+
 And my mom probably, but she’ll have no idea what we’re talking about. All right, folks, if you want to know more about Apache Druid, visit Druid. Apache.org. And if you want to know about what we’re doing with Druid at Imply, visit us at imply.io. That’s going to do it for me. Stay tuned for more.
 
 <!-- vale on -->

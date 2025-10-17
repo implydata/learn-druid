@@ -5,6 +5,12 @@ import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
 import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
+
+<!--
+
 # Apache Druid Data Modeling
 
 This guide teaches you the fundamentals of ingesting your data into Apache Druid. This course consists of:
@@ -18,6 +24,7 @@ Each module contains an introductory video, links to Python notebooks in the lea
 
 If you'd like to talk to through what you learn in this course, why not say hi to Imply's DevRel team!
 
+
 <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -29,10 +36,11 @@ If you'd like to talk to through what you learn in this course, why not say hi t
 ## Welcome video
 
 Watch the following video for an introduction to this course:
+-->
 
 <!--TBD UPDATE FINAL VIDEO-->
 
-
+<!-->
 ## Set up your learning environment
 
 Before you start, set up the learning environmentset on your local machine.
@@ -41,8 +49,9 @@ Go to the [learn-druid Github repo](https://github.com/implydata/learn-druid).
 Follow the instructions on the main page to download all the resources you need to start running Apache Druid and associated components locally.
 
 The video below demonstrates set up process.
-
+-->
 <!--TBD UPDATE FINAL VIDEO-->
+
 
 
 

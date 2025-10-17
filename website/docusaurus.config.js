@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Learn Druid',
+  title: 'Apache® Druid Training',
   tagline: 'Brought to you by contributors and committers to the Apache Druid® project. Welcome to Imply\'s public catalog of practical courses on all things Druid!',
   favicon: 'img/favicon.jpg',
 
@@ -21,7 +21,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://learn.imply.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -32,16 +32,8 @@ const config = {
   projectName: 'learn-druid', // Usually your repo name.
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
-
+  onBrokenMarkdownLinks: 'throw',
+  plugins: [require.resolve('docusaurus-lunr-search')],
   presets: [
     [
       'classic',
@@ -84,6 +76,10 @@ const config = {
             position: 'right',
           },
         ],
+      },
+      colorMode:{
+      disableSwitch: true,
+      defaultMode: 'light'
       },
       footer: {
         style: 'dark',
