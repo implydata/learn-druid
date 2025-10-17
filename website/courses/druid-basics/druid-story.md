@@ -1,9 +1,7 @@
 ---
 sidebar_position: 2
 ---
-import Link from '@docusaurus/Link';
-import styles from '../../../website/src/pages';
-import WistiaVideo from '@site/src/components/WistiaVideo';
+import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 # The Druid story
 
@@ -22,11 +20,16 @@ Listen to the episode to learn:
 - What’s next for Apache Druid
 
 <!-- TBD Embed. Current video is on Wistia. Not sure if the same video player will work for audio only. -->
+<YouTubePlayer videoId="h7U_CsDTNBw" />
 
+<br />
+<br />
+
+<details>
+    <summary>Read the **Transcript**</summary>
 Copy
 <!-- vale off -->
 
-**Transcript** 
 
 [00:00:01.050] – **Reena Leone**
 Welcome to Tales at Scale, a podcast that cracks open the world of analytics projects. I’m your host, Reena from Imply, and I’m here to bring you stories from developers doing cool things with analytics way beyond your basic bi. I’m talking about analytics applications that are taking data and insights to a whole new level. On today’s episode, we’re going to be digging into the origins of a database I’ve been spending a lot of time with lately, Apache Druid. Druid is a high performance, real time analytics database, and it’s also an open source project. Things that make Druid unique are how it enables interactive conversations with data, provides high concurrency and easily ingests, and combines both real time streaming data and historical batch data. As of April 2022, over 1000 organizations are using Druid, and that includes folks like Netflix, Twitter, Reddit, Salesforce, and more. And they’re using Druid to generate insights that make data useful across a wide variety of use cases. But let’s go back to 2011. A data team at a technology company had a problem. They needed to quickly aggregate and query real time data coming from website users across the Internet to analyze digital ad auctions.
@@ -233,6 +236,10 @@ Well, it was useful for me. I love it.
 I guess that’s really what matters, right? This is all about we got one viewer at least, and they’re happy.
 
 [00:35:44.280] – **Eric Tschetter**
+And my mom probably, but she’ll have no idea what we’re talking about. All right, folks, if you want to know more about Apache Druid, visit Druid. Apache.org. And if you want to know about what we’re doing with Druid at Imply, visit us at imply IO. That’s going to do it for me. Stay tuned for more.
+
+</details>
+
 And my mom probably, but she’ll have no idea what we’re talking about. All right, folks, if you want to know more about Apache Druid, visit Druid. Apache.org. And if you want to know about what we’re doing with Druid at Imply, visit us at imply.io. That’s going to do it for me. Stay tuned for more.
 
 <!-- vale on -->
