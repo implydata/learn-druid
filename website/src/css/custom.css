@@ -15,6 +15,8 @@
   --ifm-color-primary-lightest: #B5D5FF;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-footer-background-color: #334455; 
+  --ifm-footer-color: #ffffff;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -45,4 +47,119 @@
  width: 100%;
  height: 100%;
  overflow: auto;
+}
+
+.banner-footer {
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0;
+    width: 100%;
+    padding-top: 7em;
+}
+
+/* footer */
+footer {
+    background: #21262D;
+}
+
+footer.footer-component {
+    padding: 5em 0 1em;
+}
+
+footer.footer-component .container {
+    display: flex;
+}
+footer.footer-component .footer_copy {
+    display: block;
+    padding-right: 7em;
+}
+
+footer.footer-component .footer_copy a {
+    display: inline-block;
+}
+
+footer.footer-component .footer_copy p {
+    color: #fff;
+    padding: .5em 0;
+}
+
+footer.footer-component .footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex: 0 0 70%;
+}
+
+footer .list-cols {
+    width: 20%;
+    padding: 0 .5em 1.5em;
+}
+
+footer .list-cols p {
+    margin: 0;
+    min-height: unset;
+}
+
+footer .list-cols ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .list-cols h3,
+footer .list-cols ul li a {
+    color: #fff;
+}
+
+footer .list-cols h3 {
+    font-size: 14px;
+}
+
+footer .list-cols ul li a {
+    font-size: 12px;
+    transition: all .5s ease;
+}
+
+footer .list-cols ul li a:hover, footer.list-cols ul li a:active {
+    color: #0D7DE0;
+}
+
+footer .list-cols img {
+    display: none;
+}
+
+footer #copyright-widget {
+    margin-top: 30px;
+}
+
+footer #copyright-widget, footer #copyright-widget a, footer #copyright-widget p {
+    color: #fff;
+    font-size: 10px;
+    line-height: 20px;
+}
+
+footer #copyright-widget p {
+    margin-bottom: 1em;
+}
+
+footer #copyright-widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer #copyright-widget li {
+    display: inline-block;
+    margin-right: 1em;
+}
+
+footer #copyright-widget a {
+    font-weight: bold;
+}
+
+.wrapcode code {
+  white-space: pre-wrap;
 }
