@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Apache® Druid Training',
-  tagline: 'Brought to you by contributors and committers to the Apache Druid® project. Welcome to Imply\'s public catalog of practical courses on all things Druid!',
+  tagline: 'Brought to you by contributors and committers to the Apache Druid project. Welcome to Imply\'s public catalog of practical courses on all things Druid!',
   favicon: 'img/favicon.jpg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
