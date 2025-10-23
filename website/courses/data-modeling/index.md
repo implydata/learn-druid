@@ -1,15 +1,10 @@
 ---
 sidebar_position: 2
+label: Apache Druid Data Modeling
 ---
 import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
 import YouTubePlayer from '@site/src/components/YouTubePlayer';
-
-:::info
-We're in the process of migrating this content. Check back soon.
-:::
-
-<!--
 
 # Apache Druid Data Modeling
 
@@ -36,11 +31,11 @@ If you'd like to talk to through what you learn in this course, why not say hi t
 ## Welcome video
 
 Watch the following video for an introduction to this course:
--->
+
 
 <!--TBD UPDATE FINAL VIDEO-->
 
-<!-->
+
 ## Set up your learning environment
 
 Before you start, set up the learning environmentset on your local machine.
@@ -49,7 +44,7 @@ Go to the [learn-druid Github repo](https://github.com/implydata/learn-druid).
 Follow the instructions on the main page to download all the resources you need to start running Apache Druid and associated components locally.
 
 The video below demonstrates set up process.
--->
+
 <!--TBD UPDATE FINAL VIDEO-->
 
 
