@@ -1,12 +1,10 @@
 ---
 sidebar_position: 2
-label: Apache Druid Data Modeling
+title: Apache® Druid data modeling
 ---
 import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
 import YouTubePlayer from '@site/src/components/YouTubePlayer';
-
-# Apache Druid Data Modeling
 
 This guide teaches you the fundamentals of ingesting your data into Apache Druid. This course consists of:
 
