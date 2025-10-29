@@ -65,8 +65,8 @@ This notebook is important as it walks you through the types of UNION ALL operat
 
 To get you ready for the exam, take time to delve into the documentation. Especially remember to look at:
 
-The [Apache Datasketches](https://druid.apache.org/docs/latest/development/extensions-core/datasketches-extension) extension and the [functions](https://druid.apache.org/docs/latest/querying/sql-aggregations#sketch-functions) that are available for each.
-[TopN](https://druid.apache.org/docs/latest/querying/topnquery) queries.
-The [UNION ALL](https://druid.apache.org/docs/latest/querying/sql#union-all) operator.
-How to [roll up (summarize) data](https://druid.apache.org/docs/latest/ingestion/rollup) in native JSON-based ingestion (used in streaming), especially how to truncate the timestamp and where to specify the aggregates (metrics) that you want to produce.
-Both the [SQL](https://druid.apache.org/docs/latest/querying/sql-aggregations) and [native](https://druid.apache.org/docs/latest/querying/aggregations) aggregate functions that are available to you.
+- The [Apache Datasketches](https://druid.apache.org/docs/latest/development/extensions-core/datasketches-extension) extension and the [functions](https://druid.apache.org/docs/latest/querying/sql-aggregations#sketch-functions) that are available for each.
+- [TopN](https://druid.apache.org/docs/latest/querying/topnquery) queries.
+- The [UNION ALL](https://druid.apache.org/docs/latest/querying/sql#union-all) operator.
+- How to [roll up (summarize) data](https://druid.apache.org/docs/latest/ingestion/rollup) in native JSON-based ingestion (used in streaming), especially how to truncate the timestamp and where to specify the aggregates (metrics) that you want to produce.
+- Both the [SQL](https://druid.apache.org/docs/latest/querying/sql-aggregations) and [native](https://druid.apache.org/docs/latest/querying/aggregations) aggregate functions that are available to you.
