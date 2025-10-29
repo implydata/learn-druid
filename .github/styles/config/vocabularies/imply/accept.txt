@@ -927,7 +927,7 @@ headerSubsetFiltersInExport
 healthRoute
 helpCenterHref
 heterogenous
-historicals
+[Hh]istoricals
 hive-llap-client
 hive-llap-common
 hive-llap-tez
@@ -1731,6 +1731,7 @@ PII
 piiMask
 pinboard
 Pino
+[Pp]interest
 PivotTable
 pivot_home
 PKCE
@@ -2134,6 +2135,7 @@ testCheckpointForUnknownTaskGroup
 TestNG
 textarea
 Tez
+[Tt]iering
 time.timeBucket
 time.timeFloor
 time.timePart
