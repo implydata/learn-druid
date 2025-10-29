@@ -566,7 +566,7 @@ dataTier1
 dataTiers
 dataTierX
 DATA_TYPE
-datetime
+[Dd]atetime
 DateTimeFormat
 DATETIME_PRECISION
 datums

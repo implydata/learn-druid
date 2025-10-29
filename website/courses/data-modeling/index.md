@@ -38,7 +38,7 @@ Watch the following video for an introduction to this course:
 
 Before you start, set up the learning environmentset on your local machine.
 
-Go to the [learn-druid Github repo](https://github.com/implydata/learn-druid).
+Go to the [learn-druid Github repository](https://github.com/implydata/learn-druid).
 Follow the instructions on the main page to download all the resources you need to start running Apache Druid and associated components locally.
 
 The video below demonstrates set up process.
