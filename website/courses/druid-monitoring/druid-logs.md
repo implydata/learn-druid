@@ -23,7 +23,7 @@ Remember to take a look at the reference material at the end of each notebook. S
 
 Equipped with what you have learned, you may consider it a good idea to:
 
-- Look at and record the log4j configuration in your running environment.
+- Look at and record the Log4j configuration in your running environment.
 - Follow one of your own ingestion tasks through the logs to understand, in detail, what Druid is doing.
 - Decide whether you will implement a solution to centralize logs for storage and analysis.
 - Work out a meaningful retention policy for all your logs.
