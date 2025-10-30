@@ -500,6 +500,7 @@ connect-redis
 connect-session-knex
 consumer.listTopics
 CONTAINS_STRING
+Conviva
 CoordinatorBasicAuthorizerResourceTest
 CoordinatorPollingBasicAuthenticatorCacheManager
 CoordinatorPollingBasicAuthorizerCacheManager
@@ -601,6 +602,7 @@ defaultUserPermissions
 DEFAULT_CHARACTER_SET_CATALOG
 DEFAULT_CHARACTER_SET_NAME
 DEFAULT_CHARACTER_SET_SCHEMA
+[Dd]efragmenting
 DeleteAlarms
 deltaBucket
 denormalize
@@ -1281,6 +1283,7 @@ knex
 KoalasToTheMax
 kosmosfs
 KPL
+Krug
 Kryo
 kubectl
 labelling
@@ -1421,8 +1424,7 @@ metricsCluster
 metricsSpec
 metroCode
 Mgmt
-middleManager
-MiddleManagers?
+Middle Managers?
 MIDDLE_MANAGER
 Middle Manager
 Milli
@@ -2136,6 +2138,7 @@ TestNG
 textarea
 Tez
 [Tt]iering
+Thiyagarajan
 time.timeBucket
 time.timeFloor
 time.timePart
