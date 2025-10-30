@@ -500,6 +500,7 @@ connect-redis
 connect-session-knex
 consumer.listTopics
 CONTAINS_STRING
+Conviva
 CoordinatorBasicAuthorizerResourceTest
 CoordinatorPollingBasicAuthenticatorCacheManager
 CoordinatorPollingBasicAuthorizerCacheManager
@@ -1282,6 +1283,7 @@ knex
 KoalasToTheMax
 kosmosfs
 KPL
+Krug
 Kryo
 kubectl
 labelling
@@ -2134,6 +2136,7 @@ testCheckpointForUnknownTaskGroup
 TestNG
 textarea
 Tez
+Thiyagarajan
 time.timeBucket
 time.timeFloor
 time.timePart

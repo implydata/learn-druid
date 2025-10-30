@@ -1,11 +1,11 @@
 ---
 sidebar_position: 1
+title: Apache® Druid basics
+sidebar_label: Druid basics
 ---
 import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
 import YouTubePlayer from '@site/src/components/YouTubePlayer';
-
-# Apache Druid Basics
 
 Welcome to the fundamental course on Apache Druid from Imply!
 
