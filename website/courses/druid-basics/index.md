@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 title: Apache® Druid basics
-sidebar_label: Druid basics
+sidebar_label: Apache® Druid basics
 ---
 import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';

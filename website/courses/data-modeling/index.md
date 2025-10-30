@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+sidebar_label: Data modeling
 title: Apache® Druid data modeling
 ---
 import Link from '@docusaurus/Link';

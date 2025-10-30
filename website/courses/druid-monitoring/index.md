@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-sidebar_label: Druid monitoring
+sidebar_label: Monitoring
 title: Apache® Druid monitoring
 ---
 import Link from '@docusaurus/Link';

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 title: Apache® Druid Streaming
+sidebar_label: Streaming 
 ---
 import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
