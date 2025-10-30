@@ -567,7 +567,7 @@ dataTier1
 dataTiers
 dataTierX
 DATA_TYPE
-datetime
+[Dd]atetime
 DateTimeFormat
 DATETIME_PRECISION
 datums
@@ -1733,6 +1733,7 @@ PII
 piiMask
 pinboard
 Pino
+[Pp]interest
 PivotTable
 pivot_home
 PKCE
@@ -2136,6 +2137,7 @@ testCheckpointForUnknownTaskGroup
 TestNG
 textarea
 Tez
+[Tt]iering
 Thiyagarajan
 time.timeBucket
 time.timeFloor
