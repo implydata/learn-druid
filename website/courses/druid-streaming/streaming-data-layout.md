@@ -46,7 +46,7 @@ Here are some additional resources for you to check out:
 
 - Documentation on [Historicals](https://druid.apache.org/docs/latest/design/historical), and their role in query execution.
 - Documentation on [rollup](https://druid.apache.org/docs/latest/ingestion/rollup).
-- Documentation on [Apache Datasketches](https://druid.apache.org/docs/latest/development/extensions-core/datasketches-extension).
+- Documentation on [Apache DataSketches](https://druid.apache.org/docs/latest/development/extensions-core/datasketches-extension).
 
 ### Exercises
 
@@ -59,4 +59,4 @@ Run through the "Using roll-up to GROUP BY your incoming data in real time, and 
 Here are some more things you might want to try:
 
 - Try out different `queryGranularity` settings on one of your own streams. As you do, keep an eye on the segment size and numbers.
-- Review your schemas and queries for opportunities to generate Datasketches to support COUNT DISTINCT operations. Create a second table to compare performance and flexibility for users.
+- Review your schemas and queries for opportunities to generate DataSketches to support COUNT DISTINCT operations. Create a second table to compare performance and flexibility for users.

@@ -15,12 +15,12 @@ Take a look at these resources to learn more:
 - Dig into the [supervisor spec](https://druid.apache.org/docs/latest/ingestion/supervisor), particularly the `ioConfig` section.
   - [Apache® Kafka supervisor spec specifics](https://druid.apache.org/docs/latest/ingestion/kafka-ingestion) - including how to ingest from [multiple topics](https://druid.apache.org/docs/latest/ingestion/kafka-ingestion/#ingest-from-multiple-topics).
   - [Amazon Kinesis supervisor spec specifics](https://druid.apache.org/docs/latest/ingestion/kinesis-ingestion).
-- Review the [data server configuration](https://druid.apache.org/docs/latest/configuration/#data-server) options - notice druid.worker.capacity for each running MiddleManager.
+- Review the [data server configuration](https://druid.apache.org/docs/latest/configuration/#data-server) options - notice druid.worker.capacity for each running Middle Manager.
 - Read more about the [Apache Druid autoscaler](https://druid.apache.org/docs/latest/ingestion/supervisor#task-autoscaler).
 
 ### Exercises
 
-The ingestion specification contains the dataSchema, ioConfig, and tuningConfig components. These components determine how Druid connects to, interprets, and writes data into a table.
+The ingestion specification contains the `dataSchema`, `ioConfig`, and `tuningConfig` components. These components determine how Druid connects to, interprets, and writes data into a table.
 
 Now it's time to turn to the [learn-druid](https://github.com/implydata/learn-druid) repository of notebooks. These notebooks contain useful reference material, so even if you don't run them in the provided Docker image, it's worth looking at them in the source repository.
 
