@@ -2,6 +2,8 @@
 sidebar_position: 4
 sidebar_label: Druid architecture
 ---
+import Link from '@docusaurus/Link';
+import styles from '../../../website/src/pages';
 import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 # Apache Druid architecture

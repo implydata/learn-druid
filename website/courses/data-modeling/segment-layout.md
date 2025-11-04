@@ -4,6 +4,10 @@ title: Optimize segment layout and location
 sidebar_label: Optimize segments
 ---
 
+import Link from '@docusaurus/Link';
+import styles from '../../../website/src/pages';
+import YouTubePlayer from '@site/src/components/YouTubePlayer';
+
 ## Segments and infrastructure 
 
 <!-- Need video -->

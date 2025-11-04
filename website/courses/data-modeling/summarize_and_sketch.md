@@ -3,6 +3,10 @@ sidebar_position: 5
 title: Summarize and sketch
 ---
 
+import Link from '@docusaurus/Link';
+import styles from '../../../website/src/pages';
+import YouTubePlayer from '@site/src/components/YouTubePlayer';
+
 ## Expert interview
 
 <!--Need video -->

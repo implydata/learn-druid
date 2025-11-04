@@ -5,6 +5,7 @@ sidebar_label: Streaming
 ---
 import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
+import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 Welcome to the Apache Druid streaming course from Imply!
 

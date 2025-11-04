@@ -2,6 +2,9 @@
 sidebar_position: 3
 title: Stream data layout and summarization
 ---
+import Link from '@docusaurus/Link';
+import styles from '../../../website/src/pages';
+import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 ## Stream data layout
 

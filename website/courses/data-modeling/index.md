@@ -31,6 +31,9 @@ If you'd like to talk to through what you learn in this course, why not say hi t
 
 Watch the following video for an introduction to this course:
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 
 <!--TBD UPDATE FINAL VIDEO-->
 
@@ -43,6 +46,10 @@ Go to the [learn-druid Github repository](https://github.com/implydata/learn-dru
 Follow the instructions on the main page to download all the resources you need to start running Apache Druid and associated components locally.
 
 The video below demonstrates set up process.
+
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 
 <!--TBD UPDATE FINAL VIDEO-->
 

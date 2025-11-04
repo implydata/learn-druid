@@ -5,6 +5,7 @@ title: Apache® Druid monitoring
 ---
 import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
+import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 Welcome to the Apache Druid monitoring course on Apache Druid from Imply!
 

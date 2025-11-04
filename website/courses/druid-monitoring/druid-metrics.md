@@ -3,8 +3,15 @@ sidebar_position: 3
 sidebar_label: Druid metrics
 title: Apache® Druid metrics
 ---
+import Link from '@docusaurus/Link';
+import styles from '../../../website/src/pages';
+import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 ### Druid metrics - expert interview
+
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 
 <!--NEED VIDEO-->
 
