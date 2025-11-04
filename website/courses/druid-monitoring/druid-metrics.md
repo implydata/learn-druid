@@ -23,8 +23,9 @@ It's particularly important in this case to look at the reference material at th
 
 At this point, you may want to use your knowledge to:
 
--Connect Druid to your existing metrics collection system, like Prometheus and Grafana.
--Play with different metrics monitors, using your own data ingestion and query patterns.
+- Connect Druid to your existing metrics collection system, like Prometheus and Grafana.
+- Play with different metrics monitors, using your own data ingestion and query patterns.
+
 To understand more about why metrics are so important to set up and learn:
 
 - Watch ["Deep Dive into Metrics"](https://youtu.be/mdfuh_Q4i6U) by Rill.

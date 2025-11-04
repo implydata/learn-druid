@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-title: Summarise and sketch
+title: Summarize and sketch
 ---
 
 ## Expert interview
@@ -35,7 +35,7 @@ Apache Druid includes numerous query execution engines and functions that help y
 
 There are several notebooks that you now need to complete to experience what these techniques are, and how they can be applied both at query time and as part of your ingestion.
 
-Open JupyterLab in your [learn-druid](https://github.com/implydata/learn-druid)environment.
+Open JupyterLab in your [learn-druid](https://github.com/implydata/learn-druid) environment.
 
 Work through the following notebooks in the query section:
 

@@ -29,7 +29,8 @@ Equipped with what you have learned, you may consider it a good idea to:
 - Work out a meaningful retention policy for all your logs.
 - Use a test environment to try out different configuration options.
 - Determine a configuration management strategy that will allow you to centrally manage the log configurations of your Druid instances.
-- For extra depth and context, take a look at these resources:
+
+For extra depth and context, take a look at these resources:
 
 - Read about [setting the query Id](https://druid.apache.org/docs/latest/querying/sql-query-context) in the query context parameters.
 - Find out about [masking things like passwords](https://druid.apache.org/docs/latest/configuration/index.html#startup-logging) in log files.
