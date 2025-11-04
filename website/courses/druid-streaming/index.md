@@ -31,5 +31,5 @@ If you'd like to talk to through what you learn in this course, why not say hi t
 
 ## Supervisor specifications
 
-<!-- NEED VIDEO -->
+<YouTubePlayer videoId="PnQw2vsRiA4" />
 

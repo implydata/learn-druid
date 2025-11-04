@@ -27,7 +27,7 @@ Finally, be sure that you understand the relationship to "queryGranularity", "ro
 
 ## Approximation
 
-<!--Need video-->
+<YouTubePlayer videoId="YNXJTpC3GBg" />
 
 ### Exercises
 
@@ -49,7 +49,7 @@ When you are done, you will know how to leverage Apache Datasketches inside Apac
 
 ## Tables
 
-<!--Need video-->
+<YouTubePlayer videoId="oL0HdknqphM" />
 
 ## UNION ALL
 

@@ -8,8 +8,7 @@ import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 Watch the following video to learn about parallelism in Apache Druid.
 
-<!--TBD UPDATE FINAL VIDEO-->
-<!--YouTubePlayer videoId="h7U_CsDTNBw" /-->
+<YouTubePlayer videoId="CIXbYcf8uhg" />
 
 ## Demo code sample
 
