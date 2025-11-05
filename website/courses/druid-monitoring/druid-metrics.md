@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-sidebar_label: Druid metrics
+sidebar_label: Metrics
 title: Apache® Druid metrics
 ---
 import Link from '@docusaurus/Link';

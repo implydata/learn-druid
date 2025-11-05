@@ -10,7 +10,11 @@ import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 ### Expert interview
 
-### Learn more about data sources
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
+
+### Learn more
 
 Take a look at these resources to learn more:
 
@@ -41,6 +45,9 @@ Equipped with what you have learned, why not spin up a [Quickstart](https://drui
 
 ### Expert interview
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 <!--need video -->
 
 ### Learn more

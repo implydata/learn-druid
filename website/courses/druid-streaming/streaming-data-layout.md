@@ -10,6 +10,9 @@ import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 ### Expert interview
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 <!-- Need video-->
 
 ### Learn more
@@ -41,6 +44,9 @@ You may want to use your new knowledge to:
 
 ### Expert interview
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 <!-- Need video -->
 
 ### Learn more

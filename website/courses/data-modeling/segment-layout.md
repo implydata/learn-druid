@@ -10,13 +10,21 @@ import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 ## Segments and infrastructure 
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
+
 <!-- Need video -->
 
 ## Expert interview
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
+
 <!-- Need video -->
 
-## Exercises: layout
+## Layout
 
 Segments in Druid are generated during ingestion and stored in Deep Storage. It's critical to optimize the size and number of these files with an understanding of the impact on query efficiency and on data management.
 
@@ -50,6 +58,9 @@ Take a look at these videos and articles to deepen your understanding:
 - [Storing Data in Druid for Performance](https://youtu.be/zqcW5kP7fmI) from Imply
 - [Powering Observability](https://youtu.be/WDv7nwJEKp0) from Confluent
 
-### Tiering in action
+## Tiering in action
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 <!--Need video -->

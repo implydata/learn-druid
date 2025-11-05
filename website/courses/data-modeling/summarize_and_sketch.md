@@ -9,9 +9,12 @@ import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 ## Expert interview
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 <!--Need video -->
 
-## Exercises: summarized tables
+Summarized tables
 
 Apache Druid is a speedy GROUP BY engine thanks to the way that it stores data and how it parallelizes query operations.
 
@@ -32,8 +35,6 @@ Finally, be sure that you understand the relationship to "queryGranularity", "ro
 ## Approximation
 
 <YouTubePlayer videoId="YNXJTpC3GBg" />
-
-### Exercises
 
 Apache Druid includes numerous query execution engines and functions that help you eke out the maximum performance for your queries. When you're ingesting or querying large amounts of data, it's especially important to know about these techniques.
 

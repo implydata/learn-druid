@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-sidebar_label: Druid logs
+sidebar_label: Logs
 title: Apache® Druid logs
 ---
 import Link from '@docusaurus/Link';
@@ -9,6 +9,9 @@ import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 ## Druid logs - expert interview
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 <!--NEED VIDEO-->
 
 ## Exercises

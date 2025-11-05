@@ -29,6 +29,9 @@ If you'd like to talk to through what you learn in this course, why not say hi t
 ## Welcome
 
 <!-- NEED VIDEO -->
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 
 ## Supervisor specifications
 

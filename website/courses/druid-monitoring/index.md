@@ -30,7 +30,13 @@ Follow this link to find the bookable sessions on offer.
 ## Welcome
 
 <!--NEED VIDEO-->
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 
 ## Why observe Druid?
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
 <!--NEED VIDEO-->

@@ -9,6 +9,10 @@ import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 Watch the following expert interview for an to learn about schema design:
 
+:::info
+We're in the process of migrating this content. Check back soon.
+:::
+
 <!--TBD UPDATE FINAL VIDEO-->
 <!-- YouTubePlayer videoId="h7U_CsDTNBw" /-->
 
@@ -19,11 +23,16 @@ Putting time into identifying the correct timestamp and the value of individual 
 The time functions in Druid are particularly important to grasp and understand. Every row in a table in Druid has a time column. It is distinct from all other dimensions that a row might contain, and represents the timestamp when some event in your data occurred. It's used at ingestion time to partition your data before it is distributed, and it's used at query time to plan queries and to parallelise them.
 
 Open JupyterLab in your [learn-druid](https://github.com/implydata/learn-druid) environment.
+
 Under the ingestion section, we recommend that you run through these notebooks:
-Batch ingestion ([local](http://localhost:8889/lab/tree/02-ingestion) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/02-batch-ingestion.ipynb)) - it covers the basics of ingestion, including how to specify the columns that you choose to ingest into your table.
-Data types ([local](http://localhost:8889/lab/workspaces/auto-s/tree/02-ingestion/04-table-datatypes.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/04-table-datatypes.ipynb)) - this will familiarise you with how data is stored inside a table.
+
+- Batch ingestion ([local](http://localhost:8889/lab/tree/02-ingestion) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/02-batch-ingestion.ipynb)) - it covers the basics of ingestion, including how to specify the columns that you choose to ingest into your table.
+- Data types ([local](http://localhost:8889/lab/workspaces/auto-s/tree/02-ingestion/04-table-datatypes.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/04-table-datatypes.ipynb)) - this will familiarise you with how data is stored inside a table.
+
 Then it's time to dig into the timestamp - arguably the most important column in any table in Druid. In the query section, take time to run through this notebook:
-Datetime functions ([local](http://localhost:8889/lab/tree/03-query/07-functions-datetime.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/03-query/07-functions-datetime.ipynb))
+
+- Datetime functions ([local](http://localhost:8889/lab/tree/03-query/07-functions-datetime.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/03-query/07-functions-datetime.ipynb))
+
 You might also want to round out your knowledge by looking at the notebooks on NULL values ([local](http://localhost:8889/lab/tree/02-ingestion/09-generating-and-working-with-nulls.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/09-generating-and-working-with-nulls.ipynb)).
 
 Deciding which incoming datetime column ends up being your primary timestamp in Druid is a critical part of your decision making as a data engineer working with Druid. When you're done with the notebooks, you may want to apply what you've learned about the date and time functions to some of your own data.
