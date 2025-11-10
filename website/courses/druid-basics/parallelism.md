@@ -14,7 +14,9 @@ Watch the following video to learn about parallelism in Apache Druid.
 ## Demo code sample
 
 Here is the query that is featured in the demo video.
-It uses FILTER (WHERE...) to limit the COUNT of records to one per day.
+
+It uses `FILTER (WHERE...)` to limit the `COUNT` of records to one per day.
+
 Note that, to use this query as is, you should ingest the flights data into a table called "example-flights".
 
 ```sql
@@ -29,8 +31,8 @@ WHERE "Reporting_Airline" = 'DL'
 ## Exercise
 
 Try to adapt the flight records query to use a table that you've ingested yourself.
-There are many more examples of Druid SQL in the [learn-druid repository](https://github.com/implydata/learn-druid).
-If you'd like to see more, it's the  place to see what Druid can do.
+
+There are many more examples of Druid SQL in the [learn-druid repository](https://github.com/implydata/learn-druid). If you'd like to see more, it's the  place to see what Druid can do.
 
 ## Learn more
 

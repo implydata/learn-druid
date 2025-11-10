@@ -49,17 +49,16 @@ AND "isRobot" = FALSE
 GROUP BY 1, 2
 ```
 
-This time we changed the time partitioning and clustering.
-Notice that the  data includes the `regionIsoCode` dimension.
-We added it to the clustering at ingestion time!
-Notice, too, that the time filter now covers two hours: `PT2H`.
-The partitioning change means that hour of data comes from one segment, and another hour comes from another segment.
+Notice that the data includes the `regionIsoCode` dimension which was added to the clustering clause at ingestion time.
+
+Notice, too, that the time filter now covers two hours: `PT2H`. The partitioning change means that hour of data comes from one segment, and another hour comes from another segment.
 
 ### Sample 3
 
 And here is the ingestion SQL for the third table.
 You can paste this into the SQL query view on the console to create a new table named "wikipedia-2".
 
+The aggregates (`SUM`, `DS_HLL`, `MAX`, and `COUNT`) are used with `GROUP BY` to create a roll-up table. `PARTITIONED BY` and `CLUSTERED BY` clause enforce hourly segments, further split by `channel`.
 
 ```sql
 SELECT
@@ -95,7 +94,8 @@ CLUSTERED BY "channel"
 
 This is the final query that you see in the demo.
 It runs against the "wikipedia-2" table you just created.
-Notice how the distinct count of the number of users is calculated using the APPROX_COUNT_DISTINCT_HLL function.
+
+Notice how the distinct count of the number of users is calculated using the `APPROX_COUNT_DISTINCT_HLL` function.
 
 ```sql
 SELECT
