@@ -10,6 +10,7 @@ import YouTubePlayer from '@site/src/components/YouTubePlayer';
 Welcome to the fundamental course on Apache Druid from Imply!
 
 This course brings together critical learning materials that we think are important to your first half hour with Apache Druid.
+
 For a short course it's full of information you need to experience and understand Druid.
 
 If you'd like to talk to through what you learn in this course, why not say hi to Imply's DevRel team! Follow this link to find the bookable sessions on offer.
@@ -62,6 +63,7 @@ The official Druid website contains an overview of how this real-time analytics 
 See the [Imply website](https://imply.io/) for even more uses for Druid.
 
 For a sample of the companies using Apache Druid, take a look at the [Powered By page](https://druid.apache.org/druid-powered/).
+
 You can also watch videos from Apache Druid users at Druid Summit [2023](https://www.youtube.com/playlist?list=PLDZysOZKycN4UZTJ8B3xQXdpqdmK8iiC5), [2022](https://www.youtube.com/playlist?list=PLDZysOZKycN6Bhp8sfenweb0qtRQELbDx), and [2021](https://www.youtube.com/playlist?list=PLDZysOZKycN4FuohgyYNEuI_Azt2ySIE_)
 There you'll find technolgists from Confluent, Reddit, Shopify, PayPal, Rakuten, and Netflix, to name a few.
 

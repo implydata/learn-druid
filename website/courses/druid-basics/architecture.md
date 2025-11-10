@@ -6,10 +6,12 @@ import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 # Apache Druid architecture
 
-Apache Druid is comprises independently scalable and configurable services.
-Each service is responsible for different tasks. For details about the services that make up a Druid deployment, read the [Architecture](https://druid.apache.org/docs/latest/design/architecture) topic in the Druid documentation.
+Apache Druid is comprised of independently scalable and configurable services.
+Each service is responsible for different tasks.
 
-The following video is another great resource to learn about Apache Druid architecture.
+For details about the services that make up a Druid deployment, read the [Architecture](https://druid.apache.org/docs/latest/design/architecture) topic in the Druid documentation.
+
+Watch the following video to learn about Apache Druid architecture.
 
 :::info
 The video is coming soon. We're in the process of migrating this content.
@@ -24,8 +26,3 @@ Refer to the following topics to learn more about clustered Druid environments:
 
 - [Clustered deployment](https://druid.apache.org/docs/latest/tutorials/cluster) for information on setting up a simple cluster.
 - [High availability](https://druid.apache.org/docs/latest/operations/high-availability) for setup recommendations for high availability environments.
-
-
-
-
-
