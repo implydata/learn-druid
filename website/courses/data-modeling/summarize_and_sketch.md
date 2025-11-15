@@ -24,7 +24,7 @@ Open JupyterLab in your [learn-druid](https://github.com/implydata/learn-druid) 
 
 Work through the GROUP BY ([local](http://localhost:8889/lab/tree/03-query/01-groupby.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/03-query/01-groupby.ipynb)) notebook in the query section.
 
-But GROUP BY is not just useful at query time! You can also use GROUP BY at ingestion time to summarise your incoming data.
+But GROUP BY is not just useful at query time. You can also use GROUP BY at ingestion time to summarise your incoming data.
 
 If you're working with streaming data, you may want to check out the notebook on rollup at ingestion time ([local](http://localhost:8889/lab/workspaces/auto-w/tree/02-ingestion/16-native-groupby-rollup.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/16-native-groupby-rollup.ipynb)).
 
@@ -50,7 +50,7 @@ Work through the following notebooks in the query section:
 
 Work through the sketch generation ([local](http://localhost:8889/lab/tree/02-ingestion/03-generating-sketches.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/03-generating-sketches.ipynb)) notebook from the ingestion section to learn how to create sketches at ingestion time as part of a summarized table.
 
-When you are done, you will know how to leverage Apache Datasketches inside Apache Druid, and will know how to switch between approximate and non-approximate modes of query execution. You will also see how to pre-load your tables with Apache Datasketches for greater efficiency.
+When you are done, you will know how to leverage Apache DataSketches inside Apache Druid, and will know how to switch between approximate and non-approximate modes of query execution. You will also see how to pre-load your tables with Apache DataSketches for greater efficiency.
 
 ## Tables
 
@@ -70,7 +70,7 @@ This notebook is important as it walks you through the types of UNION ALL operat
 
 To get you ready for the exam, take time to delve into the documentation. Especially remember to look at:
 
-- The [Apache Datasketches](https://druid.apache.org/docs/latest/development/extensions-core/datasketches-extension) extension and the [functions](https://druid.apache.org/docs/latest/querying/sql-aggregations#sketch-functions) that are available for each.
+- The [Apache DataSketches](https://druid.apache.org/docs/latest/development/extensions-core/datasketches-extension) extension and the [functions](https://druid.apache.org/docs/latest/querying/sql-aggregations#sketch-functions) that are available for each.
 - [TopN](https://druid.apache.org/docs/latest/querying/topnquery) queries.
 - The [UNION ALL](https://druid.apache.org/docs/latest/querying/sql#union-all) operator.
 - How to [roll up (summarize) data](https://druid.apache.org/docs/latest/ingestion/rollup) in native JSON-based ingestion (used in streaming), especially how to truncate the timestamp and where to specify the aggregates (metrics) that you want to produce.

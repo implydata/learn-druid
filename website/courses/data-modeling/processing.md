@@ -18,7 +18,7 @@ We're in the process of migrating this content. Check back soon.
 
 ## Exercises
 
-Putting time into identifying the correct timestamp and the value of individual dimensions (attributes and measures) will pay dividends later on. Armed with your learn-druid environment, it's time to take a look at some notebooks that cover functionality you need to be familiar with as you go iterate through different table schemas.
+Making the effort to identify the correct timestamp and the value of individual dimensions (attributes and measures) for your datasource will pay dividends later on. Armed with your learn-druid environment, it's time to take a look at some notebooks that cover functionality you need to be familiar with as you go iterate through different table schemas.
 
 The time functions in Druid are particularly important to grasp and understand. Every row in a table in Druid has a time column. It is distinct from all other dimensions that a row might contain, and represents the timestamp when some event in your data occurred. It's used at ingestion time to partition your data before it is distributed, and it's used at query time to plan queries and to parallelise them.
 
@@ -79,7 +79,7 @@ Make sure you familiarize yourself with the JSON-based equivalents of all the fu
 - Setting the primary timestamp using [`timestampSpec`](https://druid.apache.org/docs/latest/ingestion/ingestion-spec#timestampspec) and truncating it using [`queryGranularity`](https://druid.apache.org/docs/latest/ingestion/ingestion-spec#granularityspec).
 - Selecting dimensions to ingest (or to ignore) as part of the [`dimensionsSpec`](https://druid.apache.org/docs/latest/ingestion/ingestion-spec#dimensionsspec).
 - Where to apply scalar functions and filters (WHERE) in the [`transformSpec`](https://druid.apache.org/docs/latest/ingestion/ingestion-spec#transformspec).
-- When doing a [rollup](https://druid.apache.org/docs/latest/ingestion/rollup)-style ingestion (ie a GROUP BY), how to:
+- When doing a [rollup](https://druid.apache.org/docs/latest/ingestion/rollup)-style ingestion (GROUP BY), how to:
   - enable it in the [`granularitySpec`](https://druid.apache.org/docs/latest/ingestion/ingestion-spec#granularityspec) and
   - set the aggregates to emit in the [`metricsSpec`](https://druid.apache.org/docs/latest/ingestion/ingestion-spec#metricsspec).
 - How to apply PARTITIONED BY and the various CLUSTERED BY options available in the [`partitionSpec`](https://druid.apache.org/docs/latest/ingestion/ingestion-spec#granularityspec).

@@ -12,11 +12,11 @@ This guide teaches you the fundamentals of ingesting your data into Apache Druid
 - [Designing a good schema](./schema-design.md): expert interviews and Python notebooks that help you create a good table
 - Data processing: how to think about when and where to process and query your data
 - Optimizing segment layout: understanding partitioning in Druid and how it affects processing
-- Summarisation and sketching:  ow to summarize your data at ingestion time and take advantage of approximation
+- Summarization and sketching: how to summarize your data at ingestion time and take advantage of approximation
 
 Each module contains an introductory video, links to Python notebooks in the learn-druid environment, and related material such as docs and community videos.
 
-If you'd like to talk to through what you learn in this course, why not say hi to Imply's DevRel team!
+If you'd like to talk to through what you learn in this course, why not say "hi" to Imply's DevRel team?
 
 
 <div className={styles.buttons}>
