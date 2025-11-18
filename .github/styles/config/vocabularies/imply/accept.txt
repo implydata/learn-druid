@@ -500,6 +500,7 @@ connect-redis
 connect-session-knex
 consumer.listTopics
 CONTAINS_STRING
+Conviva
 CoordinatorBasicAuthorizerResourceTest
 CoordinatorPollingBasicAuthenticatorCacheManager
 CoordinatorPollingBasicAuthorizerCacheManager
@@ -566,7 +567,7 @@ dataTier1
 dataTiers
 dataTierX
 DATA_TYPE
-datetime
+[Dd]atetime
 DateTimeFormat
 DATETIME_PRECISION
 datums
@@ -601,6 +602,7 @@ defaultUserPermissions
 DEFAULT_CHARACTER_SET_CATALOG
 DEFAULT_CHARACTER_SET_NAME
 DEFAULT_CHARACTER_SET_SCHEMA
+[Dd]efragmenting
 DeleteAlarms
 deltaBucket
 denormalize
@@ -850,6 +852,7 @@ geronimo-jta_1
 getPartitionIds
 GetRecords
 getSingleObjectSummary
+Github
 GitLab
 GKE
 GlassFish
@@ -927,7 +930,7 @@ headerSubsetFiltersInExport
 healthRoute
 helpCenterHref
 heterogenous
-historicals
+[Hh]istoricals
 hive-llap-client
 hive-llap-common
 hive-llap-tez
@@ -1281,6 +1284,7 @@ knex
 KoalasToTheMax
 kosmosfs
 KPL
+Krug
 Kryo
 kubectl
 labelling
@@ -1421,8 +1425,7 @@ metricsCluster
 metricsSpec
 metroCode
 Mgmt
-middleManager
-MiddleManagers?
+Middle Managers?
 MIDDLE_MANAGER
 Middle Manager
 Milli
@@ -1731,6 +1734,7 @@ PII
 piiMask
 pinboard
 Pino
+[Pp]interest
 PivotTable
 pivot_home
 PKCE
@@ -2134,6 +2138,8 @@ testCheckpointForUnknownTaskGroup
 TestNG
 textarea
 Tez
+[Tt]iering
+Thiyagarajan
 time.timeBucket
 time.timeFloor
 time.timePart

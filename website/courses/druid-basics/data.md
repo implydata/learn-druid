@@ -2,14 +2,15 @@
 sidebar_position: 4
 sidebar_label: Data in Druid
 ---
+import Link from '@docusaurus/Link';
+import styles from '../../../website/src/pages';
 import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 # Data in Druid
 
 Watch the following video to learn about data in Apache Druid.
 
-<!--TBD UPDATE FINAL VIDEO-->
-<!--YouTubePlayer videoId="h7U_CsDTNBw" /-->
+<YouTubePlayer videoId="TA3O9ASehhE" />
 
 ## Demo code samples
 

@@ -2,6 +2,8 @@
 sidebar_position: 4
 sidebar_label: Druid architecture
 ---
+import Link from '@docusaurus/Link';
+import styles from '../../../website/src/pages';
 import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
 # Apache Druid architecture
@@ -11,12 +13,7 @@ Each service is responsible for different tasks. For details about the services 
 
 The following video is another great resource to learn about Apache Druid architecture.
 
-:::info
-The video is coming soon. We're in the process of migrating this content.
-:::
-
-<!--TBD UPDATE FINAL VIDEO-->
-<!-- YouTubePlayer videoId="h7U_CsDTNBw" /-->
+<YouTubePlayer videoId="OEUBrD3Bq0s" />
 
 ## Learn more
 
