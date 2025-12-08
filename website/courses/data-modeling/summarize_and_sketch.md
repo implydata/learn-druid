@@ -20,13 +20,13 @@ Apache Druid is a speedy GROUP BY engine thanks to the way that it stores data a
 
 First off, run through the GROUP BY notebook on learn-druid to delve deeper into the not-so-obvious permutations of the GROUP BY statement in Apache Druid.
 
-Open JupyterLab in your [learn-druid](https://github.com/implydata/learn-druid) environment.
+Open JupyterLab in your [learn-druid](/courses/resources) environment.
 
-Work through the GROUP BY ([local](http://localhost:8889/lab/tree/03-query/01-groupby.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/03-query/01-groupby.ipynb)) notebook in the query section.
+Work through the GROUP BY ([local](http://localhost:8889/lab/tree/03-query/01-groupby.ipynb) | [source](/resources/blob/main/notebooks/03-query/01-groupby.ipynb)) notebook in the query section.
 
 But GROUP BY is not just useful at query time. You can also use GROUP BY at ingestion time to summarise your incoming data.
 
-If you're working with streaming data, you may want to check out the notebook on rollup at ingestion time ([local](http://localhost:8889/lab/workspaces/auto-w/tree/02-ingestion/16-native-groupby-rollup.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/16-native-groupby-rollup.ipynb)).
+If you're working with streaming data, you may want to check out the notebook on rollup at ingestion time ([local](http://localhost:8889/lab/workspaces/auto-w/tree/02-ingestion/16-native-groupby-rollup.ipynb) | [source](/resources/blob/main/notebooks/02-ingestion/16-native-groupby-rollup.ipynb)).
 
 Before you move on, take what you have learned in the notebook above and apply it to some of your own data. Use GROUP BY to summarise your data, applying a date and time function to truncate the primary timestamp, and adding aggregation functions to output metrics like COUNT and MAX.
 
@@ -40,15 +40,15 @@ Apache Druid includes numerous query execution engines and functions that help y
 
 There are several notebooks that you now need to complete to experience what these techniques are, and how they can be applied both at query time and as part of your ingestion.
 
-Open JupyterLab in your [learn-druid](https://github.com/implydata/learn-druid) environment.
+Open JupyterLab in your [learn-druid](/courses/resources) environment.
 
 Work through the following notebooks in the query section:
 
-- TopN approximation ([local](http://localhost:8889/lab/tree/03-query/02-approx-ranking.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/03-query/02-approx-ranking.ipynb))
-- Approximate COUNT DISTINCT ([local](http://localhost:8889/lab/tree/03-query/03-approx-count-distinct.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/03-query/03-approx-count-distinct.ipynb)) with HyperLogLog and Theta sketches
-- Approximate data distribution functions ([local](http://localhost:8889/lab/tree/03-query/04-approx-distribution.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/03-query/04-approx-distribution.ipynb)) with Quantiles sketches
+- TopN approximation ([local](http://localhost:8889/lab/tree/03-query/02-approx-ranking.ipynb) | [source](/resources/blob/main/notebooks/03-query/02-approx-ranking.ipynb))
+- Approximate COUNT DISTINCT ([local](http://localhost:8889/lab/tree/03-query/03-approx-count-distinct.ipynb) | [source](/resources/blob/main/notebooks/03-query/03-approx-count-distinct.ipynb)) with HyperLogLog and Theta sketches
+- Approximate data distribution functions ([local](http://localhost:8889/lab/tree/03-query/04-approx-distribution.ipynb) | [source](/resources/blob/main/notebooks/03-query/04-approx-distribution.ipynb)) with Quantiles sketches
 
-Work through the sketch generation ([local](http://localhost:8889/lab/tree/02-ingestion/03-generating-sketches.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/03-generating-sketches.ipynb)) notebook from the ingestion section to learn how to create sketches at ingestion time as part of a summarized table.
+Work through the sketch generation ([local](http://localhost:8889/lab/tree/02-ingestion/03-generating-sketches.ipynb) | [source](/resources/blob/main/notebooks/02-ingestion/03-generating-sketches.ipynb)) notebook from the ingestion section to learn how to create sketches at ingestion time as part of a summarized table.
 
 When you are done, you will know how to leverage Apache DataSketches inside Apache Druid, and will know how to switch between approximate and non-approximate modes of query execution. You will also see how to pre-load your tables with Apache DataSketches for greater efficiency.
 
@@ -60,9 +60,9 @@ When you are done, you will know how to leverage Apache DataSketches inside Apac
 
 Apache Druid enables you to UNION the results of queries in specific ways. This can help you to bring together different result sets into a single result set.
 
-Open JupyterLab in your [learn-druid ](https://github.com/implydata/learn-druid)environment.
+Open JupyterLab in your [learn-druid ](/courses/resources)environment.
 
-Work through the UNION notebook ([local](http://localhost:8889/lab/tree/03-query/05-union-operations.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/03-query/05-union-operations.ipynb)) in the query section.
+Work through the UNION notebook ([local](http://localhost:8889/lab/tree/03-query/05-union-operations.ipynb) | [source](/resources/blob/main/notebooks/03-query/05-union-operations.ipynb)) in the query section.
 
 This notebook is important as it walks you through the types of UNION ALL operations that are possible in Druid, and helps you to understand where they can be applied.
 

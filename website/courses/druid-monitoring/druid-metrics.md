@@ -20,7 +20,7 @@ We're in the process of migrating this content. Check back soon.
 Exercises
 Metrics play an important role in day-to-day operations, whether it’s monitoring the average "segment scan time" for a table or the 98th percentile query response time. Setting up and researching Druid's metrics is critical for all administrators.
 
-Run through the [metrics notebook](https://github.com/implydata/learn-druid/blob/main/notebooks/05-operations/03-metrics-configuration.ipynb) from the [learn-druid](https://github.com/implydata/learn-druid) repository.
+Run through the [metrics notebook](/resources/blob/main/notebooks/05-operations/03-metrics-configuration.ipynb) from the [Learn Druid developer environment](/courses/resources).
 
 It's particularly important in this case to look at the reference material at the end of each notebook. Some questions in the exam require you to have read the related pages, or at least to know where to get to them.
 

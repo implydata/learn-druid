@@ -40,18 +40,15 @@ We're in the process of migrating this content. Check back soon.
 
 ## Set up your learning environment
 
-Before you start, set up the learning environmentset on your local machine.
+Before you start, set up the Learn Druid developer environment on your local machine.
 
 Go to the [learn-druid Github repository](https://github.com/implydata/learn-druid).
 Follow the instructions on the main page to download all the resources you need to start running Apache Druid and associated components locally.
 
-The video below demonstrates set up process.
+The video below demonstrates the process.
 
-:::info
-We're in the process of migrating this content. Check back soon.
-:::
-
-<!--TBD UPDATE FINAL VIDEO-->
+<YouTubePlayer videoId="q6r0d_wQ6Do" />
+<br/>
 
 
 

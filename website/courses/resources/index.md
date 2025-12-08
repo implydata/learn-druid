@@ -1,7 +1,7 @@
 ---
 sidebar_position: 99
 title: Apache® Druid 
-sidebar_label: Learn Druid notebooks
+sidebar_label: Learn Druid developer environment
 ---
 import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
@@ -22,7 +22,7 @@ Watch the following video for an introduction to the  Docker environment the Jup
 <YouTubePlayer videoId="q6r0d_wQ6Do" />
 <br/>
 
-For more information see the [Learn Druid repo](https://github.com/implydata/learn-druid).
+For more information see the [Learn Druid repository](https://github.com/implydata/learn-druid)).
 
 
 

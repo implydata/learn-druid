@@ -28,7 +28,7 @@ WHERE "Reporting_Airline" = 'DL'
 ## Exercise
 
 Try to adapt the flight records query to use a table that you've ingested yourself.
-There are many more examples of Druid SQL in the [learn-druid repository](https://github.com/implydata/learn-druid).
+There are many more examples of Druid SQL in the [Learn Druid developer environment](/courses/resources).
 If you'd like to see more, it's the  place to see what Druid can do.
 
 ## Learn more
@@ -38,7 +38,7 @@ Refer to the following resources to to learn more about the SQL dialect of Apach
 - [Druid SQL reference](https://druid.apache.org/docs/latest/querying/sql)
 - [Query execution](https://druid.apache.org/docs/latest/querying/query-execution.html)
 
-The [learn-druid repository](https://github.com/implydata/learn-druid) contains many examples of Druid SQL in action.
-See [Using the Druid SQL API](https://github.com/implydata/learn-druid/blob/main/notebooks/03-query/12-query-api.ipynb) to get started with Druid SQL.
+The [Learn Druid developer environment](/courses/resources) contains many examples of Druid SQL in action.
+See [Using the Druid SQL API](/resources/blob/main/notebooks/03-query/12-query-api.ipynb) to get started with Druid SQL.
 
 <!-- TBD this should be updated to point to the HTML notebooks when they're ready-->
