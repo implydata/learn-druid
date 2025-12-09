@@ -18,10 +18,10 @@ We're in the process of migrating this content. Check back soon.
 
 Take time to look at the log files in Druid, familiarizing yourself with their location and contents, and the configuration that applies to them.
 
-Run through these notebooks from the `learn-druid` repository.:
+Run through these notebooks from the Learn Druid developer environment:
 
-- The [notebook on Apache Druid logs](https://github.com/implydata/learn-druid/blob/main/notebooks/05-operations/01-logs-configuration.ipynb), where you'll see examples of how Druid uses Log4j and the contents of those logs.
-- The [notebook on streaming and SQL-based ingestion logs](https://github.com/implydata/learn-druid/blob/main/notebooks/05-operations/02-logs-asynch.ipynb), which focuses on task logs.
+- The [notebook on Apache Druid logs](/resources/blob/main/notebooks/05-operations/01-logs-configuration.ipynb), where you'll see examples of how Druid uses Log4j and the contents of those logs.
+- The [notebook on streaming and SQL-based ingestion logs](/resources/blob/main/notebooks/05-operations/02-logs-asynch.ipynb), which focuses on task logs.
 
 Remember to take a look at the reference material at the end of each notebook. Some questions in the exam require you to have read the related pages, or at least to know where to get to them.
 

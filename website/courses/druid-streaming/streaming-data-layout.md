@@ -29,10 +29,10 @@ Complete the [Apache® Druid Data Modelling](https://learn.imply.io/apache-druid
 
 As you may already know, data layout is critical for any database. Now, it’s time to see how streaming data is organized during ingestion and review the strategies available to improve and manage the layout over time.
 
-Run through these notebooks from the [learn-druid](https://github.com/implydata/learn-druid) repository:
+Run through these notebooks from the [Learn Druid developer environment](/courses/resources):
 
-- Partitioning data at ingestion time [[local](http://localhost:8889/lab/tree/02-ingestion/07-partitioning-while-streaming.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/07-partitioning-while-streaming.ipynb)]
-- Defragmenting and clustering data with compaction [[local](http://localhost:8889/lab/tree/05-operations/04-compaction-partitioning.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/05-operations/04-compaction-partitioning.ipynb)]
+- Partitioning data at ingestion time [[local](http://localhost:8889/lab/tree/02-ingestion/07-partitioning-while-streaming.ipynb) | [source](/resources/blob/main/notebooks/02-ingestion/07-partitioning-while-streaming.ipynb)]
+- Defragmenting and clustering data with compaction [[local](http://localhost:8889/lab/tree/05-operations/04-compaction-partitioning.ipynb) | [source](/resources/blob/main/notebooks/05-operations/04-compaction-partitioning.ipynb)]
 
 You may want to use your new knowledge to:
 
@@ -63,7 +63,7 @@ When your data arrives at speed, query needs to happen at speed!
 
 As you've heard, sketching and aggregating your data, especially in high-volume, high-speed architectures with event hubs, are critical tools at your disposal.
 
-Run through the "Using roll-up to GROUP BY your incoming data in real time, and to generate sketches" [[local](http://localhost:8889/lab/tree/02-ingestion/16-native-groupby-rollup.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/05-operations/04-compaction-partitioning.ipynb)] notebook from the [learn-druid](https://github.com/implydata/learn-druid) repository.
+Run through the "Using roll-up to GROUP BY your incoming data in real time, and to generate sketches" [[local](http://localhost:8889/lab/tree/02-ingestion/16-native-groupby-rollup.ipynb) | [source](/resources/blob/main/notebooks/05-operations/04-compaction-partitioning.ipynb)] notebook from the [Learn Druid developer environment](/courses/resources).
 
 Here are some more things you might want to try:
 

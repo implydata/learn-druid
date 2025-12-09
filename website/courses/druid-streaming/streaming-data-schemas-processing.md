@@ -29,15 +29,15 @@ Take a look at these resources to learn more:
 
 The ingestion specification contains the `dataSchema`, `ioConfig`, and `tuningConfig` components. These components determine how Druid connects to, interprets, and writes data into a table.
 
-Now it's time to turn to the [learn-druid](https://github.com/implydata/learn-druid) repository of notebooks. These notebooks contain useful reference material, so even if you don't run them in the provided Docker image, it's worth looking at them in the source repository.
+Now it's time to turn to the [Learn Druid developer environment](/courses/resources). These notebooks contain useful reference material, so even if you don't run them in the provided Docker image, it's worth looking at them in the source repository.
 
 To start a streaming ingestion job using a supervisor, check out the following notebook:
 
-Quickstart for streaming with Druid [[local](http://localhost:8889/lab/tree/02-ingestion/01-streaming-from-kafka.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/01-streaming-from-kafka.ipynb)]
+Quickstart for streaming with Druid [[local](http://localhost:8889/lab/tree/02-ingestion/01-streaming-from-kafka.ipynb) | [source](/resources/blob/main/notebooks/02-ingestion/01-streaming-from-kafka.ipynb)]
 
 Druid can ingest data from multiple streams into the same table simultaneously. To see this in action, try the following notebook with sample data:
 
-Multi-topic Kafka ingestion in Druid [[local](http://localhost:8889/lab/tree/02-ingestion/11-stream-from-multiple-topics.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/11-stream-from-multiple-topics.ipynb)]
+Multi-topic Kafka ingestion in Druid [[local](http://localhost:8889/lab/tree/02-ingestion/11-stream-from-multiple-topics.ipynb) | [source](/resources/blob/main/notebooks/02-ingestion/11-stream-from-multiple-topics.ipynb)]
 
 Equipped with what you have learned, why not spin up a [Quickstart](https://druid.apache.org/docs/latest/tutorials/tutorial-kafka) of your own. Try to connect to your own Amazon Kinesis or Apache Kafka-compatible source and run some simple queries on the data as it arrives.
 
@@ -64,7 +64,7 @@ Read about strategies for [schema changes](https://druid.apache.org/docs/latest/
 
 The `dataSchema` component of an ingestion specification defines how Druid parses data and configures the resulting schema.
 
-Define the schema of the data to add to the table manually or turn on automatic schema detection. To see automatic and manual schema definition in a JSON ingestion specification, check out the "Defining table schemas in native Ingestion" notebook in the [learn-druid repository](https://github.com/implydata/learn-druid) [[local](http://localhost:8889/lab/tree/02-ingestion/15-native-dimensions.ipynb) | [source](https://github.com/implydata/learn-druid/blob/main/notebooks/02-ingestion/15-native-dimensions.ipynb)].
+Define the schema of the data to add to the table manually or turn on automatic schema detection. To see automatic and manual schema definition in a JSON ingestion specification, check out the "Defining table schemas in native Ingestion" notebook in the [Learn Druid developer environment](/courses/resources) [[local](http://localhost:8889/lab/tree/02-ingestion/15-native-dimensions.ipynb) | [source](/resources/blob/main/notebooks/02-ingestion/15-native-dimensions.ipynb)].
 
 You may want to use your new knowledge to:
 

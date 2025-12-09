@@ -12,7 +12,7 @@ Welcome to the Apache Druid streaming course from Imply!
 This course contains:
 
 - Video interviews with Apache Druid community members on using streaming technologies with Apache Druid.
-- Exercises using notebooks from the learn-druid repository showcasing streaming features in action. You can adapt these examples for your own use case.
+- Exercises using notebooks from the Learn Druid developer environment that showcase streaming features in action. You can adapt these examples for your own use case.
 - Signposts to videos and important documentation for you to broaden and deepen your understanding.
 - Take time to leave feedback when you're ready. We'd love to use your opinions and thoughts to improve this course for everyone.
 
