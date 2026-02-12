@@ -12,9 +12,9 @@ Here are some ways to participate:
 
 - Say "Thank you!" to the project team with a star on the [Druid repository](https://github.com/apache/druid).
 - Imply sponsors community events around the world. Find a group in your part of the world on meetup.com:
-     https://www.meetup.com/pro/apache-druid
+     [https://www.meetup.com/pro/apache-druid](https://www.meetup.com/pro/apache-druid)
 - Sign up to our newsletter and podcast, full of information on features, interviews with users, and information on events.
-     https://imply.io/newsletter-signup/ 
+     [https://imply.io/newsletter-signup/](https://imply.io/newsletter-signup/)
 - If you haven't already, join the the official Slack channel. The details, including an invitation link, are on the Apache Druid [community page](https://druid.apache.org/community/).
   
-Finally, if you do adopt Druid or if your team is already using it, let everyone know! Raise a PR on the [Powered by page](https://druid.apache.org/druid-powered) ato join the many companies that use Druid.
+Finally, if you do adopt Apache Druid or if your team is already using it, let everyone know! Raise a PR on the [Powered by page](https://druid.apache.org/druid-powered) to join the many companies that use Druid.
