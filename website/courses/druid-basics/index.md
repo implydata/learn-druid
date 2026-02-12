@@ -31,20 +31,12 @@ Watch the following video for an introduction to this course:
 ## Get started with Druid
 
 The official Apache Druid documentation Quick Start guide helps you through downloading the latest Apache Druid release and getting it up and running.
+
 If you have time, running Apache Druid on your laptop is a great first step.
 
 1. Open the [Local quickstart](https://druid.apache.org/docs/latest/tutorials/) in the Apache Druid docs.
 2. Check that you have the prerequisite hardware and software.
 3. Follow the instructions to Druid it on your own machine!
-
-:::info
-The video is coming soon. We're in the process of migrating this content.
-:::
-
-<!-- If you don't have time, you can watch the demonstration in the following video: -->
-
-<!--TBD UPDATE FINAL VIDEO-->
-<!-- YouTubePlayer videoId="h7U_CsDTNBw" /-->
 
 ## Druid use cases
 
@@ -60,8 +52,3 @@ See the [Imply website](https://imply.io/) for even more uses for Druid.
 For a sample of the companies using Apache Druid, take a look at the [Powered By page](https://druid.apache.org/druid-powered/).
 You can also watch videos from Apache Druid users at Druid Summit [2023](https://www.youtube.com/playlist?list=PLDZysOZKycN4UZTJ8B3xQXdpqdmK8iiC5), [2022](https://www.youtube.com/playlist?list=PLDZysOZKycN6Bhp8sfenweb0qtRQELbDx), and [2021](https://www.youtube.com/playlist?list=PLDZysOZKycN4FuohgyYNEuI_Azt2ySIE_)
 There you'll find technolgists from Confluent, Reddit, Shopify, PayPal, Rakuten, and Netflix, to name a few.
-
-
-
-
-
