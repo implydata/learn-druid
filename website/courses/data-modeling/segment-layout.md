@@ -8,13 +8,9 @@ import Link from '@docusaurus/Link';
 import styles from '../../../website/src/pages';
 import YouTubePlayer from '@site/src/components/YouTubePlayer';
 
-## Segments and infrastructure 
+## Segments and infrastructure
 
-:::info
-We're in the process of migrating this content. Check back soon.
-:::
-
-<!-- Need video -->
+<YouTubePlayer videoId="qjqAs31nSdk" />
 
 ## Expert interview
 
@@ -28,7 +24,7 @@ We're in the process of migrating this content. Check back soon.
 
 Segments in Druid are generated during ingestion and stored in Deep Storage. It's critical to optimize the size and number of these files with an understanding of the impact on query efficiency and on data management.
 
-Open JupyterLab in your [learn-druid ](https://github.com/implydata/learn-druid)environment.
+Open JupyterLab in your [learn-druid](https://github.com/implydata/learn-druid)environment.
 
 Work through the following notebooks:
 
