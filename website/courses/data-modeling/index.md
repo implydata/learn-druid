@@ -18,12 +18,11 @@ Each module contains an introductory video, links to Python notebooks in the lea
 
 If you'd like to talk to through what you learn in this course, why not say "hi" to Imply's DevRel team?
 
-
 <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="https://calendly.com/druidcommunity">
-            Book some time
+            Book some time with Imply's DevRel team
           </Link>
         </div>
 
@@ -37,22 +36,9 @@ We're in the process of migrating this content. Check back soon.
 
 <!--TBD UPDATE FINAL VIDEO-->
 
-
 ## Set up your learning environment
 
 Before you start, set up the learning environmentset on your local machine.
 
 Go to the [learn-druid Github repository](https://github.com/implydata/learn-druid).
 Follow the instructions on the main page to download all the resources you need to start running Apache Druid and associated components locally.
-
-The video below demonstrates set up process.
-
-:::info
-We're in the process of migrating this content. Check back soon.
-:::
-
-<!--TBD UPDATE FINAL VIDEO-->
-
-
-
-
