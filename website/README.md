@@ -1,11 +1,11 @@
 # Website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus 3.10](https://docusaurus.io/). The course files are MDX files located in `/website/courses`.
 
 ## Installation
 
 ```bash
-yarn
+yarn install
 ```
 
 ## Local Development
@@ -26,16 +26,4 @@ This command generates static content into the `build` directory and can be serv
 
 ## Deployment
 
-Using SSH:
-
-```bash
-USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+This website gets deployed through AWS Amplify provided by Imply. Any merges into `main` are automatically published. No other steps are needed. 
