@@ -36,8 +36,6 @@ Come meet the friendly Apache Druid [community](https://druid.apache.org/communi
 
 Imply's courses on Apache Druid at [https://learn.imply.io](https://learn.imply.io) have additional commentary for these notebooks, and you can earn a certificate of completion.
 
-If your team is just getting to know Druid, Imply also offer bookable [team tech talks](https://calendly.com/druidcommunity) on the basics of Apache Druid. And if you want to check whether Apache Druid is the right fit, or would like to get hints on the functionality you should look at, book one of Imply's [getting started with Druid](https://calendly.com/druidcommunity) meetings.
-
 ## Pre-requisites
 
 To use the "Learn Druid" Docker Compose, you need:
