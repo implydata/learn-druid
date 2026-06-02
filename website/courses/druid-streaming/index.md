@@ -16,16 +16,6 @@ This course contains:
 - Signposts to videos and important documentation for you to broaden and deepen your understanding.
 - Take time to leave feedback when you're ready. We'd love to use your opinions and thoughts to improve this course for everyone.
 
-If you'd like to talk to through what you learn in this course, why not say hi to Imply's DevRel team! Follow this link to find the bookable sessions on offer.
-
-<div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="https://calendly.com/druidcommunity">
-            Book some time
-          </Link>
-        </div>
-
 ## Welcome
 
 <!-- NEED VIDEO -->
@@ -36,4 +26,3 @@ We're in the process of migrating this content. Check back soon.
 ## Supervisor specifications
 
 <YouTubePlayer videoId="PnQw2vsRiA4" />
-

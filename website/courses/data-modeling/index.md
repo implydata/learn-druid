@@ -16,17 +16,6 @@ This guide teaches you the fundamentals of ingesting your data into Apache Druid
 
 Each module contains an introductory video, links to Python notebooks in the learn-druid environment, and related material such as docs and community videos.
 
-If you'd like to talk to through what you learn in this course, why not say "hi" to Imply's DevRel team?
-
-
-<div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="https://calendly.com/druidcommunity">
-            Book some time
-          </Link>
-        </div>
-
 ## Welcome video
 
 Watch the following video for an introduction to this course:
@@ -36,7 +25,6 @@ We're in the process of migrating this content. Check back soon.
 :::
 
 <!--TBD UPDATE FINAL VIDEO-->
-
 
 ## Set up your learning environment
 
@@ -52,7 +40,3 @@ We're in the process of migrating this content. Check back soon.
 :::
 
 <!--TBD UPDATE FINAL VIDEO-->
-
-
-
-
